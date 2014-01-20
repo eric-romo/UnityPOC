@@ -11,6 +11,8 @@ public class DisplayController : MonoBehaviour {
 	public GameObject Cursor;
 	[HideInInspector]
 	public CoherentUIView View;
+	[HideInInspector]
+	public Rigidbody Rigidbody;
 	
 	private bool _focused = false;
 	public bool Focused {
@@ -33,6 +35,7 @@ public class DisplayController : MonoBehaviour {
 		Handle = transform.FindChild("Handle").gameObject;
 		Cursor = transform.FindChild("Cursor").gameObject;
 		View = GetComponentInChildren<CoherentUIView>();
+		Rigidbody = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -84,16 +87,19 @@ public class DisplayController : MonoBehaviour {
 			if(isOverHandle){
 				if(Input.GetMouseButtonDown(0)){
 					Debug.Log("Handle Clicked! Button 0");
+					//Rigidbody.AddRelativeForce(10.0f, 0, 0);
+					//Rigidbody.AddTorque(100f, 0, 0);
+					Rigidbody.velocity = new Vector3(10.0f, 0, 0);
 				}
 				if(Input.GetMouseButtonDown(1)){
 					Debug.Log("Handle Clicked! Button 1");
+					Rigidbody.angularVelocity = new Vector3(0, 10.0f, 0);
 				}
 				if(Input.GetMouseButtonDown(2)){
 					Debug.Log("Handle Clicked! Button 2");
 				}
 				
 				float scrollDelta =  Input.GetAxis("Mouse ScrollWheel");
-				Debug.Log("Input.GetAxis(scroll);" + scrollDelta);
 				float scaleDelta = 1 - scrollDelta * 0.05f;
 				Vector3 scale = transform.localScale;
 				scale.Scale(new Vector3(scaleDelta, scaleDelta, scaleDelta));
