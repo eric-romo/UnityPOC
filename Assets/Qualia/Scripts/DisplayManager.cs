@@ -66,8 +66,8 @@ public class DisplayManager : MonoBehaviour {
 		RaycastHit hitInfo;
 		if (Physics.Raycast(CursorCamera.transform.position, CursorCamera.transform.forward, out hitInfo))
 		{
-			Debug.DrawRay(CursorCamera.transform.position, CursorCamera.transform.forward, Color.green);
-			Debug.Log (hitInfo.collider.name);
+			//Debug.DrawRay(CursorCamera.transform.position, CursorCamera.transform.forward, Color.green);
+			//Debug.Log (hitInfo.collider.name);
 			
 			CoherentUIView viewComponent = hitInfo.collider.gameObject.GetComponent(typeof(CoherentUIView)) as CoherentUIView;
 			if (viewComponent == null)
@@ -77,7 +77,9 @@ public class DisplayManager : MonoBehaviour {
 			
 			if (viewComponent != null && !viewComponent.ClickToFocus)
 			{
-				FocusedDisplay = viewComponent.gameObject.transform.parent.gameObject;
+				if(FocusedDisplay != viewComponent.gameObject.transform.parent.gameObject){//Don't spam focus updates
+					FocusedDisplay = viewComponent.gameObject.transform.parent.gameObject;
+				}
 			}
 		}
 	}
