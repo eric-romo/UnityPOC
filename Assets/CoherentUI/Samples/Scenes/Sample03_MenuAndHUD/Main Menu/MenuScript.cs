@@ -21,7 +21,9 @@ public class MenuScript : MonoBehaviour {
 	
 	void Update ()
 	{
+		if(Input.GetKey(KeyCode.LeftControl) && Input.GetKeyUp(KeyCode.Tab)){
 		
+		}
 	}	
 	
 	private void RegisterBindings(int frame, string url, bool isMain)
