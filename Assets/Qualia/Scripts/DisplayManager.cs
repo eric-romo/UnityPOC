@@ -39,7 +39,6 @@ public class DisplayManager : MonoBehaviour {
 		CursorCamera = GameObject.Find("CameraRight").GetComponent<Camera>();
 	}
 	
-	// Use this for initialization
 	void Start () {
 		Displays.AddRange(GameObject.FindGameObjectsWithTag("Display"));
 		if(Displays.Count > 0){
@@ -48,7 +47,6 @@ public class DisplayManager : MonoBehaviour {
 		Screen.lockCursor = true;
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		ProcessInput();
 	}
@@ -67,9 +65,6 @@ public class DisplayManager : MonoBehaviour {
 		RaycastHit hitInfo;
 		if (Physics.Raycast(CursorCamera.transform.position, CursorCamera.transform.forward, out hitInfo))
 		{
-			//Debug.DrawRay(CursorCamera.transform.position, CursorCamera.transform.forward, Color.green);
-			//Debug.Log (hitInfo.collider.name);
-			
 			CoherentUIView viewComponent = hitInfo.collider.gameObject.GetComponent(typeof(CoherentUIView)) as CoherentUIView;
 			if (viewComponent == null)
 			{

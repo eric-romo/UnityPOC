@@ -21,12 +21,10 @@ public class VirtualCursor : MonoBehaviour {
 	void Awake(){
 	}
 
-	// Use this for initialization
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		Delta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 		if(Acceleration){
@@ -45,9 +43,6 @@ public class VirtualCursor : MonoBehaviour {
 			if(Width > 0 && Height > 0){
 				Position = Vector2.Scale (NormalizedPosition, new Vector2(Width, Height));
 			}
-			
-			//Debug.Log("Norm x: " + NormalizedPosition.x + " y: " + NormalizedPosition.y);
-			//Debug.Log("scaledDelta x: " + scaledDelta.x + " y: " + scaledDelta.y);
 		}
 	}
 	

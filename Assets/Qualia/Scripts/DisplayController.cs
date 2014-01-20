@@ -42,7 +42,6 @@ public class DisplayController : MonoBehaviour {
 	private DisplayManager displayManager;
 	#endregion
 	
-	// Use this for initialization
 	void Awake () {
 		Handle = transform.FindChild("Handle").gameObject;
 		Cursor = transform.FindChild("Cursor").gameObject;
@@ -52,12 +51,8 @@ public class DisplayController : MonoBehaviour {
 		displayManager = GameObject.Find("/DisplayManager").GetComponent<DisplayManager>();
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		if(Focused){
-			/*Vector3 normalizedMouse = Input.mousePosition;
-			normalizedMouse.x /= Screen.width;
-			normalizedMouse.y /= Screen.height;*/
 			Vector2 normalizedMouse = virtualCursor.NormalizedPosition;
 			normalizedMouse.x *= MouseBorderRatio;
 			normalizedMouse.y *= MouseBorderRatio;
@@ -83,7 +78,6 @@ public class DisplayController : MonoBehaviour {
 			bool UR = viewMouse.x > View.Width && viewMouse.y < 0;
 			bool UL = viewMouse.x > View.Width / MouseBorderRatio && viewMouse.y < 0;
 			bool LR = viewMouse.x > View.Width && viewMouse.y < View.Height * MouseBorderRatio - View.Height;
-			//Debug.Log("UR: " + UR + " UL: " + UL + " LR: " + LR);
 			
 			bool isOverHandle = UR || UL || LR;
 			
@@ -91,14 +85,6 @@ public class DisplayController : MonoBehaviour {
 				View.SetMousePosition(Mathf.FloorToInt(viewMouse.x), Mathf.FloorToInt(viewMouse.y));
 			}
 			View.ReceivesInput = Focused && !isOverHandle;
-			
-			/*Vector2 displayMouseDelta;
-			if(lastDisplayMouse == Vector2.zero){//If it hasn't been set yet.. or if we are at the top left, but thats a really tiny edge case
-				displayMouseDelta = Vector2.zero;
-			} else {
-				displayMouseDelta = displayMouse - lastDisplayMouse;
-			} 
-			lastDisplayMouse = displayMouse;*/
 			
 			Cursor.transform.localPosition = new Vector3(-0.03138549f, displayMouse.y, -displayMouse.x);
 			
@@ -126,6 +112,7 @@ public class DisplayController : MonoBehaviour {
 			
 			#endregion
 			
+			#region Cloning
 			if(Input.GetMouseButtonDown(2)){
 				Vector3 position = transform.position;
 				position.x -= 0.5f;
@@ -138,6 +125,7 @@ public class DisplayController : MonoBehaviour {
 				displayManager.Displays.Add(clone);
 				displayManager.FocusedDisplay = clone;
 			}
+			#endregion
 			
 			#region Zooming
 			if(isOverHandle){
