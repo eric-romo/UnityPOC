@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class VirtualCursor : MonoBehaviour {
+
+	public bool Acceleration = false;
 	
 	public Vector2 Sensitivity = new Vector2(0.01f, 0.01f);
 
@@ -27,8 +29,10 @@ public class VirtualCursor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Delta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-		Delta.x = Delta.x * Mathf.Abs(Delta.x);
-		Delta.y = Delta.y * Mathf.Abs(Delta.y);
+		if(Acceleration){
+			Delta.x = Delta.x * Mathf.Abs(Delta.x);
+			Delta.y = Delta.y * Mathf.Abs(Delta.y);
+		}
 		Delta.Scale(new Vector2(Time.deltaTime, Time.deltaTime));
 		Delta.Scale(Sensitivity);
 		

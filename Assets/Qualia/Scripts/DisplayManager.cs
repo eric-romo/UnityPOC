@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 public class DisplayManager : MonoBehaviour {
 	
-	List<GameObject> Displays = new List<GameObject>();
+	public List<GameObject> Displays = new List<GameObject>();
 	
 	GameObject _focusedDisplay = null;
-	GameObject FocusedDisplay {
+	public GameObject FocusedDisplay {
 		get{
 			return _focusedDisplay;
 		}
@@ -21,7 +21,7 @@ public class DisplayManager : MonoBehaviour {
 		}
 	}
 	DisplayController _focusedDisplayController = null;
-	DisplayController FocusedDisplayController {
+	public DisplayController FocusedDisplayController {
 		get{
 			return _focusedDisplayController;
 		}
