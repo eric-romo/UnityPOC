@@ -38,7 +38,16 @@ public class DisplayController : MonoBehaviour {
 			normalizedMouse.y /= Screen.height;
 			
 			Vector3 displayMouse = normalizedMouse;
-			//Cursor.transform.localPosition = displayMouse;
+			float displayWidth = 1.6f;
+			float displayHeight = 0.9f;
+			displayMouse.x *= displayWidth;
+			displayMouse.y *= displayHeight;
+			displayMouse.x -= displayWidth / 2;
+			displayMouse.y -= displayHeight / 2;
+			displayMouse.z = -displayMouse.x;
+			displayMouse.x = -0.03138549f;
+			Cursor.transform.localPosition = displayMouse;
+			
 			Vector2 viewMouse;
 			viewMouse.x = normalizedMouse.x;
 			viewMouse.y = normalizedMouse.y;
