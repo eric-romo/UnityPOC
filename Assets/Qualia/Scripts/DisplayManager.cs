@@ -61,33 +61,9 @@ public class DisplayManager : MonoBehaviour {
 			FocusedDisplay = Displays[index];
 		}
 		
-		//FocusedView.SetMousePosition((int)Input.mousePosition.x, FocusedView.Height - (int)Input.mousePosition.y);
-		
-		/*var cameraView = m_MainCamera.gameObject.GetComponent<CoherentUIView>();
-		if (cameraView && !cameraView.ClickToFocus)
-		{
-			var view = cameraView.View;
-			if (view != null)
-			{
-				var normX = Input.mousePosition.x / cameraView.Width;
-				var normY = 1 - Input.mousePosition.y / cameraView.Height;
-				if (normX >= 0 && normX <= 1 && normY >= 0 && normY <= 1)
-				{
-					view.IssueMouseOnUIQuery(normX, normY);
-					view.FetchMouseOnUIQuery();
-					if (view.IsMouseOnView())
-					{
-						cameraView.ReceivesInput = true;
-						cameraView.SetMousePosition((int)Input.mousePosition.x, cameraView.Height - (int)Input.mousePosition.y);
-						return;
-					}
-				}
-			}
-		}*/
-		
-		
-		// Activate input processing for the view below the mouse cursor
-		/*RaycastHit hitInfo;
+
+		// Activate input processing for the view being looked at
+		RaycastHit hitInfo;
 		if (Physics.Raycast(CursorCamera.transform.position, CursorCamera.transform.forward, out hitInfo))
 		{
 			Debug.DrawRay(CursorCamera.transform.position, CursorCamera.transform.forward, Color.green);
@@ -102,11 +78,7 @@ public class DisplayManager : MonoBehaviour {
 			if (viewComponent != null && !viewComponent.ClickToFocus)
 			{
 				FocusedDisplay = viewComponent.gameObject.transform.parent.gameObject;
-				viewComponent.SetMousePosition(
-					(int)(hitInfo.textureCoord.x * viewComponent.Width),
-					(int)(hitInfo.textureCoord.y * viewComponent.Height));
-				Debug.Log("HitInfo: x: " + hitInfo.textureCoord.x + " y: " + hitInfo.textureCoord.y);
 			}
-		}*/
+		}
 	}
 }
