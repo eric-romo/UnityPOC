@@ -34,7 +34,8 @@ public class DisplayController : MonoBehaviour {
 	#endregion
 	
 	#region Private Variables
-	private Vector3 lastDisplayMouse = Vector3.zero;
+	private Vector2 lastDisplayMouse = Vector2.zero;
+	private VirtualCursor virtualCursor;
 	#endregion
 	
 	// Use this for initialization
@@ -43,28 +44,28 @@ public class DisplayController : MonoBehaviour {
 		Cursor = transform.FindChild("Cursor").gameObject;
 		View = GetComponentInChildren<CoherentUIView>();
 		Rigidbody = GetComponent<Rigidbody>();
+		virtualCursor = GetComponent<VirtualCursor>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(Focused){
-			Vector3 normalizedMouse = Input.mousePosition;
+			/*Vector3 normalizedMouse = Input.mousePosition;
 			normalizedMouse.x /= Screen.width;
-			normalizedMouse.y /= Screen.height;
+			normalizedMouse.y /= Screen.height;*/
+			Vector2 normalizedMouse = virtualCursor.NormalizedPosition;
 			normalizedMouse.x *= MouseBorderRatio;
 			normalizedMouse.y *= MouseBorderRatio;
 			normalizedMouse.x = Mathf.Min(normalizedMouse.x, MouseBorderRatio);
 			normalizedMouse.y = Mathf.Min(normalizedMouse.y, MouseBorderRatio);
 			
-			Vector3 displayMouse = normalizedMouse;
+			Vector2 displayMouse = normalizedMouse;
 			float displayWidth = 1.6f;
 			float displayHeight = 0.9f;
 			displayMouse.x *= displayWidth;
 			displayMouse.y *= displayHeight;
 			displayMouse.x -= displayWidth / 2;
 			displayMouse.y -= displayHeight / 2;
-			displayMouse.z = -displayMouse.x;
-			displayMouse.x = -0.03138549f;
 			
 			Vector2 viewMouse;
 			viewMouse.x = normalizedMouse.x;
@@ -72,10 +73,6 @@ public class DisplayController : MonoBehaviour {
 			viewMouse.x *= View.Width;
 			viewMouse.y *= View.Height;
 			viewMouse.y = View.Height - viewMouse.y;
-			
-			//Debug.Log("viewMouse x: " + viewMouse.x + " y: " + viewMouse.y);
-			
-			
 			
 			/* What quadrant, centered on the upper right corner of the display, is the cursor over */
 			bool UR = viewMouse.x > View.Width && viewMouse.y < 0;
@@ -90,40 +87,49 @@ public class DisplayController : MonoBehaviour {
 			}
 			View.ReceivesInput = Focused && !isOverHandle;
 			
-			Vector3 displayMouseDelta;
-			if(lastDisplayMouse == Vector3.zero){//If it hasn't been set yet.. or if we are at the top left, but thats a really tiny edge case
-				displayMouseDelta = Vector3.zero;
+			/*Vector2 displayMouseDelta;
+			if(lastDisplayMouse == Vector2.zero){//If it hasn't been set yet.. or if we are at the top left, but thats a really tiny edge case
+				displayMouseDelta = Vector2.zero;
 			} else {
 				displayMouseDelta = displayMouse - lastDisplayMouse;
 			} 
-			lastDisplayMouse = displayMouse;
+			lastDisplayMouse = displayMouse;*/
 			
-			Cursor.transform.localPosition = displayMouse;
+			Cursor.transform.localPosition = new Vector3(-0.03138549f, displayMouse.y, -displayMouse.x);
 			
-			#region Drag Position
+			#region Dragging
 			bool draggingPosition = Input.GetMouseButton(0) && isOverHandle;
+			bool draggingRotation = Input.GetMouseButton(1) && isOverHandle;
+			bool dragging = draggingPosition || draggingRotation;
+			
+			if(dragging){
+				virtualCursor.Locked = true;
+			} else {
+				virtualCursor.Locked = false;
+			}
 			
 			if(draggingPosition){
-				transform.position += displayMouseDelta * 15;
+				transform.position += new Vector3(0, virtualCursor.Delta.y * 15, -virtualCursor.Delta.x * 15);
 			}
+			
+			if(draggingRotation){
+				Vector3 rotation = new Vector3(0, -virtualCursor.Delta.x * 100, -virtualCursor.Delta.y * 100);
+				transform.Rotate(rotation);
+				transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+			}
+			
 			
 			#endregion
 			
+			#region Zooming
 			if(isOverHandle){
-				if(Input.GetMouseButtonDown(1)){
-					Debug.Log("Handle Clicked! Button 1");
-					Rigidbody.angularVelocity = new Vector3(0, 10.0f, 0);
-				}
-				if(Input.GetMouseButtonDown(2)){
-					Debug.Log("Handle Clicked! Button 2");
-				}
-				
 				float scrollDelta =  Input.GetAxis("Mouse ScrollWheel");
 				float scaleDelta = 1 - scrollDelta * 0.05f;
 				Vector3 scale = transform.localScale;
 				scale.Scale(new Vector3(scaleDelta, scaleDelta, scaleDelta));
 				transform.localScale = scale;
 			}
+			#endregion;
 		}
 	}
 	

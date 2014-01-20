@@ -45,6 +45,7 @@ public class DisplayManager : MonoBehaviour {
 		if(Displays.Count > 0){
 			FocusedDisplay = Displays[0];
 		}
+		Screen.lockCursor = true;
 	}
 	
 	// Update is called once per frame
