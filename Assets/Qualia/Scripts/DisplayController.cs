@@ -2,9 +2,11 @@
 using System.Collections;
 
 public class DisplayController : MonoBehaviour {
-
+	#region Inspector Variables
 	public float MouseBorderRatio = 1.05f;
+	#endregion
 	
+	#region Public Variables
 	[HideInInspector]
 	public GameObject Handle;
 	[HideInInspector]
@@ -29,6 +31,11 @@ public class DisplayController : MonoBehaviour {
 			}
 		}
 	}
+	#endregion
+	
+	#region Private Variables
+	private Vector3 lastDisplayMouse = Vector3.zero;
+	#endregion
 	
 	// Use this for initialization
 	void Awake () {
@@ -58,7 +65,6 @@ public class DisplayController : MonoBehaviour {
 			displayMouse.y -= displayHeight / 2;
 			displayMouse.z = -displayMouse.x;
 			displayMouse.x = -0.03138549f;
-			Cursor.transform.localPosition = displayMouse;
 			
 			Vector2 viewMouse;
 			viewMouse.x = normalizedMouse.x;
@@ -84,13 +90,26 @@ public class DisplayController : MonoBehaviour {
 			}
 			View.ReceivesInput = Focused && !isOverHandle;
 			
+			Vector3 displayMouseDelta;
+			if(lastDisplayMouse == Vector3.zero){//If it hasn't been set yet.. or if we are at the top left, but thats a really tiny edge case
+				displayMouseDelta = Vector3.zero;
+			} else {
+				displayMouseDelta = displayMouse - lastDisplayMouse;
+			} 
+			lastDisplayMouse = displayMouse;
+			
+			Cursor.transform.localPosition = displayMouse;
+			
+			#region Drag Position
+			bool draggingPosition = Input.GetMouseButton(0) && isOverHandle;
+			
+			if(draggingPosition){
+				transform.position += displayMouseDelta * 15;
+			}
+			
+			#endregion
+			
 			if(isOverHandle){
-				if(Input.GetMouseButtonDown(0)){
-					Debug.Log("Handle Clicked! Button 0");
-					//Rigidbody.AddRelativeForce(10.0f, 0, 0);
-					//Rigidbody.AddTorque(100f, 0, 0);
-					Rigidbody.velocity = new Vector3(10.0f, 0, 0);
-				}
 				if(Input.GetMouseButtonDown(1)){
 					Debug.Log("Handle Clicked! Button 1");
 					Rigidbody.angularVelocity = new Vector3(0, 10.0f, 0);
