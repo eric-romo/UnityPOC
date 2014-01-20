@@ -4,6 +4,7 @@ using System.Collections;
 public class DisplayController : MonoBehaviour {
 	#region Inspector Variables
 	public float MouseBorderRatio = 1.05f;
+	public GameObject ClonePrefab;
 	#endregion
 	
 	#region Public Variables
@@ -15,6 +16,8 @@ public class DisplayController : MonoBehaviour {
 	public CoherentUIView View;
 	[HideInInspector]
 	public Rigidbody Rigidbody;
+	[HideInInspector]
+	public bool Dragging = false;
 	
 	private bool _focused = false;
 	public bool Focused {
@@ -36,6 +39,7 @@ public class DisplayController : MonoBehaviour {
 	#region Private Variables
 	private Vector2 lastDisplayMouse = Vector2.zero;
 	private VirtualCursor virtualCursor;
+	private DisplayManager displayManager;
 	#endregion
 	
 	// Use this for initialization
@@ -45,6 +49,7 @@ public class DisplayController : MonoBehaviour {
 		View = GetComponentInChildren<CoherentUIView>();
 		Rigidbody = GetComponent<Rigidbody>();
 		virtualCursor = GetComponent<VirtualCursor>();
+		displayManager = GameObject.Find("/DisplayManager").GetComponent<DisplayManager>();
 	}
 	
 	// Update is called once per frame
@@ -100,9 +105,9 @@ public class DisplayController : MonoBehaviour {
 			#region Dragging
 			bool draggingPosition = Input.GetMouseButton(0) && isOverHandle;
 			bool draggingRotation = Input.GetMouseButton(1) && isOverHandle;
-			bool dragging = draggingPosition || draggingRotation;
+			Dragging = draggingPosition || draggingRotation;
 			
-			if(dragging){
+			if(Dragging){
 				virtualCursor.Locked = true;
 			} else {
 				virtualCursor.Locked = false;
@@ -120,6 +125,19 @@ public class DisplayController : MonoBehaviour {
 			
 			
 			#endregion
+			
+			if(Input.GetMouseButtonDown(2)){
+				Vector3 position = transform.position;
+				position.x -= 0.5f;
+				Vector3 scale = transform.localScale;
+				//scale = scale * 0.5f;
+				GameObject clone = GameObject.Instantiate(ClonePrefab, position, transform.rotation) as GameObject;
+				clone.transform.localScale = scale;
+				GameObject duplicateRenderCamera = clone.GetComponent<DisplayController>().View.transform.GetChild(0).gameObject;
+				GameObject.Destroy(duplicateRenderCamera);
+				displayManager.Displays.Add(clone);
+				displayManager.FocusedDisplay = clone;
+			}
 			
 			#region Zooming
 			if(isOverHandle){

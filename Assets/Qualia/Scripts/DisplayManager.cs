@@ -78,8 +78,11 @@ public class DisplayManager : MonoBehaviour {
 			
 			if (viewComponent != null && !viewComponent.ClickToFocus)
 			{
-				if(FocusedDisplay != viewComponent.gameObject.transform.parent.gameObject){//Don't spam focus updates
-					FocusedDisplay = viewComponent.gameObject.transform.parent.gameObject;
+				GameObject display = viewComponent.gameObject.transform.parent.gameObject;
+				if(FocusedDisplay != display){//Don't spam focus updates
+					if(!FocusedDisplay.GetComponent<DisplayController>().Dragging){
+						FocusedDisplay = display;
+					}
 				}
 			}
 		}
