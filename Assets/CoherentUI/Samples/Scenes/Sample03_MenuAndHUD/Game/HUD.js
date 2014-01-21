@@ -1,3 +1,4 @@
+#pragma strict
 #if UNITY_STANDALONE || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_EDITOR
 import Coherent.UI.Binding; // to use View.TriggerEvent with extra arguments
 

@@ -6,19 +6,26 @@
 #define COHERENT_UNITY_UNSUPPORTED_PLATFORM
 #endif
 
+#if UNITY_EDITOR && (UNITY_IPHONE || UNITY_ANDROID)
+#define COHERENT_SIMULATE_MOBILE_IN_EDITOR
+#endif
+
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 #if UNITY_EDITOR || COHERENT_UNITY_STANDALONE || COHERENT_UNITY_UNSUPPORTED_PLATFORM
 using Coherent.UI;
+using CoherentUI = Coherent.UI;
 #elif UNITY_IPHONE || UNITY_ANDROID
 using Coherent.UI.Mobile;
+using CoherentUI = Coherent.UI.Mobile;
 #endif
 
 /// <summary>
 /// Component controlling the CoherentUI System
 /// </summary>
+[AddComponentMenu("Coherent UI/UI System")]
 public class CoherentUISystem : MonoBehaviour {
 
 	private static CoherentUISystem m_Instance = null;
@@ -56,7 +63,11 @@ public class CoherentUISystem : MonoBehaviour {
 		FlipY = 1,
 		CorrectGamma = 2
 	};
-
+	public enum CoherentFilteringModes
+	{
+		PointFiltering = 1,
+		LinearFiltering = 2
+	};
 	private UISystem m_UISystem;
 	private SystemListener m_SystemListener;
 	private ILogHandler m_LogHandler;
@@ -258,7 +269,10 @@ public class CoherentUISystem : MonoBehaviour {
 	[HideInInspector]
 	[SerializeField]
 	private string m_HostDirectory = GetDefaultHostDirectory();
-	[CoherentExposePropertyStandalone]
+	[CoherentExposePropertyStandalone(Category = CoherentExposePropertyInfo.FoldoutType.General,
+							PrettyName = "Host directory",
+							Tooltip="The directory where the Host executable is located",
+							IsStatic=true)]
 	public string HostDirectory
 	{
 		get {
@@ -275,7 +289,10 @@ public class CoherentUISystem : MonoBehaviour {
 	[HideInInspector]
 	[SerializeField]
 	private bool m_EnableProxy = false;
-	[CoherentExposePropertyStandalone]
+	[CoherentExposePropertyStandalone(Category = CoherentExposePropertyInfo.FoldoutType.General,
+							PrettyName = "Proxy",
+							Tooltip="Enables proxy support",
+							IsStatic=true)]
 	public bool EnableProxy
 	{
 		get {
@@ -292,7 +309,10 @@ public class CoherentUISystem : MonoBehaviour {
 	[HideInInspector]
 	[SerializeField]
 	private bool m_AllowCookies = true;
-	[CoherentExposePropertyStandalone]
+	[CoherentExposePropertyStandalone(Category = CoherentExposePropertyInfo.FoldoutType.General,
+							PrettyName = "Cookies",
+							Tooltip="Enables support for cookies",
+							IsStatic=true)]
 	public bool AllowCookies
 	{
 		get {
@@ -309,7 +329,10 @@ public class CoherentUISystem : MonoBehaviour {
 	[HideInInspector]
 	[SerializeField]
 	private string m_CookiesResource = "cookies.dat";
-	[CoherentExposePropertyStandalone]
+	[CoherentExposePropertyStandalone(Category = CoherentExposePropertyInfo.FoldoutType.General,
+							PrettyName = "Cookies file",
+							Tooltip="The file where cookies will be saved",
+							IsStatic=true)]
 	public string CookiesResource
 	{
 		get {
@@ -326,7 +349,10 @@ public class CoherentUISystem : MonoBehaviour {
 	[HideInInspector]
 	[SerializeField]
 	private string m_CachePath = "cui_cache";
-	[CoherentExposePropertyStandalone]
+	[CoherentExposePropertyStandalone(Category = CoherentExposePropertyInfo.FoldoutType.General,
+							PrettyName = "Cache path",
+							Tooltip="The folder where the navigation cache will be saved",
+							IsStatic=true)]
 	public string CachePath
 	{
 		get {
@@ -343,7 +369,10 @@ public class CoherentUISystem : MonoBehaviour {
 	[HideInInspector]
 	[SerializeField]
 	private string m_HTML5LocalStoragePath = "cui_app_cache";
-	[CoherentExposePropertyStandalone]
+	[CoherentExposePropertyStandalone(Category = CoherentExposePropertyInfo.FoldoutType.General,
+							PrettyName = "Local storage path",
+							Tooltip="The directory where the HTML5 local storage will be saved",
+							IsStatic=true)]
 	public string HTML5LocalStoragePath
 	{
 		get {
@@ -360,7 +389,10 @@ public class CoherentUISystem : MonoBehaviour {
 	[HideInInspector]
 	[SerializeField]
 	private bool m_ForceDisablePluginFullscreen = true;
-	[CoherentExposePropertyStandalone]
+	[CoherentExposePropertyStandalone(Category = CoherentExposePropertyInfo.FoldoutType.General,
+							PrettyName = "Disable fullscreen plugins",
+							Tooltip="All plugins will have their fullscreen support disabled",
+							IsStatic=true)]
 	public bool ForceDisablePluginFullscreen
 	{
 		get {
@@ -377,7 +409,10 @@ public class CoherentUISystem : MonoBehaviour {
 	[HideInInspector]
 	[SerializeField]
 	private bool m_DisableWebSecutiry = false;
-	[CoherentExposePropertyStandalone]
+	[CoherentExposePropertyStandalone(Category = CoherentExposePropertyInfo.FoldoutType.General,
+							PrettyName = "Disable web security",
+							Tooltip="Allows loading making HTTP requests from coui://",
+							IsStatic=true)]
 	public bool DisableWebSecutiry
 	{
 		get {
@@ -393,8 +428,11 @@ public class CoherentUISystem : MonoBehaviour {
 	/// </summary>
 	[HideInInspector]
 	[SerializeField]
-	private int m_DebuggerPort = -1;
-	[CoherentExposePropertyStandalone]
+	private int m_DebuggerPort = 9999;
+	[CoherentExposePropertyStandalone(Category = CoherentExposePropertyInfo.FoldoutType.General,
+							PrettyName = "Debugger port",
+							Tooltip="The port where the system will listen for the debugger",
+							IsStatic=true)]
 	public int DebuggerPort
 	{
 		get {
@@ -402,6 +440,32 @@ public class CoherentUISystem : MonoBehaviour {
 		}
 		set {
 			m_DebuggerPort = value;
+		}
+	}
+
+	[HideInInspector]
+	[SerializeField]
+	private bool m_SupportForAltTab = true;
+	[CoherentExposePropertyStandalone(
+		Category = CoherentExposePropertyInfo.FoldoutType.General,
+		PrettyName = "Supports ALT+TAB",
+		Tooltip="Should ALT+TAB be supported in fullscreen",
+		IsStatic=true)]
+	/// <summary>
+	/// Indicates whether the application should support Alt+Tab
+	/// functionality in fullscreen mode, when using DirectX9
+	/// or DirectX9Ex. (Windows-only)
+	/// </summary>
+	/// <returns>
+	/// <c>true</c> if should support Alt+Tab functionality;
+	/// otherwise <c>false</c>.
+	/// </returns>
+	public bool SupportForAltTab {
+		get {
+			return m_SupportForAltTab;
+		}
+		set {
+			m_SupportForAltTab = value;
 		}
 	}
 
@@ -423,7 +487,10 @@ public class CoherentUISystem : MonoBehaviour {
 	/// <value>
 	/// If to set the cache
 	/// </value>
-	[CoherentExposePropertyiOS]
+	[CoherentExposePropertyiOS(Category = CoherentExposePropertyInfo.FoldoutType.General,
+							PrettyName = "URL cache",
+							Tooltip="Use the URL cache of the device",
+							IsStatic=true)]
 	public bool UseURLCache
 	{
 		get {
@@ -443,7 +510,10 @@ public class CoherentUISystem : MonoBehaviour {
 	/// <value>
 	/// The maximum size of the in-memory cache
 	/// </value>
-	[CoherentExposePropertyiOS]
+	[CoherentExposePropertyiOS(Category = CoherentExposePropertyInfo.FoldoutType.General,
+							PrettyName = "Memory cache size",
+							Tooltip="The maximum size of the in-memory cache",
+							IsStatic=true)]
 	public int MemoryCacheSize
 	{
 		get {
@@ -463,7 +533,10 @@ public class CoherentUISystem : MonoBehaviour {
 	/// <value>
 	/// The maximum size of the on-disk cache
 	/// </value>
-	[CoherentExposePropertyiOS]
+	[CoherentExposePropertyiOS(Category = CoherentExposePropertyInfo.FoldoutType.General,
+							PrettyName = "Disk cache size",
+							Tooltip="The maximum size of the disk cache",
+							IsStatic=true)]
 	public int DiskCacheSize
 	{
 		get {
@@ -522,7 +595,18 @@ public class CoherentUISystem : MonoBehaviour {
 	void Start () {
 		StartActivator();
 
-		if(SystemInfo.graphicsDeviceVersion.StartsWith("Direct3D 11") || SystemInfo.operatingSystem.Contains("Mac"))
+#if UNITY_STANDALONE_WIN
+		if(SupportForAltTab && Screen.fullScreen
+				&& SystemInfo.graphicsDeviceVersion.StartsWith("Direct3D 9"))
+		{
+			m_IsFullscreenApp = true;
+			m_IsWaitingForWindowedMode = true;
+			Screen.SetResolution(Screen.width, Screen.height, false);
+		}
+#endif
+
+		if (SystemInfo.graphicsDeviceVersion.StartsWith("Direct3D 11")
+				|| SystemInfo.operatingSystem.Contains("Mac"))
 		{
 			DeviceSupportsSharedTextures = true;
 		}
@@ -556,23 +640,28 @@ public class CoherentUISystem : MonoBehaviour {
 				DisableWebSecurity = this.DisableWebSecutiry,
 				DebuggerPort = this.DebuggerPort,
 			};
+			int sdkVersion = Coherent.UI.Versioning.SDKVersion;
 			#elif UNITY_IPHONE || UNITY_ANDROID
 			SystemSettings settings = new SystemSettings() {
 				iOS_UseURLCache = m_UseURLCache,
 				iOS_URLMemoryCacheSize = (uint)m_MemoryCacheSize,
 				iOS_URLDiskCacheSize = (uint)m_DiskCacheSize,
 			};
+			int sdkVersion = Coherent.UI.Mobile.Versioning.SDKVersion;
 			#endif
 			if (string.IsNullOrEmpty(Coherent.UI.License.COHERENT_KEY))
 			{
 				throw new System.ApplicationException("You must supply a license key to start Coherent UI! Follow the instructions in the manual for editing the License.cs file.");
 			}
-			m_UISystem = CoherentUI_Native.InitializeUISystem(Coherent.UI.License.COHERENT_KEY, settings, m_SystemListener, Severity.Info, m_LogHandler, m_FileHandler);
+			m_UISystem = CoherentUI_Native.InitializeUISystem(sdkVersion, Coherent.UI.License.COHERENT_KEY, settings, m_SystemListener, Severity.Info, m_LogHandler, m_FileHandler);
 			if (m_UISystem == null)
 			{
 				throw new System.ApplicationException("UI System initialization failed!");
 			}
 			Debug.Log ("Coherent UI system initialized..");
+			#if UNITY_EDITOR || COHERENT_UNITY_STANDALONE
+			CoherentUIViewRenderer.WakeRenderer();
+			#endif
 		}
 		m_StartTime = Time.realtimeSinceStartup;
 
@@ -585,6 +674,14 @@ public class CoherentUISystem : MonoBehaviour {
 		{
 			SystemReadyHandlers();
 		}
+
+#if UNITY_STANDALONE_WIN
+		if (SupportForAltTab && m_IsFullscreenApp)
+		{
+			Screen.SetResolution(Screen.width, Screen.height, true);
+			m_IsWaitingForWindowedMode = false;
+		}
+#endif
 	}
 
 	/// <summary>
@@ -648,8 +745,15 @@ public class CoherentUISystem : MonoBehaviour {
 			var view = cameraView.View;
 			if (view != null)
 			{
-				var normX = Input.mousePosition.x / cameraView.Width;
-				var normY = 1 - Input.mousePosition.y / cameraView.Height;
+				var normX = (Input.mousePosition.x / cameraView.Width);
+				var normY = (1 - Input.mousePosition.y / cameraView.Height);
+
+				normX = normX *
+				cameraView.WidthToCamWidthRatio(m_MainCamera.pixelWidth);
+
+				normY = 1 - ((1 - normY) *
+				cameraView.HeightToCamHeightRatio(m_MainCamera.pixelHeight));
+
 				if (normX >= 0 && normX <= 1 && normY >= 0 && normY <= 1)
 				{
 					view.IssueMouseOnUIQuery(normX, normY);
@@ -667,7 +771,6 @@ public class CoherentUISystem : MonoBehaviour {
 							cameraView.ReceivesInput = true;
 							SetViewFocused(true);
 						}
-						cameraView.SetMousePosition((int)Input.mousePosition.x, cameraView.Height - (int)Input.mousePosition.y);
 
 						return;
 					}
@@ -679,8 +782,6 @@ public class CoherentUISystem : MonoBehaviour {
 		RaycastHit hitInfo;
 		if (Physics.Raycast(m_MainCamera.ScreenPointToRay(Input.mousePosition), out hitInfo))
 		{
-			//Debug.Log (hitInfo.collider.name);
-
 			CoherentUIView viewComponent = hitInfo.collider.gameObject.GetComponent(typeof(CoherentUIView)) as CoherentUIView;
 			if (viewComponent == null)
 			{
@@ -700,6 +801,7 @@ public class CoherentUISystem : MonoBehaviour {
 					viewComponent.ReceivesInput = true;
 					SetViewFocused(true);
 				}
+
 				viewComponent.SetMousePosition(
 					(int)(hitInfo.textureCoord.x * viewComponent.Width),
 					(int)(hitInfo.textureCoord.y * viewComponent.Height));
@@ -729,6 +831,16 @@ public class CoherentUISystem : MonoBehaviour {
 			OnAssemblyReload();
 		}
 #endif
+		
+		//When starting fullscreen on DirectX9, we have to wait until Unity has
+		//switched to windowed mode for us to create our device.
+		//We can't create our device when the app is fullscreen
+		//because Unity places its device in exclusive mode.
+		if (m_IsFullscreenApp && m_IsWaitingForWindowedMode && Screen.fullScreen)
+		{
+			return;
+		}
+
 		if (m_UISystem != null)
 		{
 			IsUpdating = true;
@@ -782,40 +894,50 @@ public class CoherentUISystem : MonoBehaviour {
 		}
 	}
 
+	#if UNITY_EDITOR || COHERENT_UNITY_STANDALONE
+	void MouseMovedViewUpdate(CoherentUIView view)
+	{
+
+		if (view.ReceivesInput && view != null && view.View != null)
+		{
+			if (view.MouseX != -1 && view.MouseY != -1)
+			{
+				m_MouseMoveEvent.X = view.MouseX;
+				m_MouseMoveEvent.Y = view.MouseY;
+			}
+			else
+			{
+				CalculateScaledMouseCoordinates(ref m_MouseMoveEvent, view,
+					true);
+			}
+
+			view.View.MouseEvent(m_MouseMoveEvent);
+		}
+	}
+	#endif
+
 	void LateUpdate() {
-		#if UNITY_EDITOR || COHERENT_UNITY_STANDALONE
+		#if UNITY_ANDROID || COHERENT_SIMULATE_MOBILE_IN_EDITOR || COHERENT_SIMULATE_MOBILE_IN_PLAYER
+		CoherentUI.InputManager.PrepareForNextFrame();
+		#elif UNITY_EDITOR || COHERENT_UNITY_STANDALONE
 		// Check if the mouse moved
 		Vector2 mousePosition = Input.mousePosition;
 		if (mousePosition != m_LastMousePosition)
 		{
 			if (m_MouseMoveEvent != null && m_Views != null)
 			{
-				InputManager.GenerateMouseMoveEvent(ref m_MouseMoveEvent);
+				Coherent.UI.InputManager.GenerateMouseMoveEvent(
+					ref m_MouseMoveEvent);
 
 				foreach (var item in m_Views)
 				{
-					var view = item.View;
-					if (item.ReceivesInput && view != null)
-					{
-						if (item.MouseX != -1 && item.MouseY != -1)
-						{
-							m_MouseMoveEvent.X = item.MouseX;
-							m_MouseMoveEvent.Y = item.MouseY;
-						}
-						else
-						{
-							m_MouseMoveEvent.Y = item.Height - m_MouseMoveEvent.Y;
-						}
-						view.MouseEvent(m_MouseMoveEvent);
-					}
+					CoherentUIView view = item;
+					MouseMovedViewUpdate(view);
 				}
 			}
 
 			m_LastMousePosition = mousePosition;
 		}
-
-		#else
-		InputManager.PrepareForNextFrame();
 		#endif
 	}
 
@@ -847,12 +969,66 @@ public class CoherentUISystem : MonoBehaviour {
 		}
 	}
 
+	private bool IsPointInsideAnyView(int x, int y)
+	{
+		if (m_Views == null)
+		{
+			return false;
+		}
+
+		for (int i = 0; i < m_Views.Count; ++i)
+		{
+			var view = m_Views[i];
+
+			if (view.InputState ==
+				CoherentUIView.CoherentViewInputState.TakeNone)
+			{
+				continue;
+			}
+
+			if (x >= view.XPos && x <= view.XPos + view.Width &&
+				y >= view.YPos && y <= view.YPos + view.Height)
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
 	public virtual void OnGUI()
 	{
 		if (m_Views == null)
 		{
 			return;
 		}
+
+		#if UNITY_ANDROID || COHERENT_SIMULATE_MOBILE_IN_EDITOR || COHERENT_SIMULATE_MOBILE_IN_PLAYER
+		if (Event.current.isMouse && !IsPointInsideAnyView(
+				(int)Event.current.mousePosition.x,
+				(int)Event.current.mousePosition.y))
+		{
+			var evt = Event.current;
+			int x = (int)evt.mousePosition.x;
+			int y = (int)evt.mousePosition.y;
+
+			switch (evt.type)
+			{
+			case EventType.MouseDown:
+				CoherentUI.InputManager.ProcessTouchEvent(
+					(int)TouchPhase.Began, evt.button, x, y);
+				break;
+			case EventType.MouseUp:
+				CoherentUI.InputManager.ProcessTouchEvent(
+					(int)TouchPhase.Ended, evt.button, x, y);
+				break;
+			case EventType.MouseDrag:
+				CoherentUI.InputManager.ProcessTouchEvent(
+					(int)TouchPhase.Moved, evt.button, x, y);
+				break;
+			}
+		}
+		#endif
 
 		#if UNITY_EDITOR || COHERENT_UNITY_STANDALONE
 		MouseEventData mouseEventData = null;
@@ -896,6 +1072,11 @@ public class CoherentUISystem : MonoBehaviour {
 			if (Event.current.character != 0)
 			{
 				keyEventDataChar = Coherent.UI.InputManager.ProcessCharEvent(Event.current);
+
+				if(keyEventDataChar.KeyCode == 10)
+				{
+					keyEventDataChar.KeyCode = 13;
+				}
 			}
 			break;
 		case EventType.KeyUp:
@@ -913,7 +1094,13 @@ public class CoherentUISystem : MonoBehaviour {
 
 		foreach (var item in m_Views) {
 			var view = item.View;
-			if (item.ReceivesInput && view != null)
+			#if COHERENT_SIMULATE_MOBILE_IN_EDITOR || COHERENT_SIMULATE_MOBILE_IN_PLAYER
+			bool forwardInput = (item.InputState !=
+				CoherentUIView.CoherentViewInputState.TakeNone);
+			#else
+			bool forwardInput = item.ReceivesInput;
+			#endif
+			if (forwardInput && view != null)
 			{
 				if (mouseEventData != null)
 				{
@@ -922,6 +1109,18 @@ public class CoherentUISystem : MonoBehaviour {
 						mouseEventData.X = item.MouseX;
 						mouseEventData.Y = item.MouseY;
 					}
+
+					//Check if there is a camera attached to the view's parent
+					//Views attached on surfaces do not have such camera.
+					var isOnSurface = item.gameObject.camera == null;
+
+					if (!isOnSurface)
+					{
+						CalculateScaledMouseCoordinates(ref mouseEventData,
+						item,
+						false);
+					}
+
 					view.MouseEvent(mouseEventData);
 					Event.current.Use();
 				}
@@ -939,6 +1138,24 @@ public class CoherentUISystem : MonoBehaviour {
 		}
 		#endif
 	}
+
+	#if UNITY_EDITOR || COHERENT_UNITY_STANDALONE
+	private void CalculateScaledMouseCoordinates(ref MouseEventData data,
+		CoherentUIView view,
+		bool invertY)
+	{
+		var camWidth = view.gameObject.camera.pixelWidth;
+		var camHeight = view.gameObject.camera.pixelHeight;
+
+		float factorX = view.WidthToCamWidthRatio(camWidth);
+		float factorY = view.HeightToCamHeightRatio(camHeight);
+
+		float y = (invertY)? (camHeight - data.Y) : data.Y;
+
+		data.X = (int)(data.X * factorX);
+		data.Y = (int)(y * factorY);
+	}
+	#endif
 
 	/// <summary>
 	/// Gets the user interface system.
@@ -962,4 +1179,7 @@ public class CoherentUISystem : MonoBehaviour {
 		}
 	}
 	private float m_StartTime;
+
+	private bool m_IsFullscreenApp = false;
+	private bool m_IsWaitingForWindowedMode = false;
 }
