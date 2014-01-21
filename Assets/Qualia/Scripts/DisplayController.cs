@@ -118,7 +118,7 @@ public class DisplayController : MonoBehaviour {
 			#endregion
 			
 			#region Cloning
-			if(Input.GetMouseButtonDown(2)){
+			if(Input.GetMouseButtonDown(2) || Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.D)){
 				Vector3 position = transform.position;
 				position.x -= 0.5f;
 				Vector3 scale = transform.localScale;
