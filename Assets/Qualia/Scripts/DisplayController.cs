@@ -5,6 +5,7 @@ public class DisplayController : MonoBehaviour {
 	#region Inspector Variables
 	public float MouseBorderRatio = 1.05f;
 	public GameObject ClonePrefab;
+	public bool MoveRelativeToRotation = true;
 	#endregion
 	
 	#region Public Variables
@@ -100,7 +101,11 @@ public class DisplayController : MonoBehaviour {
 			}
 			
 			if(draggingPosition){
-				transform.position += new Vector3(0, virtualCursor.Delta.y * 15, -virtualCursor.Delta.x * 15);
+				if(MoveRelativeToRotation){
+					transform.position += transform.TransformDirection(new Vector3(0, virtualCursor.Delta.y * 15, -virtualCursor.Delta.x * 15));
+				} else {
+					transform.position += new Vector3(0, virtualCursor.Delta.y * 15, -virtualCursor.Delta.x * 15);
+				}
 			}
 			
 			if(draggingRotation){
