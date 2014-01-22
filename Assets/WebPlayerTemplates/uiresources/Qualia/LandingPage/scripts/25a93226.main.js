@@ -1,0 +1,1 @@
+"use strict";$("#search-form").submit(function(a){a.preventDefault(),window.location.href="http://www.google.com/#q="+$("#search-box").val()});
