@@ -16,7 +16,7 @@ public class SpeedDial : MonoBehaviour {
 	
 	void Update () {
 		for(int i = 0; i < urls.Count; i++){
-			if(Input.GetKey(KeyCode.LeftControl) && Input.GetKey((KeyCode)(49 + i))){
+			if(Input.GetButton("Super Button") && Input.GetKey((KeyCode)(49 + i))){
 				GameObject.Find("/DisplayManager").GetComponent<DisplayManager>().FocusedDisplayController.View.Page = urls[i];
 			}
 		}

@@ -1,16 +1,25 @@
-﻿using UnityEngine;
+﻿using UnityEngine;	
 using System.Collections;
+using Coherent.UI;
 
 public class Navigation : MonoBehaviour {
-
-	void Start () {
 	
+	BrowserView browserView;
+	DisplayController displayController;
+	
+	void Start () {
+		displayController = GetComponent<DisplayController>();
+		browserView = (BrowserView) displayController.View.View;
 	}
 	
 	void Update () {
-		if(Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftArrow)){
-			CoherentUIView view = GameObject.Find("/DisplayManager").GetComponent<DisplayManager>().FocusedDisplayController.View;
-			//Do back with BrowserView when availiable
+		browserView = (BrowserView) displayController.View.View;
+		if(displayController.Focused && Input.GetButton("Super Button")){
+			if(Input.GetKey(KeyCode.LeftArrow))
+				browserView.GoBack();
+			if(Input.GetKey(KeyCode.RightArrow))
+				browserView.GoForward();
+				
 		}
 	}
 }

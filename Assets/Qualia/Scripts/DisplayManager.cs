@@ -52,7 +52,7 @@ public class DisplayManager : MonoBehaviour {
 	
 	private void ProcessInput(){
 		
-		if(Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Tab)){
+		if(Input.GetButton("Super Button") && Input.GetKeyDown(KeyCode.Tab)){
 			int index = (Displays.IndexOf(FocusedDisplay) + 1);
 			index %= Displays.Count;
 			Debug.Log("Index: " + index);
