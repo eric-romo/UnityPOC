@@ -8,10 +8,17 @@ public class DisableMouselook : MonoBehaviour {
 	void Start () {
 		playerController = GetComponent<OVRPlayerController>();
 		playerController.SetAllowMouseRotation(false);
+		Screen.lockCursor = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		Screen.lockCursor = true;
+	}
 	
+	void OnApplicationPause(bool focus){
+		if(focus){
+			Screen.lockCursor = true;
+		}
 	}
 }
