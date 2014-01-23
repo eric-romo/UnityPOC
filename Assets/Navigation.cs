@@ -13,8 +13,8 @@ public class Navigation : MonoBehaviour {
 	}
 	
 	void Update () {
-		browserView = (BrowserView) displayController.View.View;
 		if(displayController.Focused && Input.GetButton("Super Button")){
+			browserView = (BrowserView) displayController.View.View;
 			if(Input.GetKey(KeyCode.LeftArrow))
 				browserView.GoBack();
 			if(Input.GetKey(KeyCode.RightArrow))
