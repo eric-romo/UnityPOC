@@ -37,6 +37,8 @@ public class DisplayController : MonoBehaviour {
 			}
 		}
 	}
+	
+	public string Location;
 	#endregion
 	
 	#region Private Variables
@@ -54,6 +56,7 @@ public class DisplayController : MonoBehaviour {
 		Rigidbody = GetComponent<Rigidbody>();
 		virtualCursor = GetComponent<VirtualCursor>();
 		displayManager = GameObject.Find("/DisplayManager").GetComponent<DisplayManager>();
+		displayManager.Displays.Add(gameObject	);
 	}
 	
 	void Update () {
@@ -122,7 +125,7 @@ public class DisplayController : MonoBehaviour {
 			#endregion
 			
 			#region Cloning
-			if(Input.GetMouseButtonDown(2) || Input.GetButton("Super Button") && Input.GetKeyDown(KeyCode.D)){
+			if(Input.GetMouseButtonDown(2) || Input.GetButton("Super Button") && Input.GetKeyDown(KeyCode.C)){
 				Vector3 position = transform.position;
 				position.x -= 0.5f;
 				Vector3 scale = transform.localScale;
@@ -148,5 +151,19 @@ public class DisplayController : MonoBehaviour {
 		}
 	}
 	
+	private string urlWaitingToLoad;
+	public void LoadUrl (string url)
+	{
+		if(View.View != null){
+			View.Page = url;
+		} else {
+			urlWaitingToLoad = url;
+			View.OnViewCreated += DelayedLoadUrl;
+		}
+	}
 	
+	void DelayedLoadUrl (Coherent.UI.View view)
+	{
+		LoadUrl(urlWaitingToLoad);
+	}
 }

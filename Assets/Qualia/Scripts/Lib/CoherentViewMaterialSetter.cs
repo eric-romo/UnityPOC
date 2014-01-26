@@ -4,7 +4,7 @@ using System.Collections;
 public class CoherentViewMaterialSetter : MonoBehaviour {
 	public Material material;
 	
-	void Start() {
+	void Awake() {
 		GetComponent<CoherentUIView>().OnViewCreated += SetMaterial;
 	}
 	

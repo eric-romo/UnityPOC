@@ -1,18 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Holoville.HOTween;
 
 public class DisplayManager : MonoBehaviour {
 
 	#region Editor Fields
 	public GameObject DisplayPrefab;
+	public float AnimationTime = 1.0f;
 	#endregion
 	
 	#region Location Transforms
 	public Dictionary<string, StoredTransform> LocationTransforms = new Dictionary<string, StoredTransform>{
 		{"single-primary", new StoredTransform(new Vector3(-0.6f, 2.15f, -0.35f), new Vector3(0, 0, 0), new Vector3(2.5f, 2.5f, 2.5f)) },
-		{"shared-left", new StoredTransform(new Vector3(-1.5f, 1.8f, 2.8f), new Vector3(0, 270, 340), new Vector3(1.15f, 1.15f, 1.15f)) },
+		{"shared-left", new StoredTransform(new Vector3(-1.5f, 1.8f, 2.8f), new Vector3(0, -90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
+		{"shared-right", new StoredTransform(new Vector3(-1.5f, 1.8f, -2.8f), new Vector3(0, 90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
 		{"single-primary-spawn", new StoredTransform(new Vector3(-0.6f, 2.15f, 0), new Vector3(0, 90, 0), new Vector3(0.5f, 0.5f, 0.5f)) },
+		{"shared-mine", new StoredTransform(new Vector3(-1.6f, 0.65f, -0.35f), new Vector3(0, 0, 300), new Vector3(2f, 2f, 2f)) },
 	};
 	#endregion
 	
@@ -44,6 +48,8 @@ public class DisplayManager : MonoBehaviour {
 		}
 	}
 	
+	public Dictionary<string, GameObject> Locations = new Dictionary<string, GameObject>();
+	
 	[HideInInspector]
 	public Camera MainCamera = null;
 	
@@ -54,13 +60,11 @@ public class DisplayManager : MonoBehaviour {
 	#region Initialization
 	void Awake(){
 		MainCamera = GameObject.Find("CameraRight").GetComponent<Camera>();
+		HOTween.Init( true, false, true );
 	}
 	
 	void Start () {
-		Displays.AddRange(GameObject.FindGameObjectsWithTag("Display"));
-		if(Displays.Count > 0){
-			FocusedDisplay = Displays[0];
-		}
+		//Displays.AddRange(GameObject.FindGameObjectsWithTag("Display"));
 	}
 	#endregion
 	
@@ -80,10 +84,16 @@ public class DisplayManager : MonoBehaviour {
 			}
 			
 			if(Input.GetKeyDown(KeyCode.W)){
-				MoveDisplayToLocation(FocusedDisplay, "single-primary");
+				MoveDisplayToLocation(FocusedDisplay, "single-primary", true);
 			}
 			if(Input.GetKeyDown(KeyCode.A)){
-				MoveDisplayToLocation(FocusedDisplay, "shared-left");
+				MoveDisplayToLocation(FocusedDisplay, "shared-left", true);
+			}
+			if(Input.GetKeyDown(KeyCode.S)){
+				MoveDisplayToLocation(FocusedDisplay, "shared-mine", true);
+			}
+			if(Input.GetKeyDown(KeyCode.D)){
+				MoveDisplayToLocation(FocusedDisplay, "shared-right", true);
 			}
 		}
 		
@@ -101,7 +111,7 @@ public class DisplayManager : MonoBehaviour {
 			if (viewComponent != null && !viewComponent.ClickToFocus)
 			{
 				GameObject display = viewComponent.gameObject.transform.parent.gameObject;
-				if(FocusedDisplay != display){//Don't spam focus updates
+				if(FocusedDisplay != null && FocusedDisplay != display){//Don't spam focus updates
 					if(!FocusedDisplay.GetComponent<DisplayController>().Dragging){
 						FocusedDisplay = display;
 					}
@@ -111,18 +121,38 @@ public class DisplayManager : MonoBehaviour {
 	}
 	#endregion
 	
-	public void MoveDisplayToLocation(GameObject display, string locationName, bool animate = false){
+	public void MoveDisplayToLocation(GameObject display, string locationName, bool animate = false){//TODO If a display already exists there, swap
+		
+		Debug.Log("Moving to location: " + locationName);
 		if(animate){
 			StoredTransform storedTransform = LocationTransforms[locationName];
-			display.transform.position = storedTransform.position;
-			display.transform.eulerAngles = storedTransform.rotation;
-			display.transform.localScale = storedTransform.scale;
+			HOTween.To(display.transform, AnimationTime, "position", storedTransform.position);
+			HOTween.To(display.transform, AnimationTime, "rotation", Quaternion.Euler(storedTransform.rotation));
+			HOTween.To(display.transform, AnimationTime, "localScale", storedTransform.scale);
 		} else {
 			StoredTransform storedTransform = LocationTransforms[locationName];
 			display.transform.position = storedTransform.position;
 			display.transform.eulerAngles = storedTransform.rotation;
 			display.transform.localScale = storedTransform.scale;
 		}
+		
+		string currentLocation = display.GetComponent<DisplayController>().Location;
+		GameObject displayAtTargetLocation = null;
+		bool displayIsAtTargetLocation = Locations.TryGetValue(locationName, out displayAtTargetLocation);
+		
+		Locations[currentLocation] = null;
+		display.GetComponent<DisplayController>().Location = locationName;
+		Locations[locationName] = display;
+		
+		if(displayIsAtTargetLocation){
+			if(displayAtTargetLocation != null && displayAtTargetLocation != display && currentLocation != null){
+				Debug.Log("Swapping");
+				MoveDisplayToLocation(displayAtTargetLocation, currentLocation, animate);
+			}
+		}
+		
+		Debug.Log("Locations: " + Locations.Keys.ToString());
+		
 	}
 }
 
