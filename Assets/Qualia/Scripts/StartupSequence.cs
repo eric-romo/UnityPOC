@@ -8,6 +8,7 @@ public class StartupSequence : MonoBehaviour {
 
 	private GameObject systemDisplay;
 	private GameObject mainDisplay;
+	private GameObject secondaryDisplay;
 	
 	// Use this for initialization
 	void Start () {
@@ -17,16 +18,23 @@ public class StartupSequence : MonoBehaviour {
 		systemDisplay.GetComponent<DisplayController>().LoadUrl("coui://UIResources/Qualia/SystemWindow/index.html");
 		//systemDisplay.GetComponent<DisplayController>().LoadUrl("www.engadget.com");
 		systemDisplay.SetActive(false);
+		mainDisplay = Instantiate (displayManager.DisplayPrefab) as GameObject;
+		mainDisplay.SetActive(false);
+		secondaryDisplay = Instantiate (displayManager.DisplayPrefab) as GameObject;
+		secondaryDisplay.SetActive(false);
+		secondaryDisplay.GetComponent<DisplayController>().LoadUrl("coui://UIResources/Qualia/CallWindow/index.html");
 		
 		Sequence startupSequence = new Sequence();
 		startupSequence.AppendInterval(2);
 		startupSequence.AppendCallback(SpawnLogin);
-		startupSequence.AppendInterval(6);
+		startupSequence.AppendInterval(10);
 		startupSequence.AppendCallback(MinimizeLogin);
 		startupSequence.AppendInterval(0.5f);
+		startupSequence.AppendCallback(SpawnSecondary);
+		startupSequence.AppendInterval(0.5f);
+		startupSequence.AppendCallback(MinimizeSecondary);
+		startupSequence.AppendInterval(1f);
 		startupSequence.AppendCallback(SpawnMain);
-		startupSequence.AppendInterval(1);
-		startupSequence.AppendCallback(MinimizeMain);
 		startupSequence.Play();
 	}
 	
@@ -39,8 +47,13 @@ public class StartupSequence : MonoBehaviour {
 	
 	public void MinimizeLogin(){
 		displayManager.MoveDisplayToLocation(systemDisplay, "shared-left", true);
-		mainDisplay = Instantiate (displayManager.DisplayPrefab) as GameObject;
-		mainDisplay.SetActive(false);
+	}
+	
+	public void SpawnSecondary(){
+		secondaryDisplay.SetActive(true);
+		displayManager.FocusedDisplay = secondaryDisplay;
+		displayManager.MoveDisplayToLocation(secondaryDisplay, "single-primary-spawn", false);
+		displayManager.MoveDisplayToLocation(secondaryDisplay, "shared-mine", true);
 	}
 	
 	public void SpawnMain(){
@@ -50,8 +63,8 @@ public class StartupSequence : MonoBehaviour {
 		displayManager.MoveDisplayToLocation(mainDisplay, "single-primary", true);
 	}
 	
-	public void MinimizeMain(){
-		displayManager.MoveDisplayToLocation(mainDisplay, "shared-mine", true);
+	public void MinimizeSecondary(){
+		displayManager.MoveDisplayToLocation(secondaryDisplay, "shared-mine", true);
 	}
 	
 	// Update is called once per frame
