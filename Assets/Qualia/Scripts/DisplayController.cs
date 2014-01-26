@@ -29,9 +29,11 @@ public class DisplayController : MonoBehaviour {
 			_focused = value;
 			View.ReceivesInput = value;
 			if(value){
-				Handle.renderer.material.color = Color.green;
+				Color color = Color.green;
+				color.a = handleDefaultColor.a;
+				Handle.renderer.material.color = color;
 			} else {
-				Handle.renderer.material.color = Color.black;
+				Handle.renderer.material.color = handleDefaultColor;
 			}
 		}
 	}
@@ -41,10 +43,12 @@ public class DisplayController : MonoBehaviour {
 	private Vector2 lastDisplayMouse = Vector2.zero;
 	private VirtualCursor virtualCursor;
 	private DisplayManager displayManager;
+	private Color handleDefaultColor;
 	#endregion
 	
 	void Awake () {
 		Handle = transform.FindChild("Handle").gameObject;
+		handleDefaultColor = Handle.renderer.material.color;
 		Cursor = transform.FindChild("Cursor").gameObject;
 		View = GetComponentInChildren<CoherentUIView>();
 		Rigidbody = GetComponent<Rigidbody>();

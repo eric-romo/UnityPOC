@@ -51,7 +51,6 @@ limitations under the License.
 //#define LOG_ALL_MESSAGES
 //#define LOG_ADD_LISTENER
 //#define LOG_BROADCAST_MESSAGE
-//#define REQUIRE_LISTENER
  
 using System;
 using System.Collections.Generic;
