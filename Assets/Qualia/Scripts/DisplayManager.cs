@@ -57,8 +57,14 @@ public class DisplayManager : MonoBehaviour {
 	public List<GameObject> Displays = new List<GameObject>();
 	#endregion
 	
+	#region Private Variables
+	CoherentUISystem coherentUISytem;
+	#endregion
+	
 	#region Initialization
 	void Awake(){
+		coherentUISytem = GetComponent<CoherentUISystem>();
+		
 		MainCamera = GameObject.Find("CameraRight").GetComponent<Camera>();
 		HOTween.Init( true, false, true );
 	}
@@ -123,7 +129,7 @@ public class DisplayManager : MonoBehaviour {
 	
 	public void MoveDisplayToLocation(GameObject display, string locationName, bool animate = false){//TODO If a display already exists there, swap
 		
-		Debug.Log("Moving to location: " + locationName);
+		//Debug.Log("Moving to location: " + locationName);
 		if(animate){
 			StoredTransform storedTransform = LocationTransforms[locationName];
 			HOTween.To(display.transform, AnimationTime, "position", storedTransform.position);
@@ -146,12 +152,11 @@ public class DisplayManager : MonoBehaviour {
 		
 		if(displayIsAtTargetLocation){
 			if(displayAtTargetLocation != null && displayAtTargetLocation != display && currentLocation != null){
-				Debug.Log("Swapping");
+				//Debug.Log("Swapping");
 				MoveDisplayToLocation(displayAtTargetLocation, currentLocation, animate);
 			}
 		}
 		
-		Debug.Log("Locations: " + Locations.Keys.ToString());
 		
 	}
 }

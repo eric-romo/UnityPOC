@@ -3,6 +3,8 @@ using System.Collections;
 using Holoville.HOTween;
 
 public class StartupSequence : MonoBehaviour {
+
+	public bool WaitForLogin = true;
 	
 	private DisplayManager displayManager;
 
@@ -22,19 +24,24 @@ public class StartupSequence : MonoBehaviour {
 		mainDisplay.SetActive(false);
 		secondaryDisplay = Instantiate (displayManager.DisplayPrefab) as GameObject;
 		secondaryDisplay.SetActive(false);
-		secondaryDisplay.GetComponent<DisplayController>().LoadUrl("coui://UIResources/Qualia/CallWindow/index.html");
+		//secondaryDisplay.GetComponent<DisplayController>().LoadUrl("coui://UIResources/Qualia/CallWindow/index.html");
+		secondaryDisplay.GetComponent<DisplayController>().LoadUrl("http://www.gavanwilhite.com/test/webrtc");
 		
 		Sequence startupSequence = new Sequence();
 		startupSequence.AppendInterval(2);
 		startupSequence.AppendCallback(SpawnLogin);
-		startupSequence.AppendInterval(10);
+		if(WaitForLogin){
+			startupSequence.AppendInterval(10);
+		} else {
+			startupSequence.AppendInterval(0.5f);
+		}
 		startupSequence.AppendCallback(MinimizeLogin);
 		startupSequence.AppendInterval(0.5f);
 		startupSequence.AppendCallback(SpawnSecondary);
-		startupSequence.AppendInterval(0.5f);
+		/*startupSequence.AppendInterval(0.5f);
 		startupSequence.AppendCallback(MinimizeSecondary);
 		startupSequence.AppendInterval(1f);
-		startupSequence.AppendCallback(SpawnMain);
+		startupSequence.AppendCallback(SpawnMain);*/
 		startupSequence.Play();
 	}
 	
@@ -53,7 +60,7 @@ public class StartupSequence : MonoBehaviour {
 		secondaryDisplay.SetActive(true);
 		displayManager.FocusedDisplay = secondaryDisplay;
 		displayManager.MoveDisplayToLocation(secondaryDisplay, "single-primary-spawn", false);
-		displayManager.MoveDisplayToLocation(secondaryDisplay, "shared-mine", true);
+		displayManager.MoveDisplayToLocation(secondaryDisplay, "single-primary", true);
 	}
 	
 	public void SpawnMain(){

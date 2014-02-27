@@ -59,6 +59,19 @@ public class DisplayController : MonoBehaviour {
 		displayManager.Displays.Add(gameObject	);
 	}
 	
+	void Start(){
+		AttachWebRTC();
+	}
+
+	void HandleOnViewCreated (Coherent.UI.View view)
+	{
+		AttachWebRTC();
+	}
+
+	void HandleOnReadyForBindings (int frameId, string path, bool isMainFrame)
+	{
+	}
+	
 	void Update () {
 		if(Focused){
 			Vector2 normalizedMouse = virtualCursor.NormalizedPosition;
@@ -165,5 +178,32 @@ public class DisplayController : MonoBehaviour {
 	void DelayedLoadUrl (Coherent.UI.View view)
 	{
 		LoadUrl(urlWaitingToLoad);
+	}
+	
+	void AttachWebRTC(){
+		View.Listener.RequestMediaStream += (request) => {
+			var devices = request.Devices;
+			request.Respond(new uint[]{0});
+			return;
+			for (var i = 0; i != devices.Length; ++i)
+			{
+				if (devices[i].Type == Coherent.UI.MediaStreamType.MST_DEVICE_AUDIO_CAPTURE)
+				{
+					if (i > 0)
+					{
+						// respond with first video and last audio device
+						Debug.Log(string.Format("Using audio device {0} {1}", devices[i-1].DeviceId, devices[i-1].Name));
+						Debug.Log(string.Format("Using video device {0} {1}", devices[i].DeviceId, devices[i].Name));
+						request.Respond(new uint[] { (uint)i - 1});
+						return;
+					}
+					else
+					{
+						Debug.LogError("No audio devices detected?");
+					}
+				}
+			}
+			Debug.LogError("No audio or video devices detected?");
+		};
 	}
 }
