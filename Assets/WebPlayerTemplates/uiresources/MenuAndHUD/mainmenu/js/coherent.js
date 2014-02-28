@@ -362,11 +362,13 @@
 		};
 	} else if (engine.SendMessage === undefined) {
 
+		var toArray = Array.prototype.slice;
+
 		if(window.__couiAndroid == undefined) {
 			var _trigger = Emitter.prototype.trigger;
 			engine._trigger = function () {
 				var _self = this,
-					args = concatArguments.apply([], arguments),
+					args = toArray.call(arguments, 0),
 					stub = function () {
 						_trigger.apply(_self, args);
 					};
@@ -374,7 +376,6 @@
 			};
 		}
 
-		var toArray = Array.prototype.slice;
 		var frame = document.createElement('iframe');
 
 		var createSendMessage = function () {

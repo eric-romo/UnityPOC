@@ -63,7 +63,8 @@ public static class CoherentExposeProperties
 				continue;
 						
 			fold.Show = EditorGUILayout.Foldout(fold.Show, new GUIContent(fold.Name, fold.Tooltip));
-			if(fold.Show && Selection.activeTransform) {
+
+			if(fold.Show) {
 				foreach ( CoherentPropertyField field in fold.Fields )
 				{
 					if(Application.isPlaying && field.IsStatic) {
@@ -117,13 +118,9 @@ public static class CoherentExposeProperties
 						break;
 		 
 					}
-		 
+
 					EditorGUILayout.EndHorizontal();	 
 				}
-			}
-			
-			if(!Selection.activeTransform) {
-				fold.Show = false;
 			}
 		}
 		EditorGUILayout.EndVertical();
@@ -294,6 +291,7 @@ public class CoherentPropertyField
 		{
 			Undo.RegisterUndo((UnityEngine.Object)m_Instance, this.Name);
 			m_Setter.Invoke( m_Instance, new System.Object[] { value } );
+			EditorUtility.SetDirty((UnityEngine.Object)m_Instance);
 		}
 #pragma warning restore 618
 	}

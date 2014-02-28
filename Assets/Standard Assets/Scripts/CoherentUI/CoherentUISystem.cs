@@ -443,32 +443,6 @@ public class CoherentUISystem : MonoBehaviour {
 		}
 	}
 
-	[HideInInspector]
-	[SerializeField]
-	private bool m_SupportForAltTab = true;
-	[CoherentExposePropertyStandalone(
-		Category = CoherentExposePropertyInfo.FoldoutType.General,
-		PrettyName = "Supports ALT+TAB",
-		Tooltip="Should ALT+TAB be supported in fullscreen",
-		IsStatic=true)]
-	/// <summary>
-	/// Indicates whether the application should support Alt+Tab
-	/// functionality in fullscreen mode, when using DirectX9
-	/// or DirectX9Ex. (Windows-only)
-	/// </summary>
-	/// <returns>
-	/// <c>true</c> if should support Alt+Tab functionality;
-	/// otherwise <c>false</c>.
-	/// </returns>
-	public bool SupportForAltTab {
-		get {
-			return m_SupportForAltTab;
-		}
-		set {
-			m_SupportForAltTab = value;
-		}
-	}
-
 	/// <summary>
 	/// The main camera. Used for obtaining mouse position over the HUD and raycasting in the world.
 	/// </summary>
@@ -594,17 +568,7 @@ public class CoherentUISystem : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		StartActivator();
-
-#if UNITY_STANDALONE_WIN
-		if(SupportForAltTab && Screen.fullScreen
-				&& SystemInfo.graphicsDeviceVersion.StartsWith("Direct3D 9"))
-		{
-			m_IsFullscreenApp = true;
-			m_IsWaitingForWindowedMode = true;
-			Screen.SetResolution(Screen.width, Screen.height, false);
-		}
-#endif
-
+	
 		if (SystemInfo.graphicsDeviceVersion.StartsWith("Direct3D 11")
 				|| SystemInfo.operatingSystem.Contains("Mac"))
 		{
@@ -674,14 +638,6 @@ public class CoherentUISystem : MonoBehaviour {
 		{
 			SystemReadyHandlers();
 		}
-
-#if UNITY_STANDALONE_WIN
-		if (SupportForAltTab && m_IsFullscreenApp)
-		{
-			Screen.SetResolution(Screen.width, Screen.height, true);
-			m_IsWaitingForWindowedMode = false;
-		}
-#endif
 	}
 
 	/// <summary>
@@ -831,15 +787,6 @@ public class CoherentUISystem : MonoBehaviour {
 			OnAssemblyReload();
 		}
 #endif
-		
-		//When starting fullscreen on DirectX9, we have to wait until Unity has
-		//switched to windowed mode for us to create our device.
-		//We can't create our device when the app is fullscreen
-		//because Unity places its device in exclusive mode.
-		if (m_IsFullscreenApp && m_IsWaitingForWindowedMode && Screen.fullScreen)
-		{
-			return;
-		}
 
 		if (m_UISystem != null)
 		{
@@ -929,10 +876,22 @@ public class CoherentUISystem : MonoBehaviour {
 				Coherent.UI.InputManager.GenerateMouseMoveEvent(
 					ref m_MouseMoveEvent);
 
+				//Cache the initial mouse X and Y
+				int mouseX = m_MouseMoveEvent.X;
+				int mouseY = m_MouseMoveEvent.Y;
 				foreach (var item in m_Views)
 				{
 					CoherentUIView view = item;
+
 					MouseMovedViewUpdate(view);
+
+					//Since we are using a single mouse event for all
+					//of the views and the MouseMovedViewUpdate
+					//mutates the event's X and Y per view, we have to
+					//reset the X and Y for the next view
+
+					m_MouseMoveEvent.X = mouseX;
+					m_MouseMoveEvent.Y = mouseY;
 				}
 			}
 
@@ -1122,6 +1081,10 @@ public class CoherentUISystem : MonoBehaviour {
 					}
 
 					view.MouseEvent(mouseEventData);
+
+					//Note: The Event.current.Use() marks the event as used,
+					//and makes the other GUI elements to ignore it, but does
+					//not destroy the event immediately
 					Event.current.Use();
 				}
 				if (keyEventData != null)
@@ -1179,7 +1142,4 @@ public class CoherentUISystem : MonoBehaviour {
 		}
 	}
 	private float m_StartTime;
-
-	private bool m_IsFullscreenApp = false;
-	private bool m_IsWaitingForWindowedMode = false;
 }

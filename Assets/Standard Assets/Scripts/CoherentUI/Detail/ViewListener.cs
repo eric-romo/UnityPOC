@@ -179,10 +179,46 @@ namespace Coherent.UI.Mobile
 		public void ResizeTexture(int width, int height)
 		{
 			#if UNITY_EDITOR || COHERENT_UNITY_STANDALONE
-			var viewCamObject = GameObject.Find("Main Camera");
-			var viewCamComponent = viewCamObject.GetComponent("Camera") as Camera;
-			var clearFlags = viewCamComponent.clearFlags;
-			viewCamComponent.clearFlags = CameraClearFlags.Nothing;
+			GameObject viewCamObject = GameObject.Find("Main Camera");
+			Camera secondCamera = null;
+			if (viewCamObject == null)
+			{
+				if (Camera.main != null)
+				{
+					viewCamObject = Camera.main.gameObject;
+				}
+
+				if (viewCamObject == null)
+				{
+					secondCamera =
+						GameObject.FindObjectOfType(typeof(Camera)) as Camera;
+				}
+
+				if (viewCamObject == null && !secondCamera)
+				{
+					return;
+				}
+			}
+
+			Camera viewCamComponent = null;
+			CameraClearFlags clearFlags = CameraClearFlags.Skybox;
+
+			if(viewCamObject != null || secondCamera)
+			{
+				viewCamComponent = viewCamObject ?
+					viewCamObject.GetComponent<Camera>() : secondCamera;
+
+				//Cache the current clear flags of the main camera and set
+				//them to Nothing. This will prevent visual artifacts
+				//when the render texutre is changed.
+				clearFlags = viewCamComponent.clearFlags;
+				viewCamComponent.clearFlags = CameraClearFlags.Nothing;
+			}
+			else
+			{
+				//Unable to find camera, abort the resizing
+				return;
+			}
 
 			m_ObjectsToDestroy.Remove(RTTexture);
 			RTTexture.Release();
@@ -199,6 +235,7 @@ namespace Coherent.UI.Mobile
 
 			m_ViewComponent.gameObject.renderer.material.mainTexture = RTTexture;
 
+			//Restore the previously cached clear flags
 			viewCamComponent.clearFlags = clearFlags;
 			#endif
 		}

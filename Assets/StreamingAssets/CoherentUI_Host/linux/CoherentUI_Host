@@ -3,7 +3,7 @@
 UDEV=lib/x86_64-linux-gnu/libudev.so
 
 function has_ldconfig {
-	which ldconfig && ldconfig -p > /dev/null
+	(which ldconfig && ldconfig -p) > /dev/null
 	return $?
 }
 
