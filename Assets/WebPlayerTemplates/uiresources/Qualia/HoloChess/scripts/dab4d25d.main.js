@@ -1,0 +1,1 @@
+"use strict";var engine=window.engine;$("#play-button").click(function(){console.log("Playing"),engine.call("Play")});

@@ -29,7 +29,7 @@ public class DisplayManager : MonoBehaviour {
 				{"left", new StoredTransform(new Vector3(-0.22f, 1.8f, 2.8f), new Vector3(0, -90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
 				{"right", new StoredTransform(new Vector3(-0.22f, 1.8f, -2.8f), new Vector3(0, 90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
 				{"spawn", new StoredTransform(new Vector3(-0.6f, 2.15f, 0), new Vector3(0, 90, 0), new Vector3(0.5f, 0.5f, 0.5f)) },
-				{"down", new StoredTransform(new Vector3(-0.13f, 1.2f, -0.35f), new Vector3(0, 0, 270), new Vector3(2f, 2f, 2f)) }
+				{"down", new StoredTransform(new Vector3(-0.13f, 1.2f, -0.35f), new Vector3(0, 0, 270), new Vector3(2.45f, 2.45f, 2.45f)) }
 			}
 		}
 	};
