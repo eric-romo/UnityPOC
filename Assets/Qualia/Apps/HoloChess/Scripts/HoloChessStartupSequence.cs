@@ -40,8 +40,8 @@ public class HoloChessStartupSequence : MonoBehaviour {
 		startupSequence.AppendCallback(SpawnHologram);
 		startupSequence.AppendInterval(0.5f);
 		startupSequence.AppendCallback(MinimizeHologram);
-		//startupSequence.AppendInterval(1.5f);
-		//startupSequence.AppendCallback(EnableHoloChess);
+		startupSequence.AppendInterval(2f);
+		startupSequence.AppendCallback(InitHoloChess);
 		startupSequence.Play();
 		
 	}
@@ -62,6 +62,9 @@ public class HoloChessStartupSequence : MonoBehaviour {
 		displayManager.FocusedDisplay = holographicDisplay;
 		displayManager.MoveDisplayToLocation(holographicDisplay, "spawn", false);
 		displayManager.MoveDisplayToLocation(holographicDisplay, "front", true);
+	}
+	
+	public void InitHoloChess(){
 		HoloChessController holoChessController = holographicDisplay.AddComponent<HoloChessController>();
 		holoChessController.Init(HoloChessPrefab);
 	}
