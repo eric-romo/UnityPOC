@@ -2,7 +2,7 @@
 using System.Collections;
 using Holoville.HOTween;
 
-public class StartupSequence : MonoBehaviour {
+public class CallStartupSequence : MonoBehaviour {
 
 	public bool WaitForLogin = true;
 	
@@ -18,11 +18,15 @@ public class StartupSequence : MonoBehaviour {
 		
 		systemDisplay = Instantiate (displayManager.DisplayPrefab) as GameObject;
 		systemDisplay.GetComponent<DisplayController>().LoadUrl("coui://UIResources/Qualia/SystemWindow/index.html");
-		//systemDisplay.GetComponent<DisplayController>().LoadUrl("www.engadget.com");
+		systemDisplay.name = "System Display";
 		systemDisplay.SetActive(false);
+		
 		mainDisplay = Instantiate (displayManager.DisplayPrefab) as GameObject;
+		mainDisplay.name = "Main Display";
 		mainDisplay.SetActive(false);
+		
 		secondaryDisplay = Instantiate (displayManager.DisplayPrefab) as GameObject;
+		secondaryDisplay.name = "Secondary Display";
 		secondaryDisplay.SetActive(false);
 		//secondaryDisplay.GetComponent<DisplayController>().LoadUrl("coui://UIResources/Qualia/CallWindow/index.html");
 		secondaryDisplay.GetComponent<DisplayController>().LoadUrl("http://www.gavanwilhite.com/test/webrtc");
@@ -38,40 +42,40 @@ public class StartupSequence : MonoBehaviour {
 		startupSequence.AppendCallback(MinimizeLogin);
 		startupSequence.AppendInterval(0.5f);
 		startupSequence.AppendCallback(SpawnSecondary);
-		/*startupSequence.AppendInterval(0.5f);
+		startupSequence.AppendInterval(0.5f);
 		startupSequence.AppendCallback(MinimizeSecondary);
 		startupSequence.AppendInterval(1f);
-		startupSequence.AppendCallback(SpawnMain);*/
+		startupSequence.AppendCallback(SpawnMain);
 		startupSequence.Play();
 	}
 	
 	public void SpawnLogin(){
 		systemDisplay.SetActive(true);
 		displayManager.FocusedDisplay = systemDisplay;
-		displayManager.MoveDisplayToLocation(systemDisplay, "single-primary-spawn", false);
-		displayManager.MoveDisplayToLocation(systemDisplay, "single-primary", true);
+		displayManager.MoveDisplayToLocation(systemDisplay, "spawn", false);
+		displayManager.MoveDisplayToLocation(systemDisplay, "front", true);
 	}
 	
 	public void MinimizeLogin(){
-		displayManager.MoveDisplayToLocation(systemDisplay, "shared-left", true);
+		displayManager.MoveDisplayToLocation(systemDisplay, "left", true);
 	}
 	
 	public void SpawnSecondary(){
 		secondaryDisplay.SetActive(true);
 		displayManager.FocusedDisplay = secondaryDisplay;
-		displayManager.MoveDisplayToLocation(secondaryDisplay, "single-primary-spawn", false);
-		displayManager.MoveDisplayToLocation(secondaryDisplay, "single-primary", true);
+		displayManager.MoveDisplayToLocation(secondaryDisplay, "spawn", false);
+		displayManager.MoveDisplayToLocation(secondaryDisplay, "front", true);
 	}
 	
 	public void SpawnMain(){
 		mainDisplay.SetActive(true);
 		displayManager.FocusedDisplay = mainDisplay;
-		displayManager.MoveDisplayToLocation(mainDisplay, "single-primary-spawn", false);
-		displayManager.MoveDisplayToLocation(mainDisplay, "single-primary", true);
+		displayManager.MoveDisplayToLocation(mainDisplay, "spawn", false);
+		displayManager.MoveDisplayToLocation(mainDisplay, "front", true);
 	}
 	
 	public void MinimizeSecondary(){
-		displayManager.MoveDisplayToLocation(secondaryDisplay, "shared-mine", true);
+		displayManager.MoveDisplayToLocation(secondaryDisplay, "down", true);
 	}
 	
 	// Update is called once per frame

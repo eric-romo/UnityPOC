@@ -11,13 +11,35 @@ public class DisplayManager : MonoBehaviour {
 	#endregion
 	
 	#region Location Transforms
-	public Dictionary<string, StoredTransform> LocationTransforms = new Dictionary<string, StoredTransform>{
-		{"single-primary", new StoredTransform(new Vector3(-0.6f, 2.15f, -0.35f), new Vector3(0, 0, 0), new Vector3(2.5f, 2.5f, 2.5f)) },
-		{"shared-left", new StoredTransform(new Vector3(-1.5f, 1.8f, 2.8f), new Vector3(0, -90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
-		{"shared-right", new StoredTransform(new Vector3(-1.5f, 1.8f, -2.8f), new Vector3(0, 90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
-		{"single-primary-spawn", new StoredTransform(new Vector3(-0.6f, 2.15f, 0), new Vector3(0, 90, 0), new Vector3(0.5f, 0.5f, 0.5f)) },
-		{"shared-mine", new StoredTransform(new Vector3(-1.6f, 0.65f, -0.35f), new Vector3(0, 0, 300), new Vector3(2f, 2f, 2f)) },
+	public Dictionary<string, StoredTransform> LocationTransforms;
+	
+	public Dictionary<string, Dictionary<string, StoredTransform>> LTLayouts = new Dictionary<string, Dictionary<string, StoredTransform>>{
+		{"original", new Dictionary<string, StoredTransform>
+			{
+				{"front", new StoredTransform(new Vector3(-0.6f, 2.15f, -0.35f), new Vector3(0, 0, 0), new Vector3(2.5f, 2.5f, 2.5f)) },
+				{"left", new StoredTransform(new Vector3(-1.5f, 1.8f, 2.8f), new Vector3(0, -90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
+				{"right", new StoredTransform(new Vector3(-1.5f, 1.8f, -2.8f), new Vector3(0, 90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
+				{"spawn", new StoredTransform(new Vector3(-0.6f, 2.15f, 0), new Vector3(0, 90, 0), new Vector3(0.5f, 0.5f, 0.5f)) },
+				{"down", new StoredTransform(new Vector3(-1.6f, 0.65f, -0.35f), new Vector3(0, 0, 300), new Vector3(2f, 2f, 2f)) }
+			}
+		},
+		{"table", new Dictionary<string, StoredTransform>
+			{
+				{"front", new StoredTransform(new Vector3(1f, 2.45f, -0.35f), new Vector3(0, 0, 0), new Vector3(2.5f, 2.5f, 2.5f)) },
+				{"left", new StoredTransform(new Vector3(-0.22f, 1.8f, 2.8f), new Vector3(0, -90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
+				{"right", new StoredTransform(new Vector3(-0.22f, 1.8f, -2.8f), new Vector3(0, 90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
+				{"spawn", new StoredTransform(new Vector3(-0.6f, 2.15f, 0), new Vector3(0, 90, 0), new Vector3(0.5f, 0.5f, 0.5f)) },
+				{"down", new StoredTransform(new Vector3(-0.13f, 1.2f, -0.35f), new Vector3(0, 0, 270), new Vector3(2f, 2f, 2f)) }
+			}
+		}
 	};
+	
+	/*public Dictionary<string, DisplayLayout> Layouts = new Dictionary<string, DisplayLayout>{
+		{"original", new DisplayLayout(
+			front: 
+		)},
+	}*/
+	
 	#endregion
 	
 	#region Public Properties
@@ -67,6 +89,7 @@ public class DisplayManager : MonoBehaviour {
 		
 		MainCamera = GameObject.Find("CameraRight").GetComponent<Camera>();
 		HOTween.Init( true, false, true );
+		LocationTransforms = LTLayouts["table"];
 	}
 	
 	void Start () {
@@ -90,16 +113,16 @@ public class DisplayManager : MonoBehaviour {
 			}
 			
 			if(Input.GetKeyDown(KeyCode.W)){
-				MoveDisplayToLocation(FocusedDisplay, "single-primary", true);
+				MoveDisplayToLocation(FocusedDisplay, "front", true);
 			}
 			if(Input.GetKeyDown(KeyCode.A)){
-				MoveDisplayToLocation(FocusedDisplay, "shared-left", true);
+				MoveDisplayToLocation(FocusedDisplay, "left", true);
 			}
 			if(Input.GetKeyDown(KeyCode.S)){
-				MoveDisplayToLocation(FocusedDisplay, "shared-mine", true);
+				MoveDisplayToLocation(FocusedDisplay, "down", true);
 			}
 			if(Input.GetKeyDown(KeyCode.D)){
-				MoveDisplayToLocation(FocusedDisplay, "shared-right", true);
+				MoveDisplayToLocation(FocusedDisplay, "right", true);
 			}
 		}
 		
