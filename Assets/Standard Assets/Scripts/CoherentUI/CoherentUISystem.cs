@@ -594,7 +594,7 @@ public class CoherentUISystem : MonoBehaviour {
 
 			#if UNITY_EDITOR || COHERENT_UNITY_STANDALONE || COHERENT_UNITY_UNSUPPORTED_PLATFORM
 			SystemSettings settings = new SystemSettings() {
-				HostDirectory = Path.Combine(Application.dataPath, this.HostDirectory),
+				HostDirectory = Path.Combine(Application.dataPath, GetDefaultHostDirectory()),
 				EnableProxy = this.EnableProxy,
 				AllowCookies = this.AllowCookies,
 				CookiesResource = "file:///" + Application.persistentDataPath + '/' + this.CookiesResource,
