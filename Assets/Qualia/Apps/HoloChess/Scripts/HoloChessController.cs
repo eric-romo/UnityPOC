@@ -64,9 +64,11 @@ public class HoloChessController : MonoBehaviour {
 	public void ShowBoard(bool animate = true){
 		holoChess = GameObject.Instantiate(holoChessPrefab) as GameObject;
 		holoChess.name = "HoloChess";
-		holoChess.transform.localPosition = new Vector3(-0.15f, 1.26f, -0.27f);
-		holoChess.SetActive(true);
 		holoChess.transform.parent = gameObject.transform;
+		holoChess.transform.localPosition = new Vector3(-0.01913294f, -0.009256481f, 0.02416356f);
+		holoChess.transform.localScale = new Vector3(0.4081632f, 0.4081632f, 0.4081632f);
+		holoChess.transform.localEulerAngles = new Vector3(0,0,90f);
+		holoChess.SetActive(true);
 		
 		holoChess.transform.Find("ChessBoard/BoardTop").gameObject.renderer.sharedMaterial.renderQueue = 2999;
 		holoChess.transform.Find("ChessBoard/BoardBottom").gameObject.renderer.sharedMaterial.renderQueue = 2999;
