@@ -161,6 +161,14 @@ public class DisplayController : MonoBehaviour {
 				transform.localScale = scale;
 			}
 			#endregion;
+			
+			#region Closing
+			if(Focused && Input.GetButton("Super Button")){
+				if(Input.GetKey(KeyCode.W))
+					displayManager.Close(this);
+				
+			}
+			#endregion
 		}
 	}
 	

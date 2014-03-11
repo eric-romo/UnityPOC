@@ -182,6 +182,11 @@ public class DisplayManager : MonoBehaviour {
 		
 		
 	}
+
+	public void Close (DisplayController displayController)
+	{
+		GameObject.Destroy(displayController.gameObject);
+	}
 }
 
 #region StoredTransform
