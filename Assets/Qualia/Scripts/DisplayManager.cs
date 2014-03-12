@@ -155,6 +155,9 @@ public class DisplayManager : MonoBehaviour {
 						FocusedDisplay = display;
 					}
 				}
+				if(FocusedDisplay == null){
+					FocusedDisplay = display;
+				}
 			}
 		}
 	}
