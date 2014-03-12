@@ -15,7 +15,7 @@ public class LaunchScreenStartupSequence : MonoBehaviour {
 		displayManager = GameObject.Find("/DisplayManager").GetComponent<DisplayManager>();
 		
 		mainDisplay = Instantiate (displayManager.DisplayPrefab) as GameObject;
-		mainDisplay.GetComponent<DisplayController>().LoadUrl("coui://UIResources/Qualia/SystemWindow/index.html");
+		mainDisplay.GetComponent<DisplayController>().LoadUrl("coui://UIResources/Qualia/LoadingScreen/index.html");
 		mainDisplay.name = "System Display";
 		mainDisplay.SetActive(false);
 		
@@ -23,7 +23,7 @@ public class LaunchScreenStartupSequence : MonoBehaviour {
 		startupSequence.AppendInterval(2);
 		startupSequence.AppendCallback(SpawnLogin);
 		if(WaitForLogin){
-			startupSequence.AppendInterval(10);
+			startupSequence.AppendInterval(7);
 		} else {
 			startupSequence.AppendInterval(0.5f);
 		}
