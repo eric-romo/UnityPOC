@@ -8,6 +8,7 @@ public class AppManifest
 	public string URL;
 	public string DefaultLocation;
 	public string ControllerScriptName;
+	public IAppController Controller;
 	public GameObject UnityAssetsPrefab;
 }
 

@@ -4,15 +4,17 @@ using System.Collections;
 using Coherent.UI.Binding;
 using Holoville.HOTween;
 
-public class HologramController : MonoBehaviour {
+public class HologramController : MonoBehaviour, IAppController {
 	
 	public GameObject Prefab;
 	
-	public float RotationRate = 0.0f;
+	public float RotationRate = -5.0f;
 	private GameObject cursor;
 	
 	private GameObject[] pieces;
 	private GameObject dragPiece;
+	
+	private GameObject hologram;
 	
 	// Use this for initialization
 	void Start () {
@@ -21,36 +23,32 @@ public class HologramController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		/*if(Input.GetMouseButtonDown(0) && pieces != null && pieces.Length > 0){
-			foreach(GameObject piece in pieces){
-				GameObject pieceMesh = piece.transform.GetChild(0).gameObject;
-				if(cursor.renderer.bounds.Intersects(pieceMesh.renderer.bounds)){
-					Debug.Log("Grabbing piece: " + pieceMesh.name);
-					dragPiece = piece;
-				}
-			}
-		}
-		
-		if(Input.GetMouseButtonUp(0)){
-			dragPiece = null;
-		}
-		
-		if(Input.GetMouseButton(0) && dragPiece != null){
-			Vector3 piecePosition = cursor.transform.position;
-			Debug.Log("dragPiece pos: " + piecePosition);
-			
-			Vector3 pieceLocalPosition = dragPiece.transform.localPosition;
-			dragPiece.transform.position = piecePosition;
-			
-			pieceLocalPosition.x = dragPiece.transform.localPosition.x;
-			pieceLocalPosition.z = dragPiece.transform.localPosition.z;
-			
-			dragPiece.transform.localPosition = pieceLocalPosition;
-		}*/
-		if(RotationRate != 0){
-			gameObject.transform.Rotate(new Vector3(0, RotationRate * Time.smoothDeltaTime));
+		if(RotationRate != 0 && hologram != null){
+			hologram.transform.Rotate(new Vector3(0, RotationRate * Time.smoothDeltaTime));
 		}
 		
 	}
-}
 	
+	public void AddAssets(GameObject assetPrefab){
+		hologram = GameObject.Instantiate(assetPrefab) as GameObject;
+		hologram.name = "Hologram";
+		hologram.transform.parent = gameObject.transform;
+		hologram.SetActive(true);
+		
+		hologram.transform.localPosition = new Vector3(-0.1f,0,0);
+		hologram.transform.localEulerAngles = new Vector3(0,0,90);
+		
+		
+		Sequence showSequence = new Sequence();
+		showSequence.AppendInterval(0.01f);
+		showSequence.AppendCallback( () => hologram.SetActive(false));
+		showSequence.AppendInterval(0.2f);
+		showSequence.AppendCallback( () => hologram.SetActive(true));
+		showSequence.AppendInterval(0.01f);
+		showSequence.AppendCallback( () => hologram.SetActive(false));
+		showSequence.AppendInterval(0.05f);
+		showSequence.AppendCallback( () => hologram.SetActive(true));
+		showSequence.Play();
+	}
+}
+

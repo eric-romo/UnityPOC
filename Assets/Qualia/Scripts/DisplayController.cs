@@ -158,6 +158,11 @@ public class DisplayController : MonoBehaviour {
 				transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 			}
 			
+			if((draggingPosition || draggingRotation) && Location != null){
+				displayManager.Locations[Location] = null;
+				Location = null;
+			}
+			
 			
 			#endregion
 			
