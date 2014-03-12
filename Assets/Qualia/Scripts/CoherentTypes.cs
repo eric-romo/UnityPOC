@@ -1,0 +1,13 @@
+﻿using Coherent.UI.Binding;
+// all properties / fields for Options will be visible to Coherent UI
+[CoherentType(PropertyBindingFlags.All)]
+public struct LaunchAppOptions
+{
+	public string Name;
+}
+
+[CoherentType(PropertyBindingFlags.All)]
+public struct SwitchEnvironmentOptions
+{
+	public string Name;
+}

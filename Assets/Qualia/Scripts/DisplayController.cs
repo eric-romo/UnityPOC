@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class DisplayController : MonoBehaviour {
 	#region Inspector Variables
@@ -45,9 +46,11 @@ public class DisplayController : MonoBehaviour {
 	private Vector2 lastDisplayMouse = Vector2.zero;
 	private VirtualCursor virtualCursor;
 	private DisplayManager displayManager;
+	private AppManager appManager;
 	private Color handleDefaultColor;
 	#endregion
 	
+	#region Initialization
 	void Awake () {
 		Handle = transform.FindChild("Handle").gameObject;
 		handleDefaultColor = Handle.renderer.material.color;
@@ -56,22 +59,43 @@ public class DisplayController : MonoBehaviour {
 		Rigidbody = GetComponent<Rigidbody>();
 		virtualCursor = GetComponent<VirtualCursor>();
 		displayManager = GameObject.Find("/DisplayManager").GetComponent<DisplayManager>();
+		appManager = GameObject.Find("/AppManager").GetComponent<AppManager>();
 		displayManager.Displays.Add(gameObject	);
+		Debug.Log(View);
+		Debug.Log(View.Listener);
 	}
 	
 	void Start(){
-		AttachWebRTC();
+		View.Listener.ViewCreated += HandleViewCreated;
+		View.Listener.ReadyForBindings += HandleReadyForBindings;
+		//AttachWebRTC();
 	}
-
-	void HandleOnViewCreated (Coherent.UI.View view)
-	{
-		AttachWebRTC();
-	}
-
-	void HandleOnReadyForBindings (int frameId, string path, bool isMainFrame)
-	{
+	#endregion
+	
+	#region Event Listeners
+	private void HandleLaunchApp(LaunchAppOptions options){
+		Debug.Log("Launching " + options.Name);
+		appManager.LaunchApp(options.Name, false);
 	}
 	
+	private void HandleSwitchEnvironment(SwitchEnvironmentOptions options){
+		Debug.Log("Switching Environment to " + options.Name);
+		
+		Application.LoadLevel(options.Name);
+	}
+	
+	void HandleViewCreated (Coherent.UI.View view){
+		//AttachWebRTC();
+	}
+
+	void HandleReadyForBindings (int frameId, string path, bool isMainFrame){
+		Debug.Log("--------Ready For Bindings");
+		GetComponent<DisplayController>().View.View.BindCall("LaunchApp", (Action<LaunchAppOptions>)(HandleLaunchApp));
+		GetComponent<DisplayController>().View.View.BindCall("SwitchEnvironment", (Action<SwitchEnvironmentOptions>)(HandleSwitchEnvironment));
+	}
+	#endregion
+	
+	#region Update
 	void Update () {
 		if(Focused){
 			Vector2 normalizedMouse = virtualCursor.NormalizedPosition;
@@ -165,13 +189,15 @@ public class DisplayController : MonoBehaviour {
 			#region Closing
 			if(Focused && Input.GetButton("Super Button")){
 				if(Input.GetKey(KeyCode.W))
-					displayManager.Close(this);
+					displayManager.Close(gameObject);
 				
 			}
 			#endregion
 		}
 	}
+	#endregion
 	
+	#region Navigation
 	private string urlWaitingToLoad;
 	public void LoadUrl (string url)
 	{
@@ -187,7 +213,9 @@ public class DisplayController : MonoBehaviour {
 	{
 		LoadUrl(urlWaitingToLoad);
 	}
+	#endregion
 	
+	#region WebRTC
 	void AttachWebRTC(){
 		View.Listener.RequestMediaStream += (request) => {
 			var devices = request.Devices;
@@ -214,4 +242,7 @@ public class DisplayController : MonoBehaviour {
 			Debug.LogError("No audio or video devices detected?");
 		};
 	}
+	#endregion
+	
+	
 }

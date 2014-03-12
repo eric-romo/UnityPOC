@@ -50,11 +50,17 @@ public class DisplayManager : MonoBehaviour {
 		}
 		set{
 			_focusedDisplay = value;
-			_focusedView = value.GetComponentInChildren<CoherentUIView>();
-			if(_focusedDisplayController != null)
+			if(_focusedDisplayController != null){
 				_focusedDisplayController.Focused = false;
-			_focusedDisplayController = value.GetComponent<DisplayController>();
-			_focusedDisplayController.Focused = true;
+			}
+			if(value != null){
+				_focusedView = value.GetComponentInChildren<CoherentUIView>();
+				_focusedDisplayController = value.GetComponent<DisplayController>();
+				_focusedDisplayController.Focused = true;
+			} else {
+				_focusedView = null;
+				_focusedDisplayController = null;
+			}
 		}
 	}
 	DisplayController _focusedDisplayController = null;
@@ -112,17 +118,21 @@ public class DisplayManager : MonoBehaviour {
 				FocusedDisplay = Displays[index];
 			}
 			
-			if(Input.GetKeyDown(KeyCode.W)){
+			if(Input.GetKeyDown(KeyCode.UpArrow)){
 				MoveDisplayToLocation(FocusedDisplay, "front", true);
 			}
-			if(Input.GetKeyDown(KeyCode.A)){
+			if(Input.GetKeyDown(KeyCode.LeftArrow)){
 				MoveDisplayToLocation(FocusedDisplay, "left", true);
 			}
-			if(Input.GetKeyDown(KeyCode.S)){
+			if(Input.GetKeyDown(KeyCode.DownArrow)){
 				MoveDisplayToLocation(FocusedDisplay, "down", true);
 			}
-			if(Input.GetKeyDown(KeyCode.D)){
+			if(Input.GetKeyDown(KeyCode.RightArrow)){
 				MoveDisplayToLocation(FocusedDisplay, "right", true);
+			}
+			if(Input.GetKeyDown(KeyCode.N)){
+				GameObject display = Create("Launch Screen", "coui://UIResources/Qualia/LaunchScreen/index.html", "spawn");
+				MoveDisplayToLocation(display, "front", true);
 			}
 		}
 		
@@ -183,9 +193,27 @@ public class DisplayManager : MonoBehaviour {
 		
 	}
 
-	public void Close (DisplayController displayController)
+	public void Close (GameObject display)
 	{
-		GameObject.Destroy(displayController.gameObject);
+		DisplayController displayController = display.GetComponent<DisplayController>();
+		Locations[displayController.Location] = null;
+		if(displayController.Focused){
+			FocusedDisplay = null;
+		}
+		GameObject.Destroy(display);
+	}
+	
+	public GameObject Create(string name, string url, string locationName){
+		GameObject display;
+		display = Instantiate(DisplayPrefab) as GameObject;
+		display.GetComponent<DisplayController>().LoadUrl(url);
+		display.GetComponent<DisplayController>().Location = locationName;
+		display.name = name;
+		//The display will add itself to Displays
+		
+		MoveDisplayToLocation(display,locationName, false);
+		
+		return display;
 	}
 }
 

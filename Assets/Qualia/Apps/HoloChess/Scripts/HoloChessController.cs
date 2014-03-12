@@ -4,7 +4,7 @@ using System.Collections;
 using Coherent.UI.Binding;
 using Holoville.HOTween;
 
-public class HoloChessController : MonoBehaviour {
+public class HoloChessController : MonoBehaviour, IAppController {
 	
 	private GameObject holoChessPrefab;
 	private GameObject holoChess;
@@ -13,9 +13,19 @@ public class HoloChessController : MonoBehaviour {
 	private GameObject[] pieces;
 	private GameObject dragPiece;
 	
+	private CoherentUIView view;
+	
 	// Use this for initialization
 	void Start () {
 		cursor = transform.Find("Cursor").gameObject;
+		view = GetComponent<DisplayController>().View;
+		view.Listener.ReadyForBindings += HandleReadyForBindings;
+	}
+
+	void HandleReadyForBindings (int frameId, string path, bool isMainFrame)
+	{
+		GetComponent<DisplayController>().View.View.BindCall("Play", (Action)(OnPlay));
+		GetComponent<DisplayController>().View.View.BindCall("NewGame", (Action)(OnNewGame));
 	}
 	
 	// Update is called once per frame
@@ -36,7 +46,7 @@ public class HoloChessController : MonoBehaviour {
 		
 		if(Input.GetMouseButton(0) && dragPiece != null){
 			Vector3 piecePosition = cursor.transform.position;
-			Debug.Log("dragPiece pos: " + piecePosition);
+			//Debug.Log("dragPiece pos: " + piecePosition);
 			
 			Vector3 pieceLocalPosition = dragPiece.transform.localPosition;
 			dragPiece.transform.position = piecePosition;
@@ -48,11 +58,8 @@ public class HoloChessController : MonoBehaviour {
 		}
 	}
 	
-	public void Init(GameObject holoChessPrefab){
+	public void AddAssets(GameObject holoChessPrefab){
 		this.holoChessPrefab = holoChessPrefab;
-		GetComponent<DisplayController>().View.View.BindCall("Play", (Action)(OnPlay));
-		GetComponent<DisplayController>().View.View.BindCall("NewGame", (Action)(OnNewGame));
-		//PlayHoloChess();
 	
 	}
 	
