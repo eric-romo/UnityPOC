@@ -47,6 +47,7 @@ public class DisplayController : MonoBehaviour {
 	private VirtualCursor virtualCursor;
 	private DisplayManager displayManager;
 	private AppManager appManager;
+	private EnvironmentManager environmentManager;
 	private Color handleDefaultColor;
 	#endregion
 	
@@ -60,6 +61,7 @@ public class DisplayController : MonoBehaviour {
 		virtualCursor = GetComponent<VirtualCursor>();
 		displayManager = GameObject.Find("/DisplayManager").GetComponent<DisplayManager>();
 		appManager = GameObject.Find("/AppManager").GetComponent<AppManager>();
+		environmentManager = GameObject.Find("/EnvironmentManager").GetComponent<EnvironmentManager>();
 		displayManager.Displays.Add(gameObject	);
 		Debug.Log(View);
 		Debug.Log(View.Listener);
@@ -81,7 +83,7 @@ public class DisplayController : MonoBehaviour {
 	private void HandleSwitchEnvironment(SwitchEnvironmentOptions options){
 		Debug.Log("Switching Environment to " + options.Name);
 		
-		Application.LoadLevel(options.Name);
+		environmentManager.SwitchEnvironment(options.Name);
 	}
 	
 	void HandleViewCreated (Coherent.UI.View view){
