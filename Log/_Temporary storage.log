@@ -1,0 +1,3829 @@
+[Log]
+[07:23:59.128]
+ALL
+[Coherent UI] (Info) Initializing Coherent UI ver. 1.8.1.1
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.142]
+ALL
+[Coherent UI] (Info) Running on Mac OS X Version 10.9.2 (Build 13C64)
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.143]
+ALL
+[Coherent UI] (Info) CGL device used in client composition: 16918311
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.255]
+ALL
+Coherent UI system initialized..
+Log
+, Line: 625; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:23:59.266]
+ALL
+Screen (CoherentUIView)
+Log
+Awake, Line: 68; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Qualia/Scripts/DisplayController.cs
+Start, Line: 17; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Qualia/Scripts/Startup/LaunchScreenStartupSequence.cs
+
+[Log]
+[07:23:59.274]
+ALL
+NullReferenceException: Object reference not set to an instance of an object
+Exception
+, Line: 80; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Sonagi Debug Watcher Console/Scripts/Debug.cs
+
+[Log]
+[07:23:59.326]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:23:59.292563 Staring Coherent UI Host ver. 1.8.1.1
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.327]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:23:59.293433 Detected OS: Mac OS X 10.9.2
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.327]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:23:59.313041 [3093:1287:INFO:UIContentClient.cpp(73)] GPU info collected in host process: 
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.328]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:23:59.313053 [3093:1287:INFO:UIContentClient.cpp(78)] Main GPU vendor 4318 device 4073
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.329]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:23:59.313057 [3093:1287:INFO:UIContentClient.cpp(83)] Secondary GPU vendor 32902 device 3366
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.329]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:23:59.313061 [3093:1287:INFO:UIContentClient.cpp(89)] NVidia Optimus is enabled
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.484]
+ALL
+[Coherent UI] (Info) Coherent UI system initialized successfully
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.575]
+ALL
+[Coherent UI] (Info) View created successfully with id 0
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.589]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:23:59.570721 Navigating view 0 to coui://UIResources/Qualia/LandingPage/index.html
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.590]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:23:59.584565 [3093:1287:INFO:compositing_iosurface_mac_coherent.mm(357)] Device used for IOSurface composition: 16918311
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.591]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:23:59.589267 Navigating view 0 to coui://UIResources/Qualia/LoadingScreen/index.html
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.640]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:23:59.626610 [3094:1287:INFO:renderer_main.cc(215)] Running without renderer sandbox
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.707]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:23:59.705734 [3093:1287:INFO:(0)] GPU info collected in gpu-process process: 
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.708]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:23:59.705761 [3093:1287:INFO:(0)] Main GPU vendor 4318 device 4073
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.743]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:23:59.736225 [3093:1287:INFO:(0)] Created virtual GL context.
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:23:59.876]
+ALL
+[Coherent UI] (Warning) PID: 3093 | -1 02:23:59.859504 Requesting resource read for coui://www.google-analytics.com/analytics.js with internal id 8 reported FAIL
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:24:01.337]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.352]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.369]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.386]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.404]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.421]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.437]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.454]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.475]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.493]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.509]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.526]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.542]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.559]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.575]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.592]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.608]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.626]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.643]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.661]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.677]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.693]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.710]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.727]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.744]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.761]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.777]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.794]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.810]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.827]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.844]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.860]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.877]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.894]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.910]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.932]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.950]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.967]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:01.984]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.001]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.018]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.035]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.052]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.069]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.085]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.102]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.118]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.136]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.152]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.168]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.185]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.202]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.218]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.235]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.252]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.269]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.286]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.306]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.328]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.344]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.361]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.389]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.408]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.425]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.441]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.458]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.476]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.493]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.512]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.528]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.545]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.562]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.580]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.604]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.620]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.637]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.654]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.672]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.693]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.712]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.728]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.748]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.765]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.783]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.804]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.823]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.840]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.859]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.883]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.900]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.920]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.940]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.961]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:02.979]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.000]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.021]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.040]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.060]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.080]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.104]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.124]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.148]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.168]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.188]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.212]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.232]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.252]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.272]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.292]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.312]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.332]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.351]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.372]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.392]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.420]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.440]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.460]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.480]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.509]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.527]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.547]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.572]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.592]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.612]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.632]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.652]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.671]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.692]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.711]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.732]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.756]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.780]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.799]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.820]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.844]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.868]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.893]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.916]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.940]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.970]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:03.996]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.020]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.044]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.068]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.093]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.116]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.140]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.164]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.188]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.216]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.240]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.282]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.384]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.408]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.432]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.460]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.484]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.515]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.540]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.568]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.592]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.621]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.648]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.672]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.696]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.720]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.743]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.768]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.792]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.816]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.840]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.869]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.896]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.920]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.944]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:04.974]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.000]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.024]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.053]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.080]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.112]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.140]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.168]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.210]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.236]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.265]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.291]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.315]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.344]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.373]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.400]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.429]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.456]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.484]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.514]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.546]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.576]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.605]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.637]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.668]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.696]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.728]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.756]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.786]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.817]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.848]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.875]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.904]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.941]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:05.972]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.000]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.028]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.056]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.084]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.112]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.141]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.172]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.204]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.237]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.269]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.301]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.333]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.365]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.396]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.429]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.460]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.494]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.524]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.560]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.592]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.624]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.657]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.688]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.724]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.757]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.788]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.822]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.857]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.889]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.921]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.952]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:06.985]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.017]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.053]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.089]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.125]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.160]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.200]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.234]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.270]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.305]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.342]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.377]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.408]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.440]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.481]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.517]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.576]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.649]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.685]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.724]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.756]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.788]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.826]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.864]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.901]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.942]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:07.976]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.012]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.050]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.084]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.120]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.157]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.193]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.228]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.265]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.302]
+ALL
+[Coherent UI] (Info) PID: 3093 | -1 02:24:08.301192 Navigating view 0 to coui://UIResources/Qualia/LaunchScreen/index.html
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:24:08.303]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.344]
+ALL
+[Coherent UI] (Warning) PID: 3093 | -1 02:24:08.341707 Requesting resource read for coui://uiresources/Qualia/LaunchScreen/styles/vendor.css with internal id 10 reported FAIL
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:24:08.345]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.404]
+ALL
+[Coherent UI] (Warning) PID: 3093 | -1 02:24:08.388351 Requesting resource read for coui://www.google-analytics.com/analytics.js with internal id 16 reported FAIL
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:24:08.404]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.449]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.488]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.530]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.569]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.604]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.641]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.677]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.717]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.753]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.789]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.825]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.860]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.896]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.937]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:08.977]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.012]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.048]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.084]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.121]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.157]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.192]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.229]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.277]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.312]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.349]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.384]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.426]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.465]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.505]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.545]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.584]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.624]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.665]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.705]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.746]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.785]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.825]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.866]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.910]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.953]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:09.993]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.033]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.073]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.113]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.153]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.193]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.241]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.281]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.320]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.361]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.401]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.441]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.481]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.521]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.565]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.609]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.654]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.697]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.737]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.777]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.817]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.857]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.897]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.937]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:10.977]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.017]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.062]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.105]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.150]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.202]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.246]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.291]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.337]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.382]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.429]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.473]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.517]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.562]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.610]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.653]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.697]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.741]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.789]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.833]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.882]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.929]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:11.973]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.017]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.061]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.106]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.157]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.201]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.257]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.302]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.349]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.393]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.438]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.490]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.538]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.585]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.635]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.690]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.732]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.777]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.821]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.865]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.913]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:12.961]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.009]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.058]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.106]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.154]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.201]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.250]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.305]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.353]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.402]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.448]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.498]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.546]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.593]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.641]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.689]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.738]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.789]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.838]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.889]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.938]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:13.989]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.037]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.085]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.133]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.181]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.228]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.281]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.328]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.389]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.437]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.485]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.532]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.581]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.630]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.680]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.728]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.782]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.833]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.885]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.937]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:14.989]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.041]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.094]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.145]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.197]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.251]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.305]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.358]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.409]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.462]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.521]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.573]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.625]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.678]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.729]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.781]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.837]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.890]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.946]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:15.997]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:16.049]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:16.101]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:16.153]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:16.205]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:16.261]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:16.317]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:16.369]
+ALL
+MissingComponentException: There is no 'Camera' attached to the "Screen" game object, but a script is trying to access it.
+You probably need to add a Camera to the game object "Screen". Or your script needs to check if the component is attached before using it.
+Exception
+, Line: 1110; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/CoherentUISystem.cs
+
+[Log]
+[07:24:16.511]
+ALL
+[Coherent UI] (Info) Removing view 0
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:24:16.514]
+ALL
+[Coherent UI] (Info) Uninitializing Coherent UI
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
+[Log]
+[07:24:16.618]
+ALL
+[Coherent UI] (Info) Coherent UI uninitialized successfully
+Log
+, Line: 19; File /Users/Primary/Code/Qualia/UnityPOC/Assets/Standard Assets/Scripts/CoherentUI/Detail/LogHandler.cs
+
