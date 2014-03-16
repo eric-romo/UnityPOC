@@ -11,3 +11,9 @@ public struct SwitchEnvironmentOptions
 {
 	public string Name;
 }
+
+[CoherentType(PropertyBindingFlags.All)]
+public struct DisplayModelOptions
+{
+	public string Url;
+}
