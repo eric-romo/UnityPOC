@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class PhotonRotator : MonoBehaviour
+public class Rotator : MonoBehaviour
 {
     private Transform myTrans;
     public int rotateSpeed = 20;

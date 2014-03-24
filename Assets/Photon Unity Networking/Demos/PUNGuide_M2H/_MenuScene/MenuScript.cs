@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class PhotonMenuScript : Photon.MonoBehaviour
+public class MenuScript : Photon.MonoBehaviour
 {
 
 
