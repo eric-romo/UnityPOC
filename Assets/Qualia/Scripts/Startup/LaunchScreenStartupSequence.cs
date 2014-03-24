@@ -6,6 +6,8 @@ public class LaunchScreenStartupSequence : MonoBehaviour {
 	
 	public bool WaitForLogin = true;
 	
+	public bool StartMinimized = true;
+	
 	private DisplayManager displayManager;
 	
 	private GameObject mainDisplay;
@@ -36,7 +38,10 @@ public class LaunchScreenStartupSequence : MonoBehaviour {
 		mainDisplay.SetActive(true);
 		displayManager.FocusedDisplay = mainDisplay;
 		displayManager.MoveDisplayToLocation(mainDisplay, "spawn", false);
-		displayManager.MoveDisplayToLocation(mainDisplay, "front", true);
+		if(StartMinimized)
+			displayManager.MoveDisplayToLocation(mainDisplay, "left", true);
+		else
+			displayManager.MoveDisplayToLocation(mainDisplay, "front", true);
 	}
 	
 	private void NavigateToLaunchScreen(){
