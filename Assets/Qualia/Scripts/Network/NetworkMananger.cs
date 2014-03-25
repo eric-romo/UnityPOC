@@ -31,7 +31,7 @@ public class NetworkMananger : MonoBehaviour {
 		GameObject avatar = PhotonNetwork.Instantiate(NetworkVRUserPrefab.name, spawnPoint.position, spawnPoint.rotation, 0);
 		
 		avatar.transform.Find("Body").gameObject.layer = 9;
-		avatar.transform.Find("Head").gameObject.layer = 9;
+		avatar.transform.Find("LookDirection/Head").gameObject.layer = 9;
 		
 		GameObject localOVRView = GameObject.Find("LocalOVRView") as GameObject;
 		localOVRView.transform.position = spawnPoint.position;
