@@ -43,8 +43,8 @@ public class TransformLerp : Photon.MonoBehaviour
     {
         if (stream.isWriting)
         {
-            Vector3 pos = transform.localPosition;
-            Quaternion rot = transform.localRotation;
+            Vector3 pos = transform.position;
+            Quaternion rot = transform.rotation;
             stream.Serialize(ref pos);
             stream.Serialize(ref rot);
         }
@@ -58,11 +58,11 @@ public class TransformLerp : Photon.MonoBehaviour
             stream.Serialize(ref rot);
 
             latestCorrectPos = pos;                 // save this to move towards it in FixedUpdate()
-            onUpdatePos = transform.localPosition;  // we interpolate from here to latestCorrectPos
+			onUpdatePos = transform.position;  // we interpolate from here to latestCorrectPos
             fractionPos = 0;                           // reset the fraction we alreay moved. see Update()
 			
 			latestCorrectRot = rot;                 // save this to move towards it in FixedUpdate()
-			onUpdateRot = transform.localRotation;  // we interpolate from here to latestCorrectPos
+			onUpdateRot = transform.rotation;  // we interpolate from here to latestCorrectPos
 			fractionRot = 0;                           // reset the fraction we alreay moved. see Update()
         }
     }
@@ -77,9 +77,9 @@ public class TransformLerp : Photon.MonoBehaviour
         // We want it to take a bit longer, so we multiply with 9 instead.
 
         fractionPos = fractionPos + Time.deltaTime * 9;
-		transform.localPosition = Vector3.Lerp(onUpdatePos, latestCorrectPos, fractionPos);    // set our pos between A and B
+		transform.position = Vector3.Lerp(onUpdatePos, latestCorrectPos, fractionPos);    // set our pos between A and B
 		
 		fractionRot = fractionRot + Time.deltaTime * 9;
-		transform.localRotation = Quaternion.Lerp(onUpdateRot, latestCorrectRot, fractionRot);    // set our pos between A and B
+		transform.rotation = Quaternion.Lerp(onUpdateRot, latestCorrectRot, fractionRot);    // set our pos between A and B
     }
 }
