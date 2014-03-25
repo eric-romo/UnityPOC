@@ -45,7 +45,7 @@ public class DisplayNetworkController : MonoBehaviour {
 	}
 	
 	[RPC]
-	public void MouseEvent(string button, string type, int x, int y){
+	public void MouseEvent(string button, string type, int x, int y){ //TODO: Replace with JS version. Scroll position is too flakey for rapid movement
 		Coherent.UI.MouseEventData.MouseButton cButton;
 		Coherent.UI.MouseEventData.EventType cType;
 		
