@@ -77,7 +77,7 @@ public class DisplayController : MonoBehaviour {
 	#region Event Listeners
 	private void HandleLaunchApp(LaunchAppOptions options){
 		Debug.Log("Launching " + options.Name);
-		appManager.LaunchApp(options.Name, false);
+		appManager.LaunchApp(options.Name, false, gameObject);
 	}
 	
 	private void HandleSwitchEnvironment(SwitchEnvironmentOptions options){
@@ -94,6 +94,9 @@ public class DisplayController : MonoBehaviour {
 		Debug.Log("--------Ready For Bindings");
 		GetComponent<DisplayController>().View.View.BindCall("LaunchApp", (Action<LaunchAppOptions>)(HandleLaunchApp));
 		GetComponent<DisplayController>().View.View.BindCall("SwitchEnvironment", (Action<SwitchEnvironmentOptions>)(HandleSwitchEnvironment));
+		
+		virtualCursor.Width = View.Width;
+		virtualCursor.Height = View.Height;
 	}
 	#endregion
 	

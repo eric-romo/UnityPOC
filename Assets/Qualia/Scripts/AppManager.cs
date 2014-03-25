@@ -11,7 +11,7 @@ public class AppManager : MonoBehaviour {
 		displayManager = GameObject.Find("DisplayManager").GetComponent<DisplayManager>();
 	}
 	
-	public void LaunchApp(string name, bool launchInNewDisplay){
+	public void LaunchApp(string name, bool launchInNewDisplay, GameObject targetDisplay = null){
 		for(int i = 0; i < Apps.Length; i++){
 			AppManifest appManifest = Apps[i];
 			if(Apps[i].Name == name){
@@ -19,7 +19,7 @@ public class AppManager : MonoBehaviour {
 				if(launchInNewDisplay){
 					display = displayManager.CreateDisplay(appManifest.Name, appManifest.URL, "spawn");
 				} else {
-					display = displayManager.FocusedDisplay;
+					display = targetDisplay != null ? targetDisplay : displayManager.FocusedDisplay;
 					//TODO clean up any components on focusedDisplay
 					display.name = appManifest.Name;
 					display.GetComponent<DisplayController>().LoadUrl(appManifest.URL);
