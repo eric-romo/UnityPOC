@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class AppManager : MonoBehaviour {
@@ -17,7 +17,7 @@ public class AppManager : MonoBehaviour {
 			if(Apps[i].Name == name){
 				GameObject display;
 				if(launchInNewDisplay){
-					display = displayManager.Create(appManifest.Name, appManifest.URL, "spawn");
+					display = displayManager.CreateDisplay(appManifest.Name, appManifest.URL, "spawn");
 				} else {
 					display = displayManager.FocusedDisplay;
 					//TODO clean up any components on focusedDisplay

@@ -8,6 +8,8 @@ public class LaunchScreenStartupSequence : MonoBehaviour {
 	
 	public bool StartMinimized = true;
 	
+	public bool Autoplay = false;
+	
 	private DisplayManager displayManager;
 	
 	private GameObject mainDisplay;
@@ -15,11 +17,16 @@ public class LaunchScreenStartupSequence : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		displayManager = GameObject.Find("/DisplayManager").GetComponent<DisplayManager>();
-		
-		mainDisplay = Instantiate (displayManager.DisplayPrefab) as GameObject;
+		if(Autoplay)
+			Play();
+	}
+	
+	public void Play(){
+		/*mainDisplay = Instantiate (displayManager.DisplayPrefab) as GameObject;
 		mainDisplay.GetComponent<DisplayController>().LoadUrl("coui://UIResources/Qualia/LoadingScreen/index.html");
 		mainDisplay.name = "System Display";
-		mainDisplay.SetActive(false);
+		mainDisplay.SetActive(false);*/
+		mainDisplay = displayManager.CreateDisplay("System Display", "coui://UIResources/Qualia/LoadingScreen/index.html", "spawn", true);
 		
 		Sequence startupSequence = new Sequence();
 		startupSequence.AppendInterval(2);
@@ -31,7 +38,6 @@ public class LaunchScreenStartupSequence : MonoBehaviour {
 		}
 		startupSequence.AppendCallback(NavigateToLaunchScreen);
 		startupSequence.Play();
-		
 	}
 	
 	public void SpawnLogin(){

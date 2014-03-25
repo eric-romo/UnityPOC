@@ -45,6 +45,7 @@ public class PhotonNetworkConnection : MonoBehaviour {
 	public void OnCreatedRoom()
 	{
 		Debug.Log("Created Room");
+		networkManager.InitializeSpace();
 		//Application.LoadLevel(Application.loadedLevel);
 	}
 	

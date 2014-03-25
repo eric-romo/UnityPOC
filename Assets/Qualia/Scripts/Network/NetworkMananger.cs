@@ -2,14 +2,24 @@
 using System.Collections;
 using System.Collections.Generic;
 
+[RequireComponent(typeof(PhotonView))]
 public class NetworkMananger : MonoBehaviour {
 	/* It would be nice if this was network platform agnostic, but this is a POC, let's try, but mostly let's just get it done */
 	
 	public GameObject NetworkVRUserPrefab;
 	
+	private DisplayManager displayManager;
+	
 	public Dictionary<string, User> Users = new Dictionary<string, User>();
 	
 	public User LocalUser;
+	
+	public PhotonView PhotonView;
+	
+	void Awake(){
+		displayManager = GameObject.Find("DisplayManager").GetComponent<DisplayManager>();
+		PhotonView = GetComponent<PhotonView>();
+	}
 	
 	/*public void AddUser(PhotonPlayer player){
 		Debug.Log("Adding User");
@@ -50,4 +60,9 @@ public class NetworkMananger : MonoBehaviour {
 	private Transform GetNextSpawnPoint(){
 		return GameObject.Find("SpawnPoints").transform.GetChild(PhotonNetwork.room.playerCount - 1);
 	}
+	
+	public void InitializeSpace(){
+		GameObject.Find("DisplayManager").GetComponent<LaunchScreenStartupSequence>().Play();
+	}
+	
 }

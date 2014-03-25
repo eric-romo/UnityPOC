@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Holoville.HOTween;
 
+[RequireComponent(typeof(PhotonView))]
 public class DisplayManager : MonoBehaviour {
 
 	#region Editor Fields
@@ -87,11 +88,13 @@ public class DisplayManager : MonoBehaviour {
 	
 	#region Private Variables
 	CoherentUISystem coherentUISytem;
+	NetworkMananger networkManager;
 	#endregion
 	
 	#region Initialization
 	void Awake(){
 		coherentUISytem = GetComponent<CoherentUISystem>();
+		networkManager = GameObject.Find("NetworkManager").GetComponent<NetworkMananger>();
 		
 		MainCamera = GameObject.Find("CameraRight").GetComponent<Camera>();
 		HOTween.Init( true, false, true );
@@ -131,7 +134,7 @@ public class DisplayManager : MonoBehaviour {
 				MoveDisplayToLocation(FocusedDisplay, "right", true);
 			}
 			if(Input.GetKeyDown(KeyCode.N)){
-				GameObject display = Create("Launch Screen", "coui://UIResources/Qualia/LaunchScreen/index.html", "spawn");
+				GameObject display = CreateDisplay("New Screen", "coui://UIResources/Qualia/LaunchScreen/index.html", "spawn", true);
 				MoveDisplayToLocation(display, "front", true);
 			}
 		}
@@ -163,7 +166,7 @@ public class DisplayManager : MonoBehaviour {
 	}
 	#endregion
 	
-	public void MoveDisplayToLocation(GameObject display, string locationName, bool animate = false){//TODO If a display already exists there, swap
+	public void MoveDisplayToLocation(GameObject display, string locationName, bool animate = false, bool sendRPC = false){//TODO If a display already exists there, swap
 		
 		//Debug.Log("Moving to location: " + locationName);
 		if(animate){
@@ -186,13 +189,15 @@ public class DisplayManager : MonoBehaviour {
 		display.GetComponent<DisplayController>().Location = locationName;
 		Locations[locationName] = display;
 		
-		if(displayIsAtTargetLocation){
+		/*if(displayIsAtTargetLocation){
 			if(displayAtTargetLocation != null && displayAtTargetLocation != display && currentLocation != null){
 				//Debug.Log("Swapping");
 				MoveDisplayToLocation(displayAtTargetLocation, currentLocation, animate);
 			}
-		}
-		
+		}*/
+		/*if(sendRPC){
+			GetComponent<PhotonView>().RPC("MoveDisplayToLocation", PhotonTargets.OthersBuffered, new object[]{display, locationName, animate});
+		}*/
 		
 	}
 
@@ -206,15 +211,34 @@ public class DisplayManager : MonoBehaviour {
 		GameObject.Destroy(display);
 	}
 	
-	public GameObject Create(string name, string url, string locationName){
+	public GameObject CreateDisplay(string name, string url, string locationName, bool networked = false){
+		if(!networked){
+			GameObject display;
+			display = Instantiate(DisplayPrefab) as GameObject;
+			display.GetComponent<DisplayController>().LoadUrl(url);
+			//display.GetComponent<DisplayController>().Location = locationName;
+			display.name = name;
+			//The display will add itself to Displays
+			
+			MoveDisplayToLocation(display,locationName, false);
+			
+			return display;
+		} else {
+			return CreateNetworkDisplay(name, url, locationName);
+		}
+	}
+	
+	private GameObject CreateNetworkDisplay(string name, string url, string locationName){
+	
 		GameObject display;
-		display = Instantiate(DisplayPrefab) as GameObject;
-		display.GetComponent<DisplayController>().LoadUrl(url);
-		display.GetComponent<DisplayController>().Location = locationName;
-		display.name = name;
-		//The display will add itself to Displays
 		
-		MoveDisplayToLocation(display,locationName, false);
+		display = PhotonNetwork.Instantiate(DisplayPrefab.name, new Vector3(0, -1000, 0), Quaternion.identity, 0);
+		
+		PhotonView photonView = display.GetComponent<PhotonView>();
+		
+		object[] args = new object[]{name, url, locationName};
+		
+		photonView.RPC("Init", PhotonTargets.AllBuffered, args);
 		
 		return display;
 	}
