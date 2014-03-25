@@ -2,14 +2,14 @@ using UnityEngine;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 [RequireComponent(typeof(PhotonView))]
-public class CubeLerp : Photon.MonoBehaviour
+public class TransformLerp : Photon.MonoBehaviour
 {
     private Vector3 latestCorrectPos;
     private Vector3 onUpdatePos;
 	private float fractionPos;
 	
-	private Vector3 latestCorrectRot;
-	private Vector3 onUpdateRot;
+	private Quaternion latestCorrectRot;
+	private Quaternion onUpdateRot;
 	private float fractionRot;
 
 
@@ -23,8 +23,8 @@ public class CubeLerp : Photon.MonoBehaviour
         latestCorrectPos = transform.position;
 		onUpdatePos = transform.position;
 		
-		latestCorrectRos = transform.rotation;
-		onUpdateRos = transform.rotation;
+		latestCorrectRot = transform.rotation;
+		onUpdateRot = transform.rotation;
     }
 
     /// <summary>
