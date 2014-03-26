@@ -26,7 +26,7 @@ public class LaunchScreenStartupSequence : MonoBehaviour {
 		mainDisplay.GetComponent<DisplayController>().LoadUrl("coui://UIResources/Qualia/LoadingScreen/index.html");
 		mainDisplay.name = "System Display";
 		mainDisplay.SetActive(false);*/
-		mainDisplay = displayManager.CreateDisplay("System Display", "coui://UIResources/Qualia/LoadingScreen/index.html", "spawn", true);
+		mainDisplay = displayManager.CreateDisplay("System Display", "coui://UIResources/Qualia/LoadingScreen/index.html", "spawn");
 		
 		Sequence startupSequence = new Sequence();
 		startupSequence.AppendInterval(2);

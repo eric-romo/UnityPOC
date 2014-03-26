@@ -134,7 +134,7 @@ public class DisplayManager : MonoBehaviour {
 				MoveDisplayToLocation(FocusedDisplay, "right", true);
 			}
 			if(Input.GetKeyDown(KeyCode.N)){
-				GameObject display = CreateDisplay("New Screen", "coui://UIResources/Qualia/LaunchScreen/index.html", "spawn", true);
+				GameObject display = CreateDisplay("New Screen", "coui://UIResources/Qualia/LaunchScreen/index.html", "spawn");
 				MoveDisplayToLocation(display, "front", true);
 			}
 		}
@@ -211,8 +211,8 @@ public class DisplayManager : MonoBehaviour {
 		GameObject.Destroy(display);
 	}
 	
-	public GameObject CreateDisplay(string name, string url, string locationName, bool networked = false){
-		if(!networked){
+	public GameObject CreateDisplay(string name, string url, string locationName){
+		if(!networkManager.Networked){
 			GameObject display;
 			display = Instantiate(DisplayPrefab) as GameObject;
 			display.GetComponent<DisplayController>().LoadUrl(url);

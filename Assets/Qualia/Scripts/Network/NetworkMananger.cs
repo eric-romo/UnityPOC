@@ -16,6 +16,8 @@ public class NetworkMananger : MonoBehaviour {
 	
 	public PhotonView PhotonView;
 	
+	public bool Networked = false;
+	
 	void Awake(){
 		displayManager = GameObject.Find("DisplayManager").GetComponent<DisplayManager>();
 		PhotonView = GetComponent<PhotonView>();

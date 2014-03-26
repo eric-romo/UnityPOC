@@ -39,6 +39,7 @@ public class PhotonNetworkConnection : MonoBehaviour {
 	{
 		Debug.Log("Joined Room, with " + PhotonNetwork.room.playerCount + " players");
 		networkManager.AddMyself();
+		networkManager.Networked = true;
 	}
 	
 	// This is one of the callback/event methods called by PUN (read more in PhotonNetworkingMessage enumeration)
