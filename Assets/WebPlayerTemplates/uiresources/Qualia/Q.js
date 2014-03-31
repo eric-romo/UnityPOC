@@ -16,6 +16,15 @@
 					console.log(window.engine);
 					window.engine.call('DisplayModel', options);
 				}
-			}
+			},
+			Sync: {
+				sendScroll: function(){
+						var options = {};
+						options.__Type = 'ScrollOptions';
+						options.ScrollTop = ;
+						console.log('displaying model');
+						window.engine.call('Sync', options);
+					}
+				}
 		};
 	})();

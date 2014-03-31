@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Coherent.UI.Binding;
 
 [RequireComponent(typeof(PhotonView))]
 public class DisplayNetworkController : MonoBehaviour {
@@ -90,5 +91,15 @@ public class DisplayNetworkController : MonoBehaviour {
 		/*mouseEvent.Type = Coherent.UI.MouseEventData.EventType.MouseUp;
 		
 		GetComponent<DisplayController>().View.View.MouseEvent(mouseEvent);*/
+	}
+	
+	[RPC]
+	public void ReceiveScroll(int scrollTop){
+		Debug.Log("Receiving scrolling of " + scrollTop);
+		ScrollOptions options = new ScrollOptions();
+		options.ScrollTop = scrollTop;
+		GetComponent<DisplayController>().View.View.ExecuteScript("Q.Sync.receiveScroll({ScrollTop: "+ scrollTop +"})");//HACK
+		//GetComponent<DisplayController>().View.View.TriggerEvent("ReceiveScroll", options);
+		
 	}
 }

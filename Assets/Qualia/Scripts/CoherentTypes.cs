@@ -17,3 +17,10 @@ public struct DisplayModelOptions
 {
 	public string Url;
 }
+
+[CoherentType(PropertyBindingFlags.All)]
+public struct ScrollOptions
+{
+	public int ScrollTop;
+}
+

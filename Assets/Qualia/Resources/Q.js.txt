@@ -1,21 +1,40 @@
 (function(){
-		var engine = window.engine;
-		if(!engine){
-			console.log('Q.js cannot be run inside of Qualia');
-			return;
-		}
+	var engine = window.engine;
+	if(!engine){
+		console.log('Qualia not detected. Exiting..');
+		return;
+	}
 	
-		window.Q = {
-			Holo: {
-				displayModel: function(url){
-					var options = {};
-					options.__Type = 'DisplayModelOptions';
-					options.Url = url;
-					console.log('displaying model');
-					console.log(window);
-					console.log(window.engine);
-					window.engine.call('DisplayModel', options);
-				}
+	window.Q = {
+		Holo: {
+			displayModel: function(url){
+				var options = {};
+				options.__Type = 'DisplayModelOptions';
+				options.Url = url;
+				console.log('displaying model');
+				console.log(window);
+				console.log(window.engine);
+				window.engine.call('DisplayModel', options);
 			}
-		};
-	})();
+		},
+		Sync: {
+			sendScroll: function(){
+				var options = {};
+				options.__Type = 'ScrollOptions';
+				options.ScrollTop = $(document).scrollTop();
+				console.log('sending scroll ' + options.ScrollTop);
+				window.engine.call('SendScroll', options);
+			},
+			receiveScroll: function(options){
+				console.log("Received scroll: " + options);
+				$('html, body').animate({
+					scrollTop: options.ScrollTop
+				}, 500);
+			}
+		}
+	};
+
+	engine.on("ReceiveScroll", Q.Sync.receiveScroll);
+	//setInterval(Q.Sync.sendScroll, 200);
+	$(window).scroll(_.throttle(Q.Sync.sendScroll, 100));
+})();

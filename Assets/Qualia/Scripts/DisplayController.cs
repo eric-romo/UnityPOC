@@ -75,25 +75,13 @@ public class DisplayController : MonoBehaviour {
 	#endregion
 	
 	#region Event Listeners
-	private void HandleLaunchApp(LaunchAppOptions options){
-		Debug.Log("Launching " + options.Name);
-		appManager.LaunchApp(options.Name, false, gameObject);
-	}
-	
-	private void HandleSwitchEnvironment(SwitchEnvironmentOptions options){
-		Debug.Log("Switching Environment to " + options.Name);
-		
-		environmentManager.SwitchEnvironment(options.Name);
-	}
 	
 	void HandleViewCreated (Coherent.UI.View view){
 		//AttachWebRTC();
 	}
 
 	void HandleReadyForBindings (int frameId, string path, bool isMainFrame){
-		Debug.Log("--------Ready For Bindings");
-		GetComponent<DisplayController>().View.View.BindCall("LaunchApp", (Action<LaunchAppOptions>)(HandleLaunchApp));
-		GetComponent<DisplayController>().View.View.BindCall("SwitchEnvironment", (Action<SwitchEnvironmentOptions>)(HandleSwitchEnvironment));
+		Debug.Log("--------Ready For Bindings" + gameObject.name);
 		
 		virtualCursor.Width = View.Width;
 		virtualCursor.Height = View.Height;
