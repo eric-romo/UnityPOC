@@ -62,9 +62,7 @@ public class DisplayController : MonoBehaviour {
 		displayManager = GameObject.Find("/DisplayManager").GetComponent<DisplayManager>();
 		appManager = GameObject.Find("/AppManager").GetComponent<AppManager>();
 		environmentManager = GameObject.Find("/EnvironmentManager").GetComponent<EnvironmentManager>();
-		displayManager.Displays.Add(gameObject	);
-		Debug.Log(View);
-		Debug.Log(View.Listener);
+		displayManager.Displays.Add(gameObject);
 	}
 	
 	void Start(){

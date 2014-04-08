@@ -23,6 +23,12 @@ public class NetworkMananger : MonoBehaviour {
 		PhotonView = GetComponent<PhotonView>();
 	}
 	
+	void Start(){
+		
+		if(!Networked)
+			InitializeSpace();
+	}
+	
 	/*public void AddUser(PhotonPlayer player){
 		Debug.Log("Adding User");
 		
@@ -39,6 +45,9 @@ public class NetworkMananger : MonoBehaviour {
 	}*/
 	
 	public void AddMyself(){
+		if(!Networked)
+			return;
+			
 		Transform spawnPoint = GetNextSpawnPoint();
 		GameObject avatar = PhotonNetwork.Instantiate(NetworkVRUserPrefab.name, spawnPoint.position, spawnPoint.rotation, 0);
 		
@@ -54,6 +63,9 @@ public class NetworkMananger : MonoBehaviour {
 	}
 	
 	public void RemoveUser(PhotonPlayer player){
+		if(!Networked)
+			return;
+			
 		GameObject avatar = Users[player.ID.ToString()].Avatar;
 		GameObject.Destroy(avatar);
 		Users[player.ID.ToString()] = null;

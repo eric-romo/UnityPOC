@@ -7,10 +7,20 @@ public class DisplayNetworkController : MonoBehaviour {
 	
 	private DisplayManager displayManager;
 	public PhotonView PhotonView;
+	private NetworkMananger networkManager;
 	
 	void Awake(){
 		PhotonView = GetComponent<PhotonView>();
 		displayManager = GameObject.Find("DisplayManager").GetComponent<DisplayManager>();
+		networkManager = GameObject.Find("NetworkManager").GetComponent<NetworkMananger>();
+		
+		if(!networkManager.Networked){
+			Destroy(this);
+			Destroy(GetComponent<TransformLerp>());
+			Destroy(GetComponent<PhotonView>());
+			Destroy(transform.Find("Cursor").gameObject.GetComponent<TransformLerp>());
+			Destroy(transform.Find("Cursor").gameObject.GetComponent<PhotonView>());
+		}
 	}
 
 	[RPC]

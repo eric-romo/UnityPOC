@@ -13,11 +13,14 @@ public class QJSController : MonoBehaviour {
 	private AppManager appManager;
 	private EnvironmentManager environmentManager;
 	private List<Coherent.UI.BoundEventHandle> boundEvents = new List<Coherent.UI.BoundEventHandle>();
+
+	NetworkMananger networkManager;
 	
 	DisplayController displayController;
 	
 	#region Initialization
 	void Start () {
+		networkManager = GameObject.Find("NetworkManager").GetComponent<NetworkMananger>();
 		displayController = GetComponent<DisplayController>();
 		displayController.View.Listener.ReadyForBindings += HandleReadyForBindings;
 		
@@ -44,7 +47,7 @@ public class QJSController : MonoBehaviour {
 	
 	private void SendScroll(ScrollOptions options){
 		Debug.Log("Sending scrolling of " + options.ScrollTop);
-		if(GetComponent<DisplayNetworkController>().PhotonView.isMine){
+		if(networkManager.Networked && GetComponent<DisplayNetworkController>().PhotonView.isMine){
 			GetComponent<DisplayNetworkController>().PhotonView.RPC("ReceiveScroll", PhotonTargets.OthersBuffered, new object[]{options.ScrollTop});
 		}
 	}

@@ -15,6 +15,9 @@ public class PhotonNetworkConnection : MonoBehaviour {
 	{
 		networkManager = GetComponent<NetworkMananger>();
 		
+		if(!networkManager.Networked)
+			return;
+			
 		if (!PhotonNetwork.connected)
 		{
 			PhotonNetwork.autoJoinLobby = false;

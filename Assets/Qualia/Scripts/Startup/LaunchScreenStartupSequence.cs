@@ -14,9 +14,11 @@ public class LaunchScreenStartupSequence : MonoBehaviour {
 	
 	private GameObject mainDisplay;
 	
-	// Use this for initialization
-	void Start () {
+	void Awake(){
 		displayManager = GameObject.Find("/DisplayManager").GetComponent<DisplayManager>();
+	}
+	
+	void Start () {
 		if(Autoplay)
 			Play();
 	}

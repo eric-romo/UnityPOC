@@ -24,3 +24,9 @@ public struct ScrollOptions
 	public int ScrollTop;
 }
 
+
+[CoherentType(PropertyBindingFlags.All)]
+public struct S_Options
+{
+	public string string0;
+}
