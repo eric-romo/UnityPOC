@@ -27,17 +27,13 @@ public class TextureCapture : MonoBehaviour {
 	void Update () {
 	}
 	
-	public IEnumerator Capture()
+	public IEnumerator ContinuousCapture()
 	{
 		while ( true )
 		{
-			RenderTexture renderTexture = screen.renderer.material.mainTexture as RenderTexture;
-			RenderTexture.active = renderTexture;
-			_captureTexture.ReadPixels(new Rect(0, 0, _captureTexture.width, _captureTexture.height), 0, 0);
-			
-			byte[] png = _captureTexture.EncodeToPNG();
+			byte[] png = Capture();
 			string base64png = Convert.ToBase64String(png);
-			File.WriteAllBytes(Application.dataPath + "/../SavedScreen_" + displayController.Location + ".png", png);
+			//File.WriteAllBytes(Application.dataPath + "/../SavedScreen_" + displayController.Location + ".png", png);
 			
 			string blob = @"data:image/jpeg;charset=utf-8;base64," + base64png;
 			string injectImage = @"
@@ -48,5 +44,14 @@ public class TextureCapture : MonoBehaviour {
 			
 			yield return new WaitForSeconds(CaptureInterval);
 		}
+	}
+	
+	private byte[] Capture(){
+		RenderTexture renderTexture = screen.renderer.material.mainTexture as RenderTexture;
+		RenderTexture.active = renderTexture;
+		_captureTexture.ReadPixels(new Rect(0, 0, _captureTexture.width, _captureTexture.height), 0, 0);
+		
+		byte[] png = _captureTexture.EncodeToPNG();
+		return png;
 	}
 }
