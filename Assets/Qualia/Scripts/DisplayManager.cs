@@ -26,7 +26,7 @@ public class DisplayManager : MonoBehaviour {
 		},
 		{"table", new Dictionary<string, StoredTransform>
 			{
-				{"front", new StoredTransform(new Vector3(1f, 2.45f, -0.35f), new Vector3(0, 0, 0), new Vector3(2.5f, 2.5f, 2.5f)) },
+				{"front", new StoredTransform(new Vector3(1f, 3.77f, -0.5f), new Vector3(0, 0, 0), new Vector3(5.4f, 5.4f, 5.4f)) },
 				{"left", new StoredTransform(new Vector3(-0.22f, 1.8f, 2.8f), new Vector3(0, -90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
 				{"right", new StoredTransform(new Vector3(-0.22f, 1.8f, -2.8f), new Vector3(0, 90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
 				{"spawn", new StoredTransform(new Vector3(-0.6f, 2.15f, 0), new Vector3(0, 90, 0), new Vector3(0.5f, 0.5f, 0.5f)) },

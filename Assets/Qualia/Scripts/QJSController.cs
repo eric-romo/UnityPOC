@@ -7,6 +7,10 @@ public class QJSController : MonoBehaviour {
 	
 	public GameObject defaultModel;
 	
+	public bool AutoInjectQJS = false;
+	public bool AutoInjectVendor = false;
+	public bool AutoInjectCoherent = true;
+	
 	private string qjsScript;
 	private string coherentjsScript;
 	private List<string> vendorScripts = new List<string>();
@@ -41,7 +45,7 @@ public class QJSController : MonoBehaviour {
 	void HandleReadyForBindings (int frameId, string path, bool isMainFrame)
 	{
 		
-		Debug.Log("---QJS bindings" + frameId);
+		//Debug.Log("---QJS bindings" + frameId);
 		
 	}
 	
@@ -68,16 +72,36 @@ public class QJSController : MonoBehaviour {
 		
 		environmentManager.SwitchEnvironment(options.Name);
 	}
-	#endregion
 	
+	private void Ping(){
+		Debug.Log("Pinged from JS!");
+		GetComponent<DisplayController>().View.View.TriggerEvent("ping");
+	}
+	
+	private void Log(SOptions options){
+		Debug.Log("Log from Q.js: " + options.String0);
+	}
+	
+	private LoadModelReturn LoadModel(LoadModelOptions options){
+		Debug.Log("Loading Model: " + options.Url);
+		
+		LoadModelReturn modelReturn = new LoadModelReturn();
+		modelReturn.Id = "";
+		modelReturn.Error = "Cannot find model";
+		
+		
+		return modelReturn;
+	}
+	
+	#endregion
 	
 	#region Script Injection
 	
 	void HandleNavigateTo (string path)
 	{
-		InjectCoherent();
-		InjectVendorScripts();
-		InjectQJS();
+		if(AutoInjectCoherent) InjectCoherent();
+		if(AutoInjectVendor) InjectVendorScripts();
+		if(AutoInjectQJS) InjectQJS();
 		
 		foreach(Coherent.UI.BoundEventHandle bind in boundEvents){
 			GetComponent<DisplayController>().View.View.UnbindCall(bind);
@@ -86,7 +110,10 @@ public class QJSController : MonoBehaviour {
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("DisplayModel", (Action<DisplayModelOptions>)(DisplayModel)));
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("SendScroll", (Action<ScrollOptions>)(SendScroll)));
         boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("LaunchApp", (Action<LaunchAppOptions>)(HandleLaunchApp)));
-        boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("SwitchEnvironment", (Action<SwitchEnvironmentOptions>)(HandleSwitchEnvironment)));
+		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("SwitchEnvironment", (Action<SwitchEnvironmentOptions>)(HandleSwitchEnvironment)));
+		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("log", (Action<SOptions>)(Log)));
+		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("ping", (Action)(Ping)));
+		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("loadModel", (Func<LoadModelOptions, LoadModelReturn>)(LoadModel)));
 	}
 	
 	public void InjectCoherent(){

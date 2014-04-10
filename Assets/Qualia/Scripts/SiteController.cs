@@ -20,7 +20,7 @@ public class SiteController : MonoBehaviour {
 
 	void HandleNavigateTo (string path)
 	{
-		Debug.Log("HNT");
+		//Debug.Log("HNT");
 		if(Prefix != null && path.Contains(Prefix)){
 			InjectScript(Scripts.NavigateTo);
 			
@@ -34,7 +34,7 @@ public class SiteController : MonoBehaviour {
 
 	void HandleFinishLoad (int frameId, string validatedPath, bool isMainFrame, int statusCode, Coherent.UI.HTTPHeader[] headers)
 	{
-		Debug.Log("HFL");
+		//Debug.Log("HFL");
 		if(Prefix != null && validatedPath.Contains(Prefix)){
 			InjectScript(Scripts.FinishLoad);
 		}

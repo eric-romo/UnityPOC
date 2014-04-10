@@ -79,7 +79,7 @@ public class DisplayController : MonoBehaviour {
 	}
 
 	void HandleReadyForBindings (int frameId, string path, bool isMainFrame){
-		Debug.Log("--------Ready For Bindings" + gameObject.name);
+		//Debug.Log("--------Ready For Bindings" + gameObject.name);
 		
 		virtualCursor.Width = View.Width;
 		virtualCursor.Height = View.Height;
