@@ -34,7 +34,7 @@ public struct ScrollOptions
 [CoherentType(PropertyBindingFlags.All)]
 public struct LoadModelReturn
 {
-	public string Id;
+	public string AssetId;
 	public string Error;
 	
 }

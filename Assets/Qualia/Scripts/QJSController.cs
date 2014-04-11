@@ -88,11 +88,11 @@ public class QJSController : MonoBehaviour {
 		Debug.Log("Loading Model: " + options.Url);
 		
 		LoadModelReturn modelReturn = new LoadModelReturn();
-		modelReturn.Id = "";
+		modelReturn.AssetId = "";
 		modelReturn.Error = "";
 		
 		Debug.Log("0");
-		modelReturn.Id = assetManager.LoadModel(options.Url, options.HasMtl);
+		modelReturn.AssetId = assetManager.LoadModel(options.Url, options.HasMtl);
 		Debug.Log("10");
 		
 //		try{
@@ -103,6 +103,17 @@ public class QJSController : MonoBehaviour {
 		
 		
 		return modelReturn;
+	}
+	
+	private void AddModel(SOptions options){
+		Debug.Log("Adding Model: " + options.String0);
+		string assetId = options.String0;
+		GameObject modelAsset = assetManager.GetModel(assetId);
+		GameObject model = Instantiate(modelAsset) as GameObject;
+		model.SetActive(true);
+		model.transform.parent = gameObject.transform;
+		model.transform.localPosition = Vector3.zero;
+		model.transform.localRotation = Quaternion.identity;
 	}
 	
 	#endregion
@@ -126,6 +137,7 @@ public class QJSController : MonoBehaviour {
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("log", (Action<SOptions>)(Log)));
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("ping", (Action)(Ping)));
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("loadModel", (Func<LoadModelOptions, LoadModelReturn>)(LoadModel)));
+		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("addModel", (Action<SOptions>)(AddModel)));
 	}
 	
 	public void InjectCoherent(){

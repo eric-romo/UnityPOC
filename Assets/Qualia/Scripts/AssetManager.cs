@@ -45,16 +45,16 @@ public class AssetManager : MonoBehaviour {
 		Debug.Log("1");
 		
 		System.Guid assetGuid = System.Guid.NewGuid();
-		string assetHandle = assetGuid.ToString();
+		string assetId = assetGuid.ToString();
 		
 		
-		StartCoroutine(LoadModelAsync(url, assetHandle, hasMtl));
+		StartCoroutine(LoadModelAsync(url, assetId, hasMtl));
 		
 		Debug.Log("9");
-		return assetHandle;
+		return assetId;
 	}
 	
-	public IEnumerator LoadModelAsync(string url, string assetHandle, bool hasMtl = false){
+	public IEnumerator LoadModelAsync(string url, string assetId, bool hasMtl = false){
 		Debug.Log("2");
 		ObjReader.ObjData objData = ObjReader.use.ConvertFileAsync(url, hasMtl, DefaultMaterial);
 		while(!objData.isDone){
@@ -71,22 +71,16 @@ public class AssetManager : MonoBehaviour {
 		GameObject root = gameObjects[0];
 			
 		Debug.Log("Loaded GameObjects: " + gameObjects);
-		//root.SetActive(false);
-		models[assetHandle] = root;
+		root.SetActive(false);
+		models[assetId] = root;
 		
 		
 		Debug.Log("4");
 		//callback(modelId);
 	}
 	
-	public IEnumerable LoadingModel(ObjReader.ObjData objData){
-		while(!objData.isDone){
-			yield return 0;
-		}
-	}
-	
-	public GameObject GetModel(string assetHandle){
-		GameObject model = models[assetHandle];
+	public GameObject GetModel(string assetId){
+		GameObject model = models[assetId];
 		return model;
 	}
 }
