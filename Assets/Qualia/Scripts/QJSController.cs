@@ -16,6 +16,7 @@ public class QJSController : MonoBehaviour {
 	private List<string> vendorScripts = new List<string>();
 	private AppManager appManager;
 	private EnvironmentManager environmentManager;
+	private AssetManager assetManager;
 	private List<Coherent.UI.BoundEventHandle> boundEvents = new List<Coherent.UI.BoundEventHandle>();
 
 	NetworkMananger networkManager;
@@ -24,6 +25,7 @@ public class QJSController : MonoBehaviour {
 	
 	#region Initialization
 	void Start () {
+		assetManager = GameObject.Find("AssetManager").GetComponent<AssetManager>();
 		networkManager = GameObject.Find("NetworkManager").GetComponent<NetworkMananger>();
 		displayController = GetComponent<DisplayController>();
 		displayController.View.Listener.ReadyForBindings += HandleReadyForBindings;
@@ -87,7 +89,17 @@ public class QJSController : MonoBehaviour {
 		
 		LoadModelReturn modelReturn = new LoadModelReturn();
 		modelReturn.Id = "";
-		modelReturn.Error = "Cannot find model";
+		modelReturn.Error = "";
+		
+		Debug.Log("0");
+		modelReturn.Id = assetManager.LoadModel(options.Url, options.HasMtl);
+		Debug.Log("10");
+		
+//		try{
+//			modelReturn.Id = assetManager.LoadModelAsync(options.Url, options.HasMtl);
+//		} catch(Exception e){
+//			modelReturn.Error = e.Message;
+//		}
 		
 		
 		return modelReturn;
