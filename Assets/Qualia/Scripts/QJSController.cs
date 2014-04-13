@@ -105,7 +105,7 @@ public class QJSController : MonoBehaviour {
 		return modelReturn;
 	}
 	
-	private void AddModel(SOptions options){
+	private AddModelReturn AddModel(SOptions options){
 		Debug.Log("Adding Model: " + options.String0);
 		string assetId = options.String0;
 		GameObject modelAsset = assetManager.GetModel(assetId);
@@ -114,6 +114,21 @@ public class QJSController : MonoBehaviour {
 		model.transform.parent = gameObject.transform;
 		model.transform.localPosition = Vector3.zero;
 		model.transform.localRotation = Quaternion.identity;
+		model.name = System.Guid.NewGuid().ToString();
+		
+		AddModelReturn ret = new AddModelReturn();
+		ret.ModelId = model.name;
+		return ret;
+	}
+	
+	private void MoveModel(ModelTransformOptions options){
+		GameObject model = GameObject.Find(options.ModelId);
+		Debug.Log("Moving model " + options.ModelId);
+		if(options.Duration > 0){
+			model.transform.localPosition = new Vector3(options.X, options.Y, options.Z);
+		} else {
+			model.transform.localPosition = new Vector3(options.X, options.Y, options.Z);
+		}
 	}
 	
 	#endregion
@@ -137,7 +152,8 @@ public class QJSController : MonoBehaviour {
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("log", (Action<SOptions>)(Log)));
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("ping", (Action)(Ping)));
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("loadModel", (Func<LoadModelOptions, LoadModelReturn>)(LoadModel)));
-		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("addModel", (Action<SOptions>)(AddModel)));
+		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("addModel", (Func<SOptions, AddModelReturn>)(AddModel)));
+		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("moveModel", (Action<ModelTransformOptions>)(MoveModel)));
 	}
 	
 	public void InjectCoherent(){

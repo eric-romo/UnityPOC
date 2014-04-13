@@ -39,10 +39,39 @@ public struct LoadModelReturn
 	
 }
 
+[CoherentType(PropertyBindingFlags.All)]
+public struct AddModelReturn
+{
+	public string ModelId;
+	public string Error;
+	
+}
+
+[CoherentType(PropertyBindingFlags.All)]
+public struct ModelTransformOptions
+{
+	public float Duration;
+	public string ModelId;
+	public string TransformType;
+	public float X;
+	public float Y;
+	public float Z;
+	
+}
+
+
 //GENERIC TYPES
 
 [CoherentType(PropertyBindingFlags.All)]
 public struct SOptions
 {
 	public string String0;
+}
+
+[CoherentType(PropertyBindingFlags.All)]
+public struct Vector3Options
+{
+	public float x;
+	public float y;
+	public float z;
 }
