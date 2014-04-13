@@ -51,6 +51,7 @@ public struct AddModelReturn
 public struct ModelTransformOptions
 {
 	public float Duration;
+	public bool IsRelative;
 	public string ModelId;
 	public string TransformType;
 	public float X;

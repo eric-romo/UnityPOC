@@ -18,6 +18,8 @@ public class QJSController : MonoBehaviour {
 	private EnvironmentManager environmentManager;
 	private AssetManager assetManager;
 	private List<Coherent.UI.BoundEventHandle> boundEvents = new List<Coherent.UI.BoundEventHandle>();
+	
+	public bool VERBOSE = true;//NOT WORKING
 
 	NetworkMananger networkManager;
 	
@@ -121,13 +123,47 @@ public class QJSController : MonoBehaviour {
 		return ret;
 	}
 	
-	private void MoveModel(ModelTransformOptions options){
+	private void TransformModel(ModelTransformOptions options){
 		GameObject model = GameObject.Find(options.ModelId);
-		Debug.Log("Moving model " + options.ModelId);
-		if(options.Duration > 0){
-			model.transform.localPosition = new Vector3(options.X, options.Y, options.Z);
-		} else {
-			model.transform.localPosition = new Vector3(options.X, options.Y, options.Z);
+		
+		if(options.Duration == 0){
+			if(options.IsRelative){
+				switch(options.TransformType){
+				case "move":
+					if(VERBOSE)
+						Debug.Log("Moving model " + options.ModelId);
+					model.transform.localPosition += new Vector3(-options.Z, options.Y, -options.X); 
+					break;
+				case "rotate": 
+					if(VERBOSE)
+						Debug.Log("Rotating model " + options.ModelId);
+					model.transform.localEulerAngles += new Vector3(options.Z * 200, options.X * 200, -options.Y * 200);
+					break;
+				case "scale": 
+					if(VERBOSE)
+						Debug.Log("Scaling model " + options.ModelId);
+					model.transform.localScale += new Vector3(-options.Z, options.Y, -options.X);
+					break;
+				}
+			} else {
+				/*switch(options.TransformType){
+				case "move":
+					if(VERBOSE)
+						Debug.Log("Moving model to" + options.ModelId);
+					model.transform.localPosition = new Vector3(-options.Z, options.Y, -options.X); 
+					break;
+				case "rotate": 
+					if(VERBOSE)
+						Debug.Log("Rotating model to" + options.ModelId);
+					model.transform.localRotation = Quaternion.LookRotation(new Vector3(options.X, options.Y, options.Z), Vector3.up);
+					break;
+				case "scale": 
+					if(VERBOSE)
+						Debug.Log("Scaling model to" + options.ModelId);
+					model.transform.localScale = new Vector3(-options.Z, options.Y, -options.X);
+					break;
+				}*/
+			}
 		}
 	}
 	
@@ -153,7 +189,7 @@ public class QJSController : MonoBehaviour {
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("ping", (Action)(Ping)));
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("loadModel", (Func<LoadModelOptions, LoadModelReturn>)(LoadModel)));
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("addModel", (Func<SOptions, AddModelReturn>)(AddModel)));
-		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("moveModel", (Action<ModelTransformOptions>)(MoveModel)));
+		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("transformModel", (Action<ModelTransformOptions>)(TransformModel)));
 	}
 	
 	public void InjectCoherent(){
