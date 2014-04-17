@@ -8,18 +8,20 @@ public class QJSController : MonoBehaviour {
 	public GameObject defaultModel;
 	
 	public bool AutoInjectQJS = false;
-	public bool AutoInjectVendor = false;
+	public bool AutoInjectVendor = true;
+	public bool AutoInjectFixes = true;
 	public bool AutoInjectCoherent = true;
 	
 	private string qjsScript;
 	private string coherentjsScript;
 	private List<string> vendorScripts = new List<string>();
+	private List<string> fixScripts = new List<string>();
 	private AppManager appManager;
 	private EnvironmentManager environmentManager;
 	private AssetManager assetManager;
 	private List<Coherent.UI.BoundEventHandle> boundEvents = new List<Coherent.UI.BoundEventHandle>();
 	
-	public bool VERBOSE = true;//NOT WORKING
+	public bool VERBOSE = true;
 
 	NetworkMananger networkManager;
 	
@@ -35,8 +37,24 @@ public class QJSController : MonoBehaviour {
 		qjsScript = (Resources.Load("Q.js") as TextAsset).text;
 		coherentjsScript = (Resources.Load("coherent.js") as TextAsset).text;
 		
+		vendorScripts.Add("window.Qualia = window.Qualia || {};");
 		vendorScripts.Add((Resources.Load("jquery.js") as TextAsset).text);
+		vendorScripts.Add("window.Qualia.$ = $.noConflict();");
 		vendorScripts.Add((Resources.Load("underscore-min.js") as TextAsset).text);
+		vendorScripts.Add("window.Qualia._ = _.noConflict();");
+		
+		
+		fixScripts.Add("window.Qualia = window.Qualia || {};");
+		fixScripts.Add("Qualia.conflicts = {window:{}};");
+		fixScripts.Add(@"Qualia.$(document).on('click', 'a[target=""_blank""]', function(e){e.currentTarget.target = ""_self"";});"); //redirect _blank links to open in the current window
+		fixScripts.Add(@"
+			if(!window.nativeOpen){
+			  window.nativeOpen = window.open;
+			  window.nativeOpen.bind(window);
+			  window.open = function(url, name, features, replace){
+			    return window.nativeOpen(url, '_self', features, replace);
+			  };
+			}"); //redirect window.open to open in the current window
 		
 		displayController.View.Listener.NavigateTo += HandleNavigateTo;
 		
@@ -175,6 +193,7 @@ public class QJSController : MonoBehaviour {
 	{
 		if(AutoInjectCoherent) InjectCoherent();
 		if(AutoInjectVendor) InjectVendorScripts();
+		if(AutoInjectFixes) InjectFixScripts();
 		if(AutoInjectQJS) InjectQJS();
 		
 		foreach(Coherent.UI.BoundEventHandle bind in boundEvents){
@@ -196,6 +215,12 @@ public class QJSController : MonoBehaviour {
 		Debug.Log("Injecting Coherent");
 		
 		displayController.View.View.ExecuteScript(coherentjsScript);
+	}
+	
+	public void InjectFixScripts(){
+		foreach(string script in fixScripts){
+			displayController.View.View.ExecuteScript(script);
+		}
 	}
 	
 	public void InjectVendorScripts(){
