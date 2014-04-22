@@ -21,6 +21,8 @@ public class QJSController : MonoBehaviour {
 	private AssetManager assetManager;
 	private List<Coherent.UI.BoundEventHandle> boundEvents = new List<Coherent.UI.BoundEventHandle>();
 	
+	private List<GameObject> appContent = new List<GameObject>();
+	
 	public bool VERBOSE = true;
 
 	NetworkMananger networkManager;
@@ -33,6 +35,7 @@ public class QJSController : MonoBehaviour {
 		networkManager = GameObject.Find("NetworkManager").GetComponent<NetworkMananger>();
 		displayController = GetComponent<DisplayController>();
 		displayController.View.Listener.ReadyForBindings += HandleReadyForBindings;
+		displayController.View.Listener.NavigateTo += HandleNavigateTo;
 		
 		qjsScript = (Resources.Load("Q.js") as TextAsset).text;
 		coherentjsScript = (Resources.Load("coherent.js") as TextAsset).text;
@@ -55,8 +58,6 @@ public class QJSController : MonoBehaviour {
 			    return window.nativeOpen(url, '_self', features, replace);
 			  };
 			}"); //redirect window.open to open in the current window
-		
-		displayController.View.Listener.NavigateTo += HandleNavigateTo;
 		
 		appManager = GameObject.Find("/AppManager").GetComponent<AppManager>();
 		environmentManager = GameObject.Find("/EnvironmentManager").GetComponent<EnvironmentManager>();
@@ -135,6 +136,7 @@ public class QJSController : MonoBehaviour {
 		model.transform.localPosition = Vector3.zero;
 		model.transform.localRotation = Quaternion.identity;
 		model.name = System.Guid.NewGuid().ToString();
+		appContent.Add(model);
 		
 		AddModelReturn ret = new AddModelReturn();
 		ret.ModelId = model.name;
@@ -187,10 +189,17 @@ public class QJSController : MonoBehaviour {
 	
 	#endregion
 	
+	private void DestroyApp(){
+		foreach(GameObject go in appContent){
+			GameObject.Destroy(go);
+		}
+	}
+	
 	#region Script Injection
 	
 	void HandleNavigateTo (string path)
 	{
+		DestroyApp();
 		if(AutoInjectCoherent) InjectCoherent();
 		if(AutoInjectVendor) InjectVendorScripts();
 		if(AutoInjectFixes) InjectFixScripts();

@@ -19,7 +19,8 @@ public class Navigation : MonoBehaviour {
 				browserView.GoBack();
 			if(Input.GetKey(KeyCode.Period))
 				browserView.GoForward();
-				
+			if(Input.GetKey(KeyCode.R))
+				displayController.View.View.ExecuteScript("location.reload(true);");
 		}
 	}
 }
