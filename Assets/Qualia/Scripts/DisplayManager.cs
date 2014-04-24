@@ -84,6 +84,8 @@ public class DisplayManager : MonoBehaviour {
 	
 	[HideInInspector]
 	public List<GameObject> Displays = new List<GameObject>();
+	
+	public string Homepage = "coui://UIResources/Qualia/LoadingScreen/index.html";
 	#endregion
 	
 	#region Private Variables
@@ -204,7 +206,9 @@ public class DisplayManager : MonoBehaviour {
 	public void Close (GameObject display)
 	{
 		DisplayController displayController = display.GetComponent<DisplayController>();
-		Locations[displayController.Location] = null;
+		if(displayController.Location != null){
+			Locations[displayController.Location] = null;
+		}
 		if(displayController.Focused){
 			FocusedDisplay = null;
 		}
