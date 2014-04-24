@@ -111,7 +111,10 @@ public class DisplayController : MonoBehaviour {
 			
 			bool isOverCloseButton = isOverTopBar && normalizedMouse.x > 1 - MouseBorder;
 			bool isOverNewButton = isOverTopBar && normalizedMouse.x < MouseBorder;
-			bool isOverMoveHandle = isOverTopBar && !isOverCloseButton && !isOverNewButton;
+			bool isOverBackButton = isOverTopBar && normalizedMouse.x < MouseBorder * 2 && normalizedMouse.x > MouseBorder * 1;
+			bool isOverForwardButton = isOverTopBar && normalizedMouse.x < MouseBorder * 3 && normalizedMouse.x > MouseBorder * 2;
+			bool isOverReloadButton = isOverTopBar && normalizedMouse.x < MouseBorder * 4 && normalizedMouse.x > MouseBorder * 3;
+			bool isOverMoveHandle = isOverTopBar && !isOverCloseButton && !isOverNewButton && !isOverBackButton && !isOverForwardButton && !isOverReloadButton;
 			
 			//Debug.Log("isOverTopBar" + isOverTopBar + "isOverCloseButton" + isOverCloseButton + " isOverNewButton" + isOverNewButton + " isOverMoveHandle" + isOverMoveHandle);
 			//Debug.Log("ViewMouse: " + viewMouse + "displayMouse: " + displayMouse + "normalizedMouse: " + normalizedMouse);
@@ -152,23 +155,24 @@ public class DisplayController : MonoBehaviour {
 				displayManager.Locations[Location] = null;
 				Location = null;
 			}
-			
-			
 			#endregion
 			
-			#region Closing
+			#region Buttons
 			if(isOverCloseButton && Input.GetMouseButtonDown(0)){
 				displayManager.Close(gameObject);
 			}
-			#endregion
-			
-			#region Spawning
 			if(isOverNewButton && Input.GetMouseButtonDown(0)){
 				displayManager.CreateDisplay(name + "(Clone)", displayManager.Homepage, "front");
 			}
-			#endregion
-			
-			#region Cloning
+			if(isOverBackButton && Input.GetMouseButtonDown(0)){
+				View.View.ExecuteScript("history.back();");
+			}
+			if(isOverForwardButton && Input.GetMouseButtonDown(0)){
+				View.View.ExecuteScript("history.forward();");
+			}
+			if(isOverReloadButton && Input.GetMouseButtonDown(0)){
+				View.View.ExecuteScript("location.reload(true);");
+			}
 			if(isOverNewButton && Input.GetMouseButtonDown(1)){
 				displayManager.CreateDisplay(name + "(Clone)", View.Page, "front");
 			}
