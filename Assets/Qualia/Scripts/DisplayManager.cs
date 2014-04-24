@@ -82,7 +82,7 @@ public class DisplayManager : MonoBehaviour {
 	[HideInInspector]
 	public Camera MainCamera = null;
 	
-	[HideInInspector]
+	//[HideInInspector]
 	public List<GameObject> Displays = new List<GameObject>();
 	
 	public string Homepage = "coui://UIResources/Qualia/LaunchScreen/index.html";
@@ -216,6 +216,7 @@ public class DisplayManager : MonoBehaviour {
 		if(displayController.Focused){
 			FocusedDisplay = null;
 		}
+		Displays.Remove(display);
 		GameObject.Destroy(display);
 	}
 	
