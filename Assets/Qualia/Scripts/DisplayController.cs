@@ -122,7 +122,7 @@ public class DisplayController : MonoBehaviour {
 			if(!isOverTopBar){
 				View.SetMousePosition(Mathf.FloorToInt(viewMouse.x), Mathf.FloorToInt(viewMouse.y));
 			}
-			View.ReceivesInput = Focused && !isOverMoveHandle;
+			View.ReceivesInput = Focused && !isOverTopBar;
 			
 			Cursor.transform.localPosition = new Vector3(-0.03138549f, displayMouse.y, -displayMouse.x);
 			
