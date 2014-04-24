@@ -85,7 +85,7 @@ public class DisplayManager : MonoBehaviour {
 	[HideInInspector]
 	public List<GameObject> Displays = new List<GameObject>();
 	
-	public string Homepage = "coui://UIResources/Qualia/LoadingScreen/index.html";
+	public string Homepage = "coui://UIResources/Qualia/LaunchScreen/index.html";
 	#endregion
 	
 	#region Private Variables

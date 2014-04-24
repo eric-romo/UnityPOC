@@ -113,7 +113,7 @@ public class DisplayController : MonoBehaviour {
 			bool isOverNewButton = isOverTopBar && normalizedMouse.x < MouseBorder;
 			bool isOverMoveHandle = isOverTopBar && !isOverCloseButton && !isOverNewButton;
 			
-			Debug.Log("isOverTopBar" + isOverTopBar + "isOverCloseButton" + isOverCloseButton + " isOverNewButton" + isOverNewButton + " isOverMoveHandle" + isOverMoveHandle);
+			//Debug.Log("isOverTopBar" + isOverTopBar + "isOverCloseButton" + isOverCloseButton + " isOverNewButton" + isOverNewButton + " isOverMoveHandle" + isOverMoveHandle);
 			//Debug.Log("ViewMouse: " + viewMouse + "displayMouse: " + displayMouse + "normalizedMouse: " + normalizedMouse);
 			
 			if(!isOverTopBar){
@@ -136,9 +136,9 @@ public class DisplayController : MonoBehaviour {
 			
 			if(draggingPosition){
 				if(MoveRelativeToRotation || Input.GetKey(KeyCode.LeftShift)){
-					transform.position += transform.TransformDirection(new Vector3(0, -virtualCursor.Delta.y * 15, -virtualCursor.Delta.x * 15));
+					transform.position += transform.TransformDirection(new Vector3(0, -virtualCursor.Delta.y * 8, -virtualCursor.Delta.x * 8));
 				} else {
-					transform.position += new Vector3(0, -virtualCursor.Delta.y * 15, -virtualCursor.Delta.x * 15);
+					transform.position += new Vector3(0, -virtualCursor.Delta.y * 8, -virtualCursor.Delta.x * 8);
 				}
 			}
 			
@@ -164,13 +164,13 @@ public class DisplayController : MonoBehaviour {
 			
 			#region Spawning
 			if(isOverNewButton && Input.GetMouseButtonDown(0)){
-				displayManager.CreateDisplay(name, displayManager.Homepage, "front");
+				displayManager.CreateDisplay(name + "(Clone)", displayManager.Homepage, "front");
 			}
 			#endregion
 			
 			#region Cloning
-			if(isOverNewButton && Input.GetMouseButtonDown(2)){
-				displayManager.CreateDisplay(name, View.Page, "front");
+			if(isOverNewButton && Input.GetMouseButtonDown(1)){
+				displayManager.CreateDisplay(name + "(Clone)", View.Page, "front");
 			}
 			#endregion
 			
