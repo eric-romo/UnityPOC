@@ -115,6 +115,10 @@ public class DisplayManager : MonoBehaviour {
 	
 	private void ProcessInput(){
 		
+		if(Displays.Count == 0 && Input.GetMouseButtonDown(0)){
+			CreateDisplay("New Display", Homepage, "front");
+		}
+		
 		if(Input.GetButton("Super Button") ){
 			if(Input.GetKeyDown(KeyCode.Tab)){
 				int index = (Displays.IndexOf(FocusedDisplay) + 1);
