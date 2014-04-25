@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using Coherent.UI.Binding;//VERY IMPORTANT
 
 public class AssetManager : MonoBehaviour {
 	
@@ -64,8 +65,10 @@ public class AssetManager : MonoBehaviour {
 		GameObject[] gameObjects = objData.gameObjects;
 		Debug.Log("3");
 		
+		string error = null;
 		if(gameObjects == null){
-			throw new Exception("No models found in OBJ");
+			error = "No models found in OBJ";
+			//throw new Exception("No models found in OBJ");
 		}
 			
 		GameObject root = gameObjects[0];
@@ -76,6 +79,9 @@ public class AssetManager : MonoBehaviour {
 		
 		
 		Debug.Log("4");
+		
+		GameObject.Find("DisplayManager").GetComponent<DisplayManager>().FocusedDisplayController.View.View.TriggerEvent<string, string>("modelLoaded", assetId, error);
+		
 		//callback(modelId);
 	}
 	
