@@ -4,7 +4,7 @@ using System;
 
 public class DisplayController : MonoBehaviour {
 	#region Inspector Variables
-	public float MouseBorderRatio = 1.05f;
+	public float MouseBorder = 0.06f;
 	public GameObject ClonePrefab;
 	public bool MoveRelativeToRotation = true;
 	#endregion
@@ -90,14 +90,12 @@ public class DisplayController : MonoBehaviour {
 	void Update () {
 		if(Focused){
 			Vector2 normalizedMouse = virtualCursor.NormalizedPosition;
-			normalizedMouse.x *= MouseBorderRatio;
-			normalizedMouse.y *= MouseBorderRatio;
-			normalizedMouse.x = Mathf.Min(normalizedMouse.x, MouseBorderRatio);
-			normalizedMouse.y = Mathf.Min(normalizedMouse.y, MouseBorderRatio);
+			normalizedMouse.y = Utilities.mapRange(0, 1, -MouseBorder, 1f, normalizedMouse.y);
 			
 			Vector2 displayMouse = normalizedMouse;
 			float displayWidth = 1.6f;
 			float displayHeight = 0.9f;
+			displayMouse.y = 1 - displayMouse.y;
 			displayMouse.x *= displayWidth;
 			displayMouse.y *= displayHeight;
 			displayMouse.x -= displayWidth / 2;
@@ -108,25 +106,29 @@ public class DisplayController : MonoBehaviour {
 			viewMouse.y = normalizedMouse.y;
 			viewMouse.x *= View.Width;
 			viewMouse.y *= View.Height;
-			viewMouse.y = View.Height - viewMouse.y;
 			
-			/* What quadrant, centered on the upper right corner of the display, is the cursor over */
-			bool UR = viewMouse.x > View.Width && viewMouse.y < 0;
-			bool UL = viewMouse.x > View.Width / MouseBorderRatio && viewMouse.y < 0;
-			bool LR = viewMouse.x > View.Width && viewMouse.y < View.Height * MouseBorderRatio - View.Height;
+			bool isOverTopBar = viewMouse.y < 0;
 			
-			bool isOverHandle = UR || UL || LR;
+			bool isOverCloseButton = isOverTopBar && normalizedMouse.x > 1 - MouseBorder;
+			bool isOverNewButton = isOverTopBar && normalizedMouse.x < MouseBorder;
+			bool isOverBackButton = isOverTopBar && normalizedMouse.x < MouseBorder * 2 && normalizedMouse.x > MouseBorder * 1;
+			bool isOverForwardButton = isOverTopBar && normalizedMouse.x < MouseBorder * 3 && normalizedMouse.x > MouseBorder * 2;
+			bool isOverReloadButton = isOverTopBar && normalizedMouse.x < MouseBorder * 4 && normalizedMouse.x > MouseBorder * 3;
+			bool isOverMoveHandle = isOverTopBar && !isOverCloseButton && !isOverNewButton && !isOverBackButton && !isOverForwardButton && !isOverReloadButton;
 			
-			if(!isOverHandle){
+			//Debug.Log("isOverTopBar" + isOverTopBar + "isOverCloseButton" + isOverCloseButton + " isOverNewButton" + isOverNewButton + " isOverMoveHandle" + isOverMoveHandle);
+			//Debug.Log("ViewMouse: " + viewMouse + "displayMouse: " + displayMouse + "normalizedMouse: " + normalizedMouse);
+			
+			if(!isOverTopBar){
 				View.SetMousePosition(Mathf.FloorToInt(viewMouse.x), Mathf.FloorToInt(viewMouse.y));
 			}
-			View.ReceivesInput = Focused && !isOverHandle;
+			View.ReceivesInput = Focused && !isOverTopBar;
 			
 			Cursor.transform.localPosition = new Vector3(-0.03138549f, displayMouse.y, -displayMouse.x);
 			
 			#region Dragging
-			bool draggingPosition = Input.GetMouseButton(0) && isOverHandle;
-			bool draggingRotation = Input.GetMouseButton(1) && isOverHandle;
+			bool draggingPosition = Input.GetMouseButton(0) && isOverMoveHandle;
+			bool draggingRotation = Input.GetMouseButton(1) && isOverMoveHandle;
 			Dragging = draggingPosition || draggingRotation;
 			
 			if(Dragging){
@@ -137,14 +139,14 @@ public class DisplayController : MonoBehaviour {
 			
 			if(draggingPosition){
 				if(MoveRelativeToRotation || Input.GetKey(KeyCode.LeftShift)){
-					transform.position += transform.TransformDirection(new Vector3(0, virtualCursor.Delta.y * 15, -virtualCursor.Delta.x * 15));
+					transform.position += transform.TransformDirection(new Vector3(0, -virtualCursor.Delta.y * 8, -virtualCursor.Delta.x * 8));
 				} else {
-					transform.position += new Vector3(0, virtualCursor.Delta.y * 15, -virtualCursor.Delta.x * 15);
+					transform.position += new Vector3(0, -virtualCursor.Delta.y * 8, -virtualCursor.Delta.x * 8);
 				}
 			}
 			
 			if(draggingRotation){
-				Vector3 rotation = new Vector3(0, -virtualCursor.Delta.x * 100, -virtualCursor.Delta.y * 100);
+				Vector3 rotation = new Vector3(0, -virtualCursor.Delta.x * 100, virtualCursor.Delta.y * 100);
 				transform.Rotate(rotation);
 				transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
 			}
@@ -153,27 +155,31 @@ public class DisplayController : MonoBehaviour {
 				displayManager.Locations[Location] = null;
 				Location = null;
 			}
-			
-			
 			#endregion
 			
-			#region Cloning
-			if(Input.GetMouseButtonDown(2) || Input.GetButton("Super Button") && Input.GetKeyDown(KeyCode.C)){
-				Vector3 position = transform.position;
-				position.x -= 0.5f;
-				Vector3 scale = transform.localScale;
-				//scale = scale * 0.5f;
-				GameObject clone = GameObject.Instantiate(ClonePrefab, position, transform.rotation) as GameObject;
-				clone.transform.localScale = scale;
-				GameObject duplicateRenderCamera = clone.GetComponent<DisplayController>().View.transform.GetChild(0).gameObject;
-				GameObject.Destroy(duplicateRenderCamera);
-				displayManager.Displays.Add(clone);
-				displayManager.FocusedDisplay = clone;
+			#region Buttons
+			if(isOverCloseButton && Input.GetMouseButtonDown(0)){
+				displayManager.Close(gameObject);
+			}
+			if(isOverNewButton && Input.GetMouseButtonDown(0)){
+				displayManager.CreateDisplay(name + "(Clone)", displayManager.Homepage, "front");
+			}
+			if(isOverBackButton && Input.GetMouseButtonDown(0)){
+				View.View.ExecuteScript("history.back();");
+			}
+			if(isOverForwardButton && Input.GetMouseButtonDown(0)){
+				View.View.ExecuteScript("history.forward();");
+			}
+			if(isOverReloadButton && Input.GetMouseButtonDown(0)){
+				View.View.ExecuteScript("location.reload(true);");
+			}
+			if(isOverNewButton && Input.GetMouseButtonDown(1)){
+				displayManager.CreateDisplay(name + "(Clone)", View.Page, "front");
 			}
 			#endregion
 			
 			#region Zooming
-			if(isOverHandle){
+			if(isOverMoveHandle){
 				float scrollDelta =  Input.GetAxis("Mouse ScrollWheel");
 				float scaleDelta = 1 - scrollDelta * 0.05f;
 				Vector3 scale = transform.localScale;

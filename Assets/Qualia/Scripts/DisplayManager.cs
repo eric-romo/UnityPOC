@@ -82,8 +82,10 @@ public class DisplayManager : MonoBehaviour {
 	[HideInInspector]
 	public Camera MainCamera = null;
 	
-	[HideInInspector]
+	//[HideInInspector]
 	public List<GameObject> Displays = new List<GameObject>();
+	
+	public string Homepage = "coui://UIResources/Qualia/LaunchScreen/index.html";
 	#endregion
 	
 	#region Private Variables
@@ -112,6 +114,10 @@ public class DisplayManager : MonoBehaviour {
 	}
 	
 	private void ProcessInput(){
+		
+		if(Displays.Count == 0 && Input.GetMouseButtonDown(0)){
+			CreateDisplay("New Display", Homepage, "front");
+		}
 		
 		if(Input.GetButton("Super Button") ){
 			if(Input.GetKeyDown(KeyCode.Tab)){
@@ -204,10 +210,13 @@ public class DisplayManager : MonoBehaviour {
 	public void Close (GameObject display)
 	{
 		DisplayController displayController = display.GetComponent<DisplayController>();
-		Locations[displayController.Location] = null;
+		if(displayController.Location != null){
+			Locations[displayController.Location] = null;
+		}
 		if(displayController.Focused){
 			FocusedDisplay = null;
 		}
+		Displays.Remove(display);
 		GameObject.Destroy(display);
 	}
 	

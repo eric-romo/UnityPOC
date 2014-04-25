@@ -31,7 +31,7 @@ public class VirtualCursor : MonoBehaviour {
 			Delta.x = Delta.x * Mathf.Abs(Delta.x);
 			Delta.y = Delta.y * Mathf.Abs(Delta.y);
 		}
-		Delta.Scale(new Vector2(Time.deltaTime, Time.deltaTime));
+		Delta.Scale(new Vector2(Time.deltaTime, -Time.deltaTime));
 		Delta.Scale(Sensitivity);
 		
 		if(!Locked){
