@@ -124,7 +124,7 @@ public class DisplayController : MonoBehaviour {
 			}
 			View.ReceivesInput = Focused && !isOverTopBar;
 			
-			Cursor.transform.localPosition = new Vector3(-0.03138549f, displayMouse.y, -displayMouse.x);
+			Cursor.transform.localPosition = new Vector3(-0.01304078f, displayMouse.y, -displayMouse.x);
 			
 			#region Dragging
 			bool draggingPosition = Input.GetMouseButton(0) && isOverMoveHandle;
