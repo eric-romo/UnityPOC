@@ -65,24 +65,22 @@ public class AssetManager : MonoBehaviour {
 		GameObject[] gameObjects = objData.gameObjects;
 		Debug.Log("3");
 		
-		string error = null;
-		if(gameObjects == null){
-			error = "No models found in OBJ";
+		if(gameObjects == null || gameObjects.Length == 0){
+			string error = "Could not find/load .obj file";
+			GameObject.Find("DisplayManager").GetComponent<DisplayManager>().FocusedDisplayController.View.View.TriggerEvent<string, string>("modelLoaded", assetId, error);
 			//throw new Exception("No models found in OBJ");
+		} else {
+			GameObject root = gameObjects[0];
+			
+			Debug.Log("Loaded GameObjects: " + gameObjects);
+			root.SetActive(false);
+			models[assetId] = root;
+			
+			
+			Debug.Log("4");
+			
+			GameObject.Find("DisplayManager").GetComponent<DisplayManager>().FocusedDisplayController.View.View.TriggerEvent<string, string>("modelLoaded", assetId, null);
 		}
-			
-		GameObject root = gameObjects[0];
-			
-		Debug.Log("Loaded GameObjects: " + gameObjects);
-		root.SetActive(false);
-		models[assetId] = root;
-		
-		
-		Debug.Log("4");
-		
-		GameObject.Find("DisplayManager").GetComponent<DisplayManager>().FocusedDisplayController.View.View.TriggerEvent<string, string>("modelLoaded", assetId, error);
-		
-		//callback(modelId);
 	}
 	
 	public GameObject GetModel(string assetId){

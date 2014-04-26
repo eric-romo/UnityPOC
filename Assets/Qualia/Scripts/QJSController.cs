@@ -23,7 +23,8 @@ public class QJSController : MonoBehaviour {
 	
 	private List<GameObject> appContent = new List<GameObject>();
 	
-	public bool VERBOSE = true;
+	[HideInInspector]
+	public bool VERBOSE = false;
 
 	NetworkMananger networkManager;
 	
@@ -135,6 +136,7 @@ public class QJSController : MonoBehaviour {
 		model.transform.parent = gameObject.transform;
 		model.transform.localPosition = Vector3.zero;
 		model.transform.localRotation = Quaternion.identity;
+		model.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 		model.name = System.Guid.NewGuid().ToString();
 		appContent.Add(model);
 		
@@ -150,18 +152,15 @@ public class QJSController : MonoBehaviour {
 			if(options.IsRelative){
 				switch(options.TransformType){
 				case "move":
-					if(VERBOSE)
-						Debug.Log("Moving model " + options.ModelId);
+					//Debug.Log("Moving model " + options.ModelId);
 					model.transform.localPosition += new Vector3(-options.Z, options.Y, -options.X); 
 					break;
 				case "rotate": 
-					if(VERBOSE)
-						Debug.Log("Rotating model " + options.ModelId);
+					//Debug.Log("Rotating model " + options.ModelId);
 					model.transform.localEulerAngles += new Vector3(options.Z * 200, options.X * 200, -options.Y * 200);
 					break;
 				case "scale": 
-					if(VERBOSE)
-						Debug.Log("Scaling model " + options.ModelId);
+					//Debug.Log("Scaling model " + options.ModelId);
 					model.transform.localScale += new Vector3(-options.Z, options.Y, -options.X);
 					break;
 				}
