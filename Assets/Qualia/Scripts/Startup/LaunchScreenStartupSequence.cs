@@ -2,7 +2,7 @@
 using System.Collections;
 using Holoville.HOTween;
 
-public class LaunchScreenStartupSequence : MonoBehaviour {
+public class DemoDeveloperStartupSequence : MonoBehaviour {
 	
 	public bool WaitForLogin = true;
 	

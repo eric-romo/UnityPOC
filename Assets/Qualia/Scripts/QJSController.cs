@@ -145,6 +145,12 @@ public class QJSController : MonoBehaviour {
 		return ret;
 	}
 	
+	private void RemoveModel(SOptions options){
+		Debug.Log("Removing Model: " + options.String0);
+		GameObject model = GameObject.Find(options.String0);
+		GameObject.Destroy(model);
+	}
+	
 	private void TransformModel(ModelTransformOptions options){
 		GameObject model = GameObject.Find(options.ModelId);
 		
@@ -216,6 +222,7 @@ public class QJSController : MonoBehaviour {
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("ping", (Action)(Ping)));
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("loadModel", (Func<LoadModelOptions, LoadModelReturn>)(LoadModel)));
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("addModel", (Func<SOptions, AddModelReturn>)(AddModel)));
+		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("removeModel", (Action<SOptions>)(RemoveModel)));
 		boundEvents.Add(GetComponent<DisplayController>().View.View.BindCall("transformModel", (Action<ModelTransformOptions>)(TransformModel)));
 	}
 	
