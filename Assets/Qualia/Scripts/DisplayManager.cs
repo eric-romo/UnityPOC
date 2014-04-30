@@ -41,6 +41,15 @@ public class DisplayManager : MonoBehaviour {
 				{"spawn", new StoredTransform(new Vector3(-0.6f, 2.15f, 0), new Vector3(0, 90, 0), new Vector3(0.5f, 0.5f, 0.5f)) },
 				{"down", new StoredTransform(new Vector3(0.05f, -0.5f, -0.45f), new Vector3(0, 0, 270), new Vector3(3.65f, 3.65f, 3.65f)) }
 			}
+		},
+		{"wrap", new Dictionary<string, StoredTransform>
+			{
+				{"front", new StoredTransform(new Vector3(2.2f, 2.5f, -0.37f), new Vector3(0, 0, 0), new Vector3(6.5f, 6.5f, 6.5f)) },
+				{"left", new StoredTransform(new Vector3(-0.22f, 1.8f, 2.8f), new Vector3(0, -90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
+				{"right", new StoredTransform(new Vector3(-0.22f, 1.8f, -2.8f), new Vector3(0, 90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
+				{"spawn", new StoredTransform(new Vector3(-0.6f, 2.15f, 0), new Vector3(0, 90, 0), new Vector3(0.5f, 0.5f, 0.5f)) },
+				{"down", new StoredTransform(new Vector3(0.05f, -0.5f, -0.45f), new Vector3(0, 0, 270), new Vector3(3.65f, 3.65f, 3.65f)) }
+			}
 		}
 	};
 	
