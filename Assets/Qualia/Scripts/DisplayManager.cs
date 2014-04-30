@@ -21,7 +21,8 @@ public class DisplayManager : MonoBehaviour {
 				{"left", new StoredTransform(new Vector3(-1.5f, 1.8f, 2.8f), new Vector3(0, -90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
 				{"right", new StoredTransform(new Vector3(-1.5f, 1.8f, -2.8f), new Vector3(0, 90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
 				{"spawn", new StoredTransform(new Vector3(-0.6f, 2.15f, 0), new Vector3(0, 90, 0), new Vector3(0.5f, 0.5f, 0.5f)) },
-				{"down", new StoredTransform(new Vector3(-1.6f, 0.65f, -0.35f), new Vector3(0, 0, 300), new Vector3(2f, 2f, 2f)) }
+				{"down", new StoredTransform(new Vector3(-1.6f, 0.65f, -0.35f), new Vector3(0, 0, 300), new Vector3(2f, 2f, 2f)) },
+				{"direct", new StoredTransform(new Vector3(-6.22f, 3.00f, 0.96f), new Vector3(0, 90, 0), new Vector3(1f, 1f, 1f)) }
 			}
 		},
 		{"table", new Dictionary<string, StoredTransform>
@@ -30,7 +31,8 @@ public class DisplayManager : MonoBehaviour {
 				{"left", new StoredTransform(new Vector3(-0.22f, 1.8f, 2.8f), new Vector3(0, -90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
 				{"right", new StoredTransform(new Vector3(-0.22f, 1.8f, -2.8f), new Vector3(0, 90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
 				{"spawn", new StoredTransform(new Vector3(-0.6f, 2.15f, 0), new Vector3(0, 90, 0), new Vector3(0.5f, 0.5f, 0.5f)) },
-				{"down", new StoredTransform(new Vector3(-0.13f, 1.2f, -0.35f), new Vector3(0, 0, 270), new Vector3(2.45f, 2.45f, 2.45f)) }
+				{"down", new StoredTransform(new Vector3(-0.13f, 1.2f, -0.35f), new Vector3(0, 0, 270), new Vector3(2.45f, 2.45f, 2.45f)) },
+				{"direct", new StoredTransform(new Vector3(-6.22f, 3.00f, 0.96f), new Vector3(0, 90, 0), new Vector3(1f, 1f, 1f)) }
 			}
 		},
 		{"empty", new Dictionary<string, StoredTransform>
@@ -39,7 +41,8 @@ public class DisplayManager : MonoBehaviour {
 				{"left", new StoredTransform(new Vector3(-0.22f, 1.8f, 2.8f), new Vector3(0, -90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
 				{"right", new StoredTransform(new Vector3(-0.22f, 1.8f, -2.8f), new Vector3(0, 90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
 				{"spawn", new StoredTransform(new Vector3(-0.6f, 2.15f, 0), new Vector3(0, 90, 0), new Vector3(0.5f, 0.5f, 0.5f)) },
-				{"down", new StoredTransform(new Vector3(0.05f, -0.5f, -0.45f), new Vector3(0, 0, 270), new Vector3(3.65f, 3.65f, 3.65f)) }
+				{"down", new StoredTransform(new Vector3(0.05f, -0.5f, -0.45f), new Vector3(0, 0, 270), new Vector3(3.65f, 3.65f, 3.65f)) },
+				{"direct", new StoredTransform(new Vector3(-6.22f, 3.00f, 0.96f), new Vector3(0, 90, 0), new Vector3(1f, 1f, 1f)) }
 			}
 		},
 		{"wrap", new Dictionary<string, StoredTransform>
@@ -48,7 +51,8 @@ public class DisplayManager : MonoBehaviour {
 				{"left", new StoredTransform(new Vector3(-0.22f, 1.8f, 2.8f), new Vector3(0, -90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
 				{"right", new StoredTransform(new Vector3(-0.22f, 1.8f, -2.8f), new Vector3(0, 90, -20), new Vector3(1.15f, 1.15f, 1.15f)) },
 				{"spawn", new StoredTransform(new Vector3(-0.6f, 2.15f, 0), new Vector3(0, 90, 0), new Vector3(0.5f, 0.5f, 0.5f)) },
-				{"down", new StoredTransform(new Vector3(0.05f, -0.5f, -0.45f), new Vector3(0, 0, 270), new Vector3(3.65f, 3.65f, 3.65f)) }
+				{"down", new StoredTransform(new Vector3(0.05f, -0.5f, -0.45f), new Vector3(0, 0, 270), new Vector3(3.65f, 3.65f, 3.65f)) },
+				{"direct", new StoredTransform(new Vector3(-6.22f, 3.00f, 0.96f), new Vector3(0, 90, 0), new Vector3(1f, 1f, 1f)) }
 			}
 		}
 	};
