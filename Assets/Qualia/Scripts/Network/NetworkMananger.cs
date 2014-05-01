@@ -76,7 +76,7 @@ public class NetworkMananger : MonoBehaviour {
 	}
 	
 	public void InitializeSpace(){
-		GameObject.Find("DisplayManager").GetComponent<LaunchScreenStartupSequence>().Play();
+		//GameObject.Find("DisplayManager").GetComponent<LaunchScreenStartupSequence>().Play();
 	}
 	
 }
