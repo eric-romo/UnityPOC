@@ -7,6 +7,9 @@ public class DisplayController : MonoBehaviour {
 	public float MouseBorder = 0.06f;
 	public GameObject ClonePrefab;
 	public bool MoveRelativeToRotation = true;
+	
+	public Color FocusedColor = Color.white;
+	public Color UnfocusedColor = Color.black;
 	#endregion
 	
 	#region Public Variables
@@ -30,11 +33,9 @@ public class DisplayController : MonoBehaviour {
 			_focused = value;
 			View.ReceivesInput = value;
 			if(value){
-				Color color = Color.green;
-				color.a = handleDefaultColor.a;
-				Handle.renderer.material.color = color;
+				Handle.renderer.material.color = FocusedColor;
 			} else {
-				Handle.renderer.material.color = handleDefaultColor;
+				Handle.renderer.material.color = UnfocusedColor;
 			}
 		}
 	}
@@ -49,6 +50,7 @@ public class DisplayController : MonoBehaviour {
 	private AppManager appManager;
 	private EnvironmentManager environmentManager;
 	private Color handleDefaultColor;
+	private TopBarController topBarController;
 	#endregion
 	
 	#region Initialization
@@ -56,6 +58,7 @@ public class DisplayController : MonoBehaviour {
 		Handle = transform.FindChild("Handle").gameObject;
 		handleDefaultColor = Handle.renderer.material.color;
 		Cursor = transform.FindChild("Cursor").gameObject;
+		topBarController = GetComponent<TopBarController>();
 		View = GetComponentInChildren<CoherentUIView>();
 		Rigidbody = GetComponent<Rigidbody>();
 		virtualCursor = GetComponent<VirtualCursor>();
@@ -88,6 +91,7 @@ public class DisplayController : MonoBehaviour {
 	
 	#region Update
 	void Update () {
+		topBarController.ClearHighlights();
 		if(Focused){
 			Vector2 normalizedMouse = virtualCursor.NormalizedPosition;
 			normalizedMouse.y = Utilities.mapRange(0, 1, -MouseBorder, 1f, normalizedMouse.y);
@@ -119,12 +123,17 @@ public class DisplayController : MonoBehaviour {
 			//Debug.Log("isOverTopBar" + isOverTopBar + "isOverCloseButton" + isOverCloseButton + " isOverNewButton" + isOverNewButton + " isOverMoveHandle" + isOverMoveHandle);
 			//Debug.Log("ViewMouse: " + viewMouse + "displayMouse: " + displayMouse + "normalizedMouse: " + normalizedMouse);
 			
+			if(isOverMoveHandle){
+				topBarController.HighlightBar();
+			}
+			
 			if(!isOverTopBar){
 				View.SetMousePosition(Mathf.FloorToInt(viewMouse.x), Mathf.FloorToInt(viewMouse.y));
 			}
 			View.ReceivesInput = Focused && !isOverTopBar;
 			
 			Cursor.transform.localPosition = new Vector3(-0.01304078f, displayMouse.y, -displayMouse.x);
+			
 			
 			#region Dragging
 			bool draggingPosition = Input.GetMouseButton(0) && isOverMoveHandle;
@@ -158,6 +167,18 @@ public class DisplayController : MonoBehaviour {
 			#endregion
 			
 			#region Buttons
+			if(isOverCloseButton)
+				topBarController.SetButtonHighlight(topBarController.CloseButton, true);
+			if(isOverNewButton)
+				topBarController.SetButtonHighlight(topBarController.NewButton, true);
+			if(isOverBackButton)
+				topBarController.SetButtonHighlight(topBarController.BackButton, true);
+			if(isOverForwardButton)
+				topBarController.SetButtonHighlight(topBarController.ForwardButton, true);
+			if(isOverReloadButton)
+				topBarController.SetButtonHighlight(topBarController.ReloadButton, true);
+			
+			
 			if(isOverCloseButton && Input.GetMouseButtonDown(0)){
 				displayManager.Close(gameObject);
 			}
