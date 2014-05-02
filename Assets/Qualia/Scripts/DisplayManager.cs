@@ -35,6 +35,16 @@ public class DisplayManager : MonoBehaviour {
 				{"direct", new StoredTransform(new Vector3(-6.22f, 3.00f, 0.96f), new Vector3(0, 90, 0), new Vector3(1f, 1f, 1f)) }
 			}
 		},
+		{"entertainment", new Dictionary<string, StoredTransform>
+			{
+				{"front", new StoredTransform(new Vector3(1f, 2.8f, -0.2f), new Vector3(0, 0, 0), new Vector3(3.4f, 3.4f, 3.4f)) },
+				{"left", new StoredTransform(new Vector3(0.89f, 2.86f, 6.64f), new Vector3(0, 300, 357), new Vector3(4.48f, 4.48f, 4.48f)) },
+				{"right", new StoredTransform(new Vector3(-1.07f, 2.28f, -3.34f), new Vector3(0, 54, 336), new Vector3(2.28f, 2.28f, 2.28f)) },
+				{"spawn", new StoredTransform(new Vector3(-0.6f, 2.15f, 0), new Vector3(0, 90, 0), new Vector3(0.5f, 0.5f, 0.5f)) },
+				{"down", new StoredTransform(new Vector3(-1.15f, 1.2f, -0.11f), new Vector3(0, 0, 270), new Vector3(2.2f, 2.2f, 2.2f)) },
+				{"direct", new StoredTransform(new Vector3(-6.22f, 3.00f, 0.96f), new Vector3(0, 90, 0), new Vector3(1f, 1f, 1f)) }
+			}
+		},
 		{"empty", new Dictionary<string, StoredTransform>
 			{
 				{"front", new StoredTransform(new Vector3(2.2f, 2.5f, 0f), new Vector3(0, 0, 0), new Vector3(6.5f, 6.5f, 6.5f)) },
