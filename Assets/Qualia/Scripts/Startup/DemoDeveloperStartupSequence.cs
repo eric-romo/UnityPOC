@@ -29,7 +29,7 @@ public class DemoDeveloperStartupSequence : MonoBehaviour {
 		
 		editorDisplay = displayManager.CreateDisplay("Editor Display", "coui://UIResources/Qualia/LoadingScreen/index.html", "spawn");
 		previewDisplay = displayManager.CreateDisplay("Preview Display", "https://c9.io/qualiademo/demos/workspace/model-viewer/model-viewer.html", "spawn");
-		jobsDisplay = displayManager.CreateDisplay("Jobs Display", "http://qualia3d.com/jobs.html", "spawn");
+		jobsDisplay = displayManager.CreateDisplay("Jobs Display", "http://qualia3d.com/hiring.html", "spawn");
 		sharedDisplay = displayManager.CreateDisplay("Shared Display", "http://piratepad.net/o27r6xuk94", "spawn");
 		
 		editorDisplay.SetActive(false);

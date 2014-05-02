@@ -29,7 +29,7 @@ public class DemoEntertainmentStartupSequence : MonoBehaviour {
 		
 		gameDisplay = displayManager.CreateDisplay("Game Display", "coui://UIResources/Qualia/LoadingScreen/index.html", "spawn");
 		netflixDisplay = displayManager.CreateDisplay("Netflix Display", "http://www.netflix.com/WiPlayer?movieid=70153380&trkid=7728649&tctx=-99%2C-99%2Cc8f2efb8-1052-42af-a945-cadd1946453a-8519625", "spawn");
-		jobsDisplay = displayManager.CreateDisplay("Jobs Display", "http://qualia3d.com/jobs.html", "spawn");
+		jobsDisplay = displayManager.CreateDisplay("Jobs Display", "http://qualia3d.com/hiring.html", "spawn");
 		sharedDisplay = displayManager.CreateDisplay("Shared Display", "http://piratepad.net/o27r6xuk94", "spawn");
 		
 		gameDisplay.SetActive(false);
